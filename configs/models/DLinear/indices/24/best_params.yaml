@@ -1,0 +1,4 @@
+kernel_size: 21
+individual: true
+learning_rate: 0.0019843966652221857
+batch_size: 64

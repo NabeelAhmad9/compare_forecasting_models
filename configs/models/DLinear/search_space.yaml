@@ -1,0 +1,22 @@
+# DLinear (paper-faithful) hyperparameter search space
+
+# Only performance-relevant options allowed per project protocol:
+# - kernel_size: moving-average window for decomposition (odd integers encouraged)
+# - individual: per-channel weights (True/False)
+
+search_space:
+  kernel_size:
+    type: int
+    low: 3
+    high: 51
+    step: 2
+  individual:
+    type: categorical
+    choices: [true, false]
+  learning_rate:
+    type: loguniform
+    low: 0.0005
+    high: 0.005
+  batch_size:
+    type: categorical
+    choices: [64, 128]

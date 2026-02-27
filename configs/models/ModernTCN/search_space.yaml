@@ -1,0 +1,85 @@
+# ModernTCN hyperparameter search space (restricted to medium-capacity regime)
+
+search_space:
+  # Patching configuration
+  patch_size:
+    type: categorical
+    choices: [8, 16]
+  patch_stride:
+    type: categorical
+    choices: [8]
+    # Restricted to values <= patch_size to guarantee valid padding and prevent negative-dimension tensors
+
+  # Architecture (only safe, medium-capacity options)
+  num_blocks:
+    type: categorical
+    choices: [[1, 1, 1]]            # total blocks <= 4
+  dims:
+    type: categorical
+    choices: [[32, 64, 96]]        # last stage <= 128
+  ffn_ratio:
+    type: categorical
+    choices: [1]                   # only FFN=1 keeps params within budget
+
+  # Downsampling and head
+  downsample_ratio:
+    type: categorical
+    choices: [2]
+  use_multi_scale:
+    type: categorical
+    choices: [false]               # disabled to control head size
+  individual:
+    type: categorical
+    choices: [false]               # individual heads would exceed budget for H24
+
+  # Series decomposition (disabled for medium regime)
+  decomposition:
+    type: categorical
+    choices: [false]
+
+  # RevIN normalization (keep optional)
+  revin:
+    type: categorical
+    choices: [true, false]
+  affine:
+    type: categorical
+    choices: [true, false]
+  subtract_last:
+    type: categorical
+    choices: [false]
+
+  # Regularization
+  dropout:
+    type: float
+    low: 0.0
+    high: 0.2
+    step: 0.05
+  head_dropout:
+    type: float
+    low: 0.0
+    high: 0.2
+    step: 0.05
+
+  # Decomposition kernel (unused because decomposition is false)
+  kernel_size:
+    type: categorical
+    choices: [25]
+
+  # Training hyperparameters
+  learning_rate:
+    type: loguniform
+    low: 0.0005
+    high: 0.005  
+  batch_size:
+    type: categorical
+    choices: [64, 128]
+
+  # Advanced options (fixed)
+  small_kernel_merged:
+    type: categorical
+    choices: [false]
+
+# Notes:
+# - All choices are constrained so any sampled configuration stays within 220k-250k params
+# - Decomposition, individual heads, large dims/ffn_ratio are intentionally disabled
+

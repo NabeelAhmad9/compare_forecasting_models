@@ -1,0 +1,2 @@
+category,asset,horizon_low,horizon_high,spearman_rho,p_value,n_models
+forex,GBPUSD,4,24,0.7999999999999999,0.00962792472537983,9

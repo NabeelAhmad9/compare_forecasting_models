@@ -1,0 +1,77 @@
+% =============================================================================
+% Section 6: Conclusion
+% =============================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+% --------------------------------------------------------------------------
+\subsection{Summary of Contributions}
+\label{sec:contribution_summary}
+
+This paper presented a controlled comparison of \nmodels deep learning architectures---spanning Transformer, MLP, convolutional, and recurrent families---for multi-horizon financial time-series forecasting across 918 experimental runs.  Five contributions were made: (C1)~protocol-controlled fair comparison, (C2)~multi-seed robustness quantification, (C3)~cross-horizon generalisation analysis, (C4)~asset-class-specific deployment guidance, and (C5)~release of a fully open benchmarking framework.
+
+% --------------------------------------------------------------------------
+\subsection{Principal Findings}
+\label{sec:principal_findings}
+All four hypotheses from Section~\ref{sec:hypotheses} are supported (see Section~\ref{sec:hypothesis_adjudication} for detailed adjudication):
+
+\begin{description}[leftmargin=0.5cm, font=\bfseries]
+  \item[H1 (Ranking non-uniformity): SUPPORTED.]  A clear three-tier hierarchy emerges, with \moderntcn and \patchtst separated from the bottom tier by over 5.5 mean-rank positions.
+
+  \item[H2 (Cross-horizon stability): SUPPORTED.]  Top-tier rankings are preserved across horizons despite $2$--$2.5\times$ error amplification; rank shifts are confined to mid-tier models.
+
+  \item[H3 (Variance dominance): STRONGLY SUPPORTED.]  Architecture explains $\geq 99.9\%$ of raw variance; seed variance is negligible ($\leq 0.04\%$), confirming three-seed replication suffices.
+
+  \item[H4 (Non-monotonic complexity): SUPPORTED.]  \dlinear (approximately 1{,}000 parameters) outranks \autoformer (approximately 438K) and \lstm (approximately 172K); architectural inductive bias dominates raw capacity.
+\end{description}
+
+% --------------------------------------------------------------------------
+\subsection{Practical Recommendations}
+\label{sec:recommendations}
+
+Building on the empirical evidence from 648 final training runs and the hypothesis adjudication (Section~\ref{sec:hypothesis_adjudication}):
+
+\begin{itemize}[nosep]
+  \item \textbf{Default recommendation:} \moderntcn.  Rank~1 on 75\% of evaluation points with moderate cost.  Large-kernel depthwise convolutions and multi-stage downsampling provide effective general-purpose temporal modelling across all asset classes and horizons.  On low-noise markets (EUR/USD), its superiority is statistically unambiguous ($p_\text{Holm} < 10^{-20}$ vs.\ all competitors; Section~\ref{sec:statistical_tests}).
+
+  \item \textbf{Transformer alternative:} \patchtst.  Consistently rank~2, with a narrow gap from \moderntcn (0.667).  Patch-based tokenisation with channel independence suits settings where Transformer-family models are preferred.
+
+  \item \textbf{Altcoin specialist:} \nhits.  Achieves the lowest \rmse on ETH/USDT and ADA/USDT (Table~\ref{tab:per_asset_best_models}), suggesting niche advantage on lower-capitalisation cryptocurrency assets due to its multi-rate pooling design.
+
+  \item \textbf{Resource-constrained environments:} \dlinear.  Rank~5 with approximately 1{,}000 parameters and no nonlinear activations, suitable when inference latency or memory is binding.
+
+  \item \textbf{Not recommended:} \lstm.  Ranks last across all conditions with errors $7$--$33\times$ higher than the best model.
+\end{itemize}
+
+\paragraph{Directional accuracy.}  MSE-optimised architectures produce directional forecasts indistinguishable from a coin flip (mean \da~$= 50.08\%$; Table~\ref{tab:directional_accuracy}).  Applications requiring directional skill must incorporate explicit directional objectives or post-processing.
+
+These recommendations are conditioned on the experimental scope described in Section~\ref{sec:experimental_design} (OHLCV features, H1 frequency, 12~assets, 2~horizons) and the limitations acknowledged in Section~\ref{sec:limitations}.
+
+% --------------------------------------------------------------------------
+\subsection{Future Work}
+\label{sec:future_work}
+
+The following extensions are prioritised by expected impact:
+
+\begin{enumerate}
+
+  \item \textbf{Cohen's $d$ effect-size matrices} to complement the Holm-Wilcoxon and Diebold-Mariano pairwise analyses already reported (Section~\ref{sec:statistical_tests}), facilitating standardised cross-study comparison.
+
+  \item \textbf{Increased HPO budget and seed count} to strengthen ranking evidence, particularly for mid-tier models where the current 5-trial budget may be limiting.
+
+  \item \textbf{Directional loss training} via differentiable surrogate losses, investigating whether MSE-accurate architectures also achieve superior directional accuracy under explicit supervision.
+
+  \item \textbf{Extended horizon coverage} ($h \in \{1, 8, 12, 48, 96\}$) for smoother degradation curves and more precise characterisation of architecture-specific scaling behaviour.
+
+  \item \textbf{Asset-specific model selection} exploring whether the niche advantages observed for \nhits on lower-capitalisation cryptocurrency (Table~\ref{tab:per_asset_best_models}) extend to a broader altcoin universe.
+
+  \item \textbf{Richer feature sets} (technical indicators, sentiment, order-book data) to assess ranking sensitivity to input dimensionality.
+
+  \item \textbf{Heterogeneous ensembles} of top architectures for potential accuracy gains, particularly combining \moderntcn's convolutional inductive bias with \patchtst's patch-based attention.
+
+  \item \textbf{Alternative frequencies} (H4, daily, tick-level) to test cross-frequency generalisation.
+
+  \item \textbf{Expanded asset universe} (commodities, fixed income, emerging markets).
+
+  \item \textbf{Forward-walk evaluation} with rolling retraining for real-time deployment evidence.
+\end{enumerate}

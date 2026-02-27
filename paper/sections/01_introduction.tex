@@ -1,0 +1,89 @@
+% =============================================================================
+% Section 1: Introduction
+% =============================================================================
+\section{Introduction}
+\label{sec:introduction}
+
+% --------------------------------------------------------------------------
+\subsection{Motivation}
+\label{sec:motivation}
+
+Multi-horizon price forecasting is central to modern finance: portfolio allocation relies on expected return estimates at multiple horizons, risk management depends on volatility projections, and algorithmic trading requires predictive signals whose quality degrades with the forecast window.  Unlike physical systems governed by conservation laws, financial time series exhibit non-stationarity, heavy-tailed returns, volatility clustering, leverage effects, and abrupt regime transitions \citep{Cont2001, Fama1970}---properties that make accurate multi-step prediction exceptionally difficult.
+
+Deep learning architectures for temporal sequence modelling have proliferated rapidly over the past five years.  Transformer-based models now span a wide range of inductive biases: auto-correlation in the frequency domain \citep{Wu2021}, patch-based tokenisation with channel independence \citep{Nie2023}, inverted variate-wise attention \citep{Liu2024itransformer}, and exogenous-variable-aware cross-attention with learnable global tokens \citep{Wang2024timexer}.  At the same time, decomposition-based linear mappings have been shown to match or surpass Transformer performance on standard benchmarks \citep{Zeng2023}, while modern temporal convolutional architectures exploit large-kernel depthwise convolutions \citep{Luo2024moderntcn} and FFT-based 2D reshaping \citep{Wu2023timesnet} to capture multi-scale temporal structure.  Hierarchical MLP designs with multi-rate pooling \citep{Challu2023} offer yet another approach to direct multi-step forecasting.
+
+This architectural diversity raises a practical question: \emph{which architecture should a practitioner deploy for a given financial forecasting task, at which horizon, and for which asset class?}  A reliable answer requires controlled experimentation that isolates architectural merit from confounding factors---a requirement that existing benchmarks have not met, as Section~\ref{sec:benchmarking_gap} demonstrates.
+
+% --------------------------------------------------------------------------
+\subsection{Research Gap}
+\label{sec:research_gap}
+
+Despite the growing body of forecasting studies, five persistent methodological shortcomings undermine published model comparisons:
+
+\begin{enumerate}[label=\textbf{G\arabic*.}, leftmargin=1.5cm]
+  \item \textbf{Uncontrolled hyperparameter budgets.}  Many benchmarks allocate different tuning effort to different models---or skip hyperparameter optimisation entirely---confounding tuning luck with architectural merit.  Prior work has introduced architectures with custom-tuned configurations while evaluating competitors under default or unspecified settings \citep{Zeng2023, Wu2023timesnet}, preventing fair attribution of performance differences.
+
+  \item \textbf{Single-seed evaluation.}  The vast majority of comparative studies report results from a single random initialisation.  Seed-induced variance has been shown to exceed algorithmic differences in standard machine learning benchmarks \citep{Bouthillier2021}, with analogous effects documented in reinforcement learning \citep{Henderson2018}.  Without multi-seed replication, it is impossible to distinguish genuine architectural advantage from stochastic variation in weight initialisation.
+
+  \item \textbf{Single-horizon analysis.}  Most comparisons evaluate a single forecasting horizon, precluding investigation of how architectural inductive biases interact with prediction difficulty as the forecast window extends.  Prior work has benchmarked recurrent networks at fixed horizons without characterising degradation behaviour, leaving cross-horizon generalisation unaddressed \citep{Hewamalage2021}.
+
+  \item \textbf{Absent pairwise statistical correction.}  Even studies that report omnibus significance tests (\eg Friedman) rarely apply post-hoc pairwise corrections with family-wise error control, leaving the significance of individual ranking differences unquantified.  The M4 competition \citep{Makridakis2018} provided aggregate rankings but did not report pairwise tests among deep learning participants.
+
+  \item \textbf{Narrow asset-class coverage.}  Benchmarks focusing on a single asset class---whether cryptocurrency \citep{Sezer2020}, equities, or standard forecasting datasets (ETTh, Weather, Electricity)---cannot assess whether ranking conclusions generalise across the structurally distinct dynamics of different financial markets.  Cross-class evaluation is necessary for reliable deployment guidance.
+\end{enumerate}
+
+Collectively, these gaps prevent reliable inference about the relationship between architectural inductive biases and financial time-series structure, and deprive practitioners of evidence-based model selection guidance---despite the finding (Section~\ref{sec:seed_robustness}) that architecture choice, not random initialisation, explains over 99\% of total forecast variance.
+
+% --------------------------------------------------------------------------
+\subsection{Hypotheses and Objectives}
+\label{sec:hypotheses}
+
+Four testable hypotheses structure the empirical investigation.  Each states a clear null and a designated statistical test:
+
+\begin{description}[leftmargin=1.2cm, labelwidth=1cm, labelsep=0.2cm, font=\bfseries]
+  \item[H1.] \textbf{Ranking Non-Uniformity.}  The global performance ranking of the nine architectures is significantly non-uniform across evaluation points.\\
+  \emph{\Hzero:} All models have equal expected rank.\\
+  \emph{Test:} Rank-based leaderboard analysis across 24 evaluation points (12~assets $\times$ 2~horizons); win-rate counts; mean rank gaps between tiers.\\
+  \emph{Evidence:} Sections~\ref{sec:global_rankings} and~\ref{sec:statistical_tests}.
+
+  \item[H2.] \textbf{Cross-Horizon Ranking Stability.}  Top-ranked architectures at $\hfour$ maintain their relative superiority at $\htwentyfour$, despite absolute error amplification.\\
+  \emph{\Hzero:} Rankings at $\hfour$ and $\htwentyfour$ are independent ($\rho_S = 0$).\\
+  \emph{Test:} Spearman rank correlation between $\hfour$ and $\htwentyfour$ model rankings per asset; percentage degradation analysis.\\
+  \emph{Evidence:} Section~\ref{sec:horizon_degradation}.
+
+  \item[H3.] \textbf{Variance Dominance.}  Architecture choice explains a significantly larger proportion of total forecast variance than random seed initialisation.\\
+  \emph{\Hzero:} Model and seed factors contribute equally to variance.\\
+  \emph{Test:} Two-factor sum-of-squares variance decomposition; comparison of variance proportions across panels (raw, z-normalised all models, z-normalised modern only).\\
+  \emph{Evidence:} Section~\ref{sec:seed_robustness}.
+
+  \item[H4.] \textbf{Non-Monotonic Complexity--Performance.}  The relationship between trainable parameter count and forecasting error is non-monotonic---architectural inductive bias matters more than raw model capacity.\\
+  \emph{\Hzero:} Monotonic negative correlation ($\rho_S = -1$) between parameter count and \rmse rank.\\
+  \emph{Test:} Spearman rank correlation between parameter count and mean \rmse rank; visual inspection of complexity--performance scatter.\\
+  \emph{Evidence:} Section~\ref{sec:complexity}.
+\end{description}
+
+The primary objective is to provide a controlled, statistically validated comparison of nine deep learning architectures across three asset classes at two forecasting horizons under identical experimental conditions, yielding evidence-based deployment guidance.
+
+% --------------------------------------------------------------------------
+\subsection{Contributions}
+\label{sec:contributions}
+
+Five specific contributions advance the state of knowledge:
+
+\begin{enumerate}[label=\textbf{C\arabic*.}]
+  \item \textbf{Protocol-controlled fair comparison (addresses G1).}  \Nmodels architectures spanning four families (Transformer, MLP, CNN, RNN) are evaluated under a single five-stage protocol: fixed-seed Bayesian HPO (\ntrials Optuna TPE trials, seed~42), configuration freezing per asset class, identical chronological 70/15/15 splits, a common OHLCV feature set, and rank-based performance evaluation across \nassets instruments, three asset classes, and two horizons, totalling 918~runs (648~final training runs~$+$ 270~HPO trials).
+
+  \item \textbf{Multi-seed robustness quantification (addresses G2).}  Final training is replicated across three independent seeds (123, 456, 789).  A two-factor variance decomposition shows that architecture choice explains 99.90\% of total forecast variance while seed variation accounts for 0.01\%, establishing model selection as the dominant lever for accuracy improvement and confirming that three-seed replication is sufficient.
+
+  \item \textbf{Cross-horizon generalisation analysis (addresses G3).}  Identical models are evaluated at $\hfour$ and $\htwentyfour$ with matched protocol, characterising architecture-specific degradation (Table~\ref{tab:horizon_degradation_btc}) and identifying which inductive biases scale with prediction difficulty.
+
+  \item \textbf{Asset-class-specific deployment guidance (addresses G5).}  Category-level analysis across \crypto, \forex, and \indices (Table~\ref{tab:category_metrics}) shows that top-tier rankings (\moderntcn, \patchtst) hold across all three classes, while mid-tier orderings (\dlinear, \nhits, \timexer) are category-dependent.  A per-asset best-model matrix (Table~\ref{tab:per_asset_best_models}) further reveals niche advantages: \nhits achieves the lowest error on lower-capitalisation cryptocurrency assets, providing actionable asset-level deployment guidance.
+
+  \item \textbf{Open, deterministic benchmarking framework (addresses G1--G5).}  The complete pipeline---source code, configuration files, raw market data, processed datasets, all trained models, and evaluation outputs---is released under an open licence.  Accompanying documentation enables any researcher to reproduce every experiment via a unified command-line interface.
+\end{enumerate}
+
+% --------------------------------------------------------------------------
+\subsection{Paper Organisation}
+\label{sec:outline}
+
+The remainder of this paper is organised as follows.  Section~\ref{sec:literature_review} surveys related work and positions this study relative to existing benchmarks.  Section~\ref{sec:experimental_design} presents the unified experimental protocol.  Section~\ref{sec:results} reports the empirical findings structured by the four hypotheses.  Section~\ref{sec:discussion} interprets the results, provides economic context, and discusses limitations.  Section~\ref{sec:conclusion} summarises contributions and offers deployment recommendations.  Section~\ref{sec:reproducibility} provides a reproducibility statement.  Supplementary results are collected in the Appendix.

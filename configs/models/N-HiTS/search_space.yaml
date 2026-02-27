@@ -1,0 +1,36 @@
+# N-HiTS hyperparameter search space for Optuna HPO
+search_space:
+  # Block / hidden dimensions
+  n_blocks:
+    type: int
+    low: 2
+    high: 3         
+  n_hidden:
+    type: categorical
+    choices: [64, 96]  
+  n_layers:
+    type: int
+    low: 3
+    high: 6          
+  n_pool_kernel_size:
+    type: categorical
+    choices: [ [2, 4, 8] , [4, 8, 12] ] 
+  n_freq_downsample:
+    type: categorical
+    choices: [ [4,2,1] ]   
+  pooling_mode:
+    type: categorical
+    choices: ['max']          
+  dropout:
+    type: float
+    low: 0.0
+    high: 0.2
+    step: 0.05               
+  learning_rate:
+    type: loguniform
+    low: 0.0005
+    high: 0.005               
+  batch_size:
+    type: categorical
+    choices: [64, 128]       
+

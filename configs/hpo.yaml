@@ -1,0 +1,27 @@
+# Hyperparameter Optimization configuration
+
+# Fixed seed for HPO fairness
+fixed_seed: 42
+
+# Optuna settings
+n_trials: 5
+sampler: TPE  # TPE | Random | CmaEs
+pruner:
+  type: median  # median | hyperband
+  n_startup_trials: 2
+  n_warmup_steps: 5
+
+# Optimization target
+direction: minimize
+metric: val_mse
+
+# HPO training overrides
+epochs: 50
+batch_size: 256
+
+# Timeout per trial (seconds, 0 = no limit)
+timeout_per_trial: 0
+
+# Resume tracking: JSON-based, stored in models/ directory
+# Per-trial resume state: models/hpo/<model>/<category>/<asset>/<horizon>/trial_XXX/training_state.json
+

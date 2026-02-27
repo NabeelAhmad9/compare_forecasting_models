@@ -1,0 +1,8 @@
+d_model: 32
+d_ff: 64
+e_layers: 2
+num_kernels: 3
+top_k: 5
+dropout: 0.0
+learning_rate: 0.0020254188906648385
+batch_size: 64

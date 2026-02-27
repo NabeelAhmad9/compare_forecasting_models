@@ -1,0 +1,61 @@
+% =============================================================================
+% Table 5: Best Hyperparameters (Frozen after HPO)
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \caption{Frozen best hyperparameters selected via Optuna TPE (\ntrials
+    trials, seed~42, objective: minimum validation \mse).  Only key
+    architecture-specific parameters are shown; all configurations also
+    include learning rate and batch size.  Shared entries across categories
+    indicate that the representative-asset optimum was identical.}
+  \label{tab:best_hyperparameters}
+  \footnotesize
+  \setlength{\tabcolsep}{5pt}%
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{%
+    l%          Model
+    l%          Category
+    c%          Horizon
+    p{8cm}%     Key Parameters
+  }
+    \toprule
+    \textbf{Model} & \textbf{Category} & \textbf{$h$} & \textbf{Key Parameters} \\
+    \midrule
+    \multirow{2}{*}{\autoformer}
+      & Crypto/Forex & 4/24 & $d_{\mathrm{model}}{=}128$, heads${=}4$, enc${=}1$, dec${=}2$, $d_{\mathrm{ff}}{=}128$, drop${=}0.20$ \\
+      & Indices      & 4/24 & $d_{\mathrm{model}}{=}128$, heads${=}4$, enc${=}1$, dec${=}2$, $d_{\mathrm{ff}}{=}128$, drop${=}0.10$ \\
+    \midrule
+    \multirow{2}{*}{\dlinear}
+      & All          & 4    & kernel${=}21$, individual${=}\text{true}$ \\
+      & Crypto/Forex & 24   & kernel${=}43$, individual${=}\text{true}$ \\
+    \midrule
+    \multirow{2}{*}{\itransformer}
+      & Crypto       & 24   & $d_{\mathrm{model}}{=}112$, $d_{\mathrm{ff}}{=}128$, layers${=}2$, heads${=}16$, drop${=}0.15$ \\
+      & Other        & 4    & $d_{\mathrm{model}}{=}96$,  $d_{\mathrm{ff}}{=}128$, layers${=}4$, heads${=}16$, drop${=}0.00$ \\
+    \midrule
+    \multirow{2}{*}{\lstm}
+      & All          & 4    & hidden${=}128$, layers${=}1$, mlp${=}128$, bidir${=}\text{true}$, drop${=}0.15$ \\
+      & All          & 24   & hidden${=}64$,  layers${=}1$, mlp${=}128$, bidir${=}\text{true}$, drop${=}0.10$ \\
+    \midrule
+    \multirow{2}{*}{\moderntcn}
+      & Crypto       & 24   & patch${=}16$, dims${=}[32,64,96]$, RevIN, drop${=}0.20$, head-drop${=}0.20$ \\
+      & Other        & 4/24 & patch${=}8$,  dims${=}[32,64,96]$, RevIN+affine, drop${=}0.10$, head-drop${=}0.10$ \\
+    \midrule
+    \multirow{2}{*}{\nhits}
+      & Crypto       & 4    & blocks${=}2$, hidden${=}64$, layers${=}3$, pool${=}[4,8,12]$, drop${=}0.05$ \\
+      & Crypto       & 24   & blocks${=}3$, hidden${=}96$, layers${=}4$, pool${=}[4,8,12]$, drop${=}0.00$ \\
+    \midrule
+    \multirow{2}{*}{\patchtst}
+      & Crypto       & 4    & $d_{\mathrm{model}}{=}64$, layers${=}2$, patch${=}24$, stride${=}8$, drop${=}0.05$ \\
+      & Other        & 24   & $d_{\mathrm{model}}{=}64$, layers${=}1$, patch${=}24$, stride${=}4$, drop${=}0.15$ \\
+    \midrule
+    \timesnet
+      & All          & 4/24 & $d_{\mathrm{model}}{=}32$, $d_{\mathrm{ff}}{=}32$, layers${=}2$, top-$k{=}3$, drop${=}0.00$ \\
+    \midrule
+    \multirow{2}{*}{\timexer}
+      & Crypto       & 4    & $d_{\mathrm{model}}{=}64$, $d_{\mathrm{ff}}{=}256$, layers${=}2$, heads${=}4$, drop${=}0.05$ \\
+      & Other        & 4/24 & $d_{\mathrm{model}}{=}64$, $d_{\mathrm{ff}}{=}128$, layers${=}3$, heads${=}8$, drop${=}0.05$ \\
+    \bottomrule
+  \end{tabular}%
+  }% end resizebox
+\end{table}

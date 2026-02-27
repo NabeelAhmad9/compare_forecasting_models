@@ -1,0 +1,271 @@
+compare_forecasting_models/
+│
+├── README.md                       # project overview + reproduction steps
+├── Makefile                       # common commands (hpo, final, benchmark)
+├── environment.yml
+├── requirements.txt
+│
+├── configs/
+│   │
+│   ├── asset.yaml                 # assets names and info
+│   ├── base.yaml                  # global defaults (device, paths, logging)
+│   ├── dataset.yaml              # window_size, horizon, features
+│   ├── training.yaml             # epochs, batch_size, eval_seeds=[123,456,789]
+│   ├── hpo.yaml                  # fixed_seed=42, n_trials, sampler
+│   │
+│   └── models/
+│       │
+│       ├── <model>/
+│       │   ├── search_space.yaml # hyperparameter ranges
+│       │   └── <category>/
+│       │       └── <horizon>/
+│       │           └── best_params.yaml # auto-generated after HPO
+│
+├── data/
+│   │
+│   ├── raw/                      # original CSVs (never modified)
+│   │   ├── ADAUSDT_H1.csv
+│   │   ├── AUDUSD_H1.csv
+│   │   ├── BNBUSDT_H1.csv
+│   │   ├── BTCUSDT_H1.csv
+│   │   ├── DEUIDXEUR_H1.csv
+│   │   ├── ETHUSDT_H1.csv
+│   │   ├── EURUSD_H1.csv
+│   │   ├── GBPUSD_H1.csv
+│   │   ├── USA30IDXUSD_H1.csv
+│   │   ├── USA500IDXUSD_H1.csv
+│   │   ├── USATECHIDXUSD_H1.csv
+│   │   └── USDJPY_H1.csv
+│   │
+│   └── processed/               # numpy tensors after scaling + windowing
+│       └── <category>/
+│           └── <asset>/
+│               └── <horizon>/
+│                   ├── split_metadata.json
+│                   ├── train_x.npy
+│                   ├── train_y.npy
+│                   ├── val_x.npy
+│                   ├── val_y.npy
+│                   ├── test_x.npy
+│                   ├── test_y.npy
+│                   └── scaler.pkl
+│
+├── logs/
+│   │
+│   ├── hpo/                      # tuning logs
+│   │   └── <model>_<category>_<asset>_<horizon>.log
+│   │
+│   ├── final/                    # multi-seed training logs
+│   │   └── <model>_<category>_<asset>_<horizon>.log
+│   │
+│   └── system.log               # global logger
+│
+├── models/
+│   │
+│   ├── hpo/                      # checkpoints during hyperparameter search
+│   │   └── <model>/
+│   │       └── <category>/
+│   │           └── <asset>/
+│   │               └── <horizon>/
+│   │                   ├── trial_001/
+│   │                   │   └── model.pt
+│   │                   └── trial_002/
+│   │
+│   └── final/
+│       └── <model>/                        # e.g., Autoformer, DLinear, NHiTS
+│           └── <category>/                 # crypto / indices / forex
+│               └── <asset>/                # BTCUSDT / DEUIDXEUR / EURUSD
+│                   └── <horizon>/          # 4 / 24
+│                       ├── <seed_1>/       # 42
+│                       │   ├── model_best.pt
+│                       │   ├── model_last.pt
+│                       │   ├── training_state.json
+│                       ├── <seed_2>/
+│                       ├── <seed_3>/
+├── results/
+│   ├── benchmark_tree.txt
+│   ├── results_tree.txt
+│   ├── test_counts.csv
+│   │
+│   ├── final/                              # Multi-seed retraining results
+│   │   └── <model>/
+│   │       └── <category>/
+│   │           └── <asset>/
+│   │               └── <horizon>/          # 4 | 24
+│   │                   ├── aggregated_best.json
+│   │                   ├── aggregated_last.json
+│   │                   └── <seed>/         # 123 | 456 | 789
+│   │                       ├── best/
+│   │                       │   ├── metrics.json
+│   │                       │   └── predictions.csv
+│   │                       └── last/
+│   │                           ├── metrics.json
+│   │                           └── predictions.csv
+│   │
+│   ├── benchmark/                          # Comparative analysis results
+│       ├── global_summary/                 # Dataset-wide aggregation
+│       │   ├── figures/
+│       │   │   ├── global_metric_heatmap.pdf
+│       │   │   ├── global_metric_heatmap_no_lstm.pdf
+│       │   │   ├── global_rank_comparison.pdf
+│       │   │   └── variance_decomposition_pie.pdf
+│       │   └── tables/
+│       │       ├── friedman_iman_davenport.csv
+│       │       ├── global_ranking_aggregated.csv
+│       │       ├── global_win_counts.csv
+│       │       ├── holm_wilcoxon.csv
+│       │       ├── jonckheere_terpstra_complexity.csv
+│       │       ├── spearman_cross_horizon_per_asset.csv
+│       │       ├── spearman_stouffer.csv
+│       │       └── variance_decomposition.csv
+│       │
+│       └── categories/                    # Analysis by asset class
+│           └── <category>/                # crypto | forex | indices
+│               ├── category_summary/      # Aggregated over assets & horizons
+│               │   ├── figures/
+│               │   │   ├── category_metric_barplot.pdf
+│               │   │   ├── category_metric_barplot_no_lstm.pdf
+│               │   │   ├── category_rank_boxplot.pdf
+│               │   │   ├── category_rank_boxplot_no_lstm.pdf
+│               │   │   ├── category_scatter_rmse_mae.pdf
+│               │   │   ├── category_scatter_rmse_mae_no_lstm.pdf
+│               │   │   ├── category_violin_seed_variance.pdf
+│               │   │   └── category_violin_seed_variance_no_lstm.pdf
+│               │   └── tables/
+│               │       ├── category_metrics_aggregated.csv
+│               │       ├── category_ranking_by_metric.csv
+│               │       ├── config_hash_reference.json
+│               │       ├── friedman_iman_davenport.csv
+│               │       ├── friedman_test.csv
+│               │       ├── holm_wilcoxon.csv
+│               │       └── pairwise_wilcoxon.csv
+│               │
+│               ├── figures_summary/       # Cross-asset visual summaries
+│               │   ├── category_hierarchical_ranking.pdf
+│               │   ├── category_hierarchical_ranking_no_lstm.pdf
+│               │   ├── category_performance_matrix.pdf
+│               │   └── category_performance_matrix_no_lstm.pdf
+│               │
+│               └── assets/                # Individual asset analysis
+│                   └── <asset>/           # e.g., BTCUSDT
+│                       ├── summary/       # Aggregated over horizons
+│                       │   ├── figures/
+│                       │   │   ├── asset_model_comparison_grouped.pdf
+│                       │   │   └── asset_model_comparison_grouped_no_lstm.pdf
+│                       │   └── tables/
+│                       │       ├── asset_best_models.csv
+│                       │       ├── asset_metrics_aggregated.csv
+│                       │       └── asset_ranking_matrix.csv
+│                       │
+│                       ├── cross_horizon/  # Horizon-dependent analysis
+│                       │   ├── figures/
+│                       │   │   ├── horizon_degradation_lineplot.pdf
+│                       │   │   ├── horizon_degradation_lineplot_no_lstm.pdf
+│                       │   │   ├── horizon_sensitivity_heatmap.pdf
+│                       │   │   └── horizon_sensitivity_heatmap_no_lstm.pdf
+│                       │   └── tables/
+│                       │       ├── horizon_degradation_curves.csv
+│                       │       ├── horizon_ranking_shift.csv
+│                       │       ├── spearman_cross_horizon.csv
+│                       │       └── spearman_stouffer.csv
+│                       │
+│                       └── horizons/       # Single-horizon results
+│                           └── <horizon>/  # 4 | 24
+│                               ├── results_aggregated/
+│                               │   ├── figures/
+│                               │   │   ├── mae_comparison_barplot.pdf
+│                               │   │   ├── mae_comparison_barplot_no_lstm.pdf
+│                               │   │   ├── rank_barplot.pdf
+│                               │   │   ├── rank_barplot_no_lstm.pdf
+│                               │   │   ├── rmse_comparison_barplot.pdf
+│                               │   │   ├── rmse_comparison_barplot_no_lstm.pdf
+│                               │   │   ├── scatter_rmse_vs_seed_variance.pdf
+│                               │   │   ├── scatter_rmse_vs_seed_variance_no_lstm.pdf
+│                               │   │   ├── seed_variance_boxplot.pdf
+│                               │   │   └── seed_variance_boxplot_no_lstm.pdf
+│                               │   └── tables/
+│                               │       ├── metrics_aggregated.csv
+│                               │       ├── metrics_raw_per_seed.csv
+│                               │       ├── rank_matrix.csv
+│                               │       └── top_models_summary.csv
+│                               │
+│                               └── statistical_tests/
+│                                   ├── da_ztest.csv
+│                                   ├── diebold_mariano.csv
+│                                   ├── friedman_iman_davenport.csv
+│                                   ├── friedman_test.csv
+│                                   ├── holm_wilcoxon.csv
+│                                   ├── icc_seed_reliability.csv
+│                                   ├── pairwise_wilcoxon.csv
+│                                   └── variance_decomposition.csv
+│
+│   ├── plots/                              # Forecast visualizations
+│       └── <category>/
+│           └── <asset>/
+│               └── <model>/
+│                   └── <horizon>/  #24
+│                       ├── actual_vs_pred_step_1.pdf
+│                       ├── actual_vs_pred_step_4.pdf
+│                       ├── actual_vs_pred_step_12.pdf
+│                       └── actual_vs_pred_step_24.pdf
+│                   └── <horizon>/ #4
+│                       ├── actual_vs_pred_step_1.pdf
+│                       ├── actual_vs_pred_step_2.pdf
+│                       ├── actual_vs_pred_step_3.pdf
+│                       └── actual_vs_pred_step_4.pdf
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_dataset_creation.ipynb
+│   ├── 03_models_params.ipynb
+│   ├── 04_hpo.ipynb
+│   ├── 05_hpo_model_comparison.ipynb
+│   ├── 06_final_training.ipynb
+│   └── 07_model_comparison.ipynb
+│
+├── paper/                    # LaTeX source for the companion paper
+│   ├── main.tex
+│   ├── bibliography.bib
+│   ├── sections/             # Introduction, literature review, results, etc.
+│   ├── figures/              # Generated PDF figures
+│   └── tables/               # Generated LaTeX tables
+└── src/
+    │
+    ├── main.py                   # CLI entry:
+    │                             # hpo | final | benchmark
+    │
+    ├── data/
+    │   ├── loader.py
+    │   ├── preprocessing.py
+    │   ├── scaler.py
+    │   └── windowing.py
+    │
+    ├── models/
+    │   ├── base.py
+    │   ├── Autoformer.py
+    │   ├── TimesNet.py
+    │   ├── DLinear.py
+    │   ├── PatchTST.py
+    │   ├── N-HiTS.py
+    │   ├── iTransformer.py
+    │   ├── LSTM.py
+    │   ├── ModernTCN.py
+    │   └── TimeXer.py
+    │
+    ├── training/
+    │   ├── trainer.py
+    │   └── callbacks.py
+    │
+    ├── evaluation/
+    │   ├── metrics.py
+    │   ├── aggregate.py          # computes mean/std
+    │   └── plots.py
+    │
+    ├── experiments/
+    │   ├── hpo_runner.py         # fixed-seed hyperparameter tuning
+    │   ├── final_runner.py       # multi-seed retraining
+    │   └── benchmark.py         # creates leaderboard
+    │
+    └── utils/
+        ├── config.py
+        ├── logger.py
+        └── seed.py              # reproducibility utilities

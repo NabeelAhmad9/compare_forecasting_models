@@ -1,0 +1,15 @@
+n_blocks: 2
+n_hidden: 64
+n_layers: 3
+n_pool_kernel_size:
+- 4
+- 8
+- 12
+n_freq_downsample:
+- 4
+- 2
+- 1
+pooling_mode: max
+dropout: 0.05
+learning_rate: 0.0016738881542579659
+batch_size: 64

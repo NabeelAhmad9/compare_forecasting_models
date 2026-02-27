@@ -1,0 +1,12 @@
+moving_avg: 9
+d_model: 128
+n_heads: 4
+e_layers: 1
+d_layers: 2
+d_ff: 128
+factor: 3
+dropout: 0.2
+activation: gelu
+embed: timeF
+learning_rate: 0.0008152843673110737
+batch_size: 128

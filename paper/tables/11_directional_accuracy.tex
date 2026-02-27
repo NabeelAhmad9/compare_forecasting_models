@@ -1,0 +1,64 @@
+
+% siunitx setup
+\sisetup{
+  round-mode              = places,
+  round-precision         = 2,
+  detect-weight           = true,
+  text-series-to-math     = true,
+  table-number-alignment  = center
+}
+
+% =============================================================================
+% Table 11: Directional Accuracy (per model, category, horizon)
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \begin{threeparttable}
+  \caption{Mean directional accuracy (\da, \%) per model, asset class, and
+    horizon, averaged across assets within each category and over three
+    seeds. Values close to 50\% indicate no systematic directional bias.}
+  \label{tab:directional_accuracy}
+  \footnotesize
+  \setlength{\tabcolsep}{6pt}
+
+  \begin{tabular}{
+    l
+    S[table-format=2.2]
+    S[table-format=2.2]
+    S[table-format=2.2]
+    S[table-format=2.2]
+    S[table-format=2.2]
+    S[table-format=2.2]
+  }
+    \toprule
+    & \multicolumn{2}{c}{\textbf{Crypto}}
+    & \multicolumn{2}{c}{\textbf{Forex}}
+    & \multicolumn{2}{c}{\textbf{Indices}} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+    \textbf{Model}
+      & {$h{=}4$} & {$h{=}24$}
+      & {$h{=}4$} & {$h{=}24$}
+      & {$h{=}4$} & {$h{=}24$} \\
+    \midrule
+    \autoformer     & 50.41 & 49.96 & 50.06 & 50.11 & 50.01 & 49.98 \\
+    \dlinear        & 49.70 & 49.94 & 50.13 & 50.12 & 49.97 & 49.96 \\
+    \itransformer   & 49.58 & 50.22 & 50.04 & 49.99 & 49.90 & 50.18 \\
+    \lstm           & 49.73 & 50.07 & 50.08 & 49.95 & 49.88 & 49.95 \\
+    \moderntcn      & 50.04 & 49.96 & 49.96 & 50.03 & 50.34 & 50.03 \\
+    \nhits          & 50.05 & 49.87 & 50.02 & 50.03 & 50.78 & 49.92 \\
+    \patchtst       & 50.07 & 49.85 & 50.10 & 49.98 & 50.42 & 49.95 \\
+    \timesnet       & 50.57 & 50.34 & 50.05 & 49.88 & 50.27 & 50.18 \\
+    \timexer        & 49.86 & 49.94 & 49.98 & 50.08 & 50.92 & 50.20 \\
+    \bottomrule
+  \end{tabular}
+
+  \begin{tablenotes}[flushleft]\footnotesize
+    \item Mean \da\ across all 54 model--category--horizon combinations is
+      50.08\%, indistinguishable from a fair-coin baseline. No combination
+      deviates meaningfully from 50\%. Values below 50\,\% indicate slight
+      down-trend bias arising from scaling artefacts, not genuine negative
+      directional skill.
+  \end{tablenotes}
+
+  \end{threeparttable}
+\end{table}

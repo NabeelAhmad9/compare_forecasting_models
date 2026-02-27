@@ -1,0 +1,24 @@
+patch_size: 8
+patch_stride: 8
+num_blocks:
+- 1
+- 1
+- 1
+dims:
+- 32
+- 64
+- 96
+ffn_ratio: 1
+downsample_ratio: 2
+use_multi_scale: false
+individual: false
+decomposition: false
+revin: true
+affine: true
+subtract_last: false
+dropout: 0.1
+head_dropout: 0.1
+kernel_size: 25
+learning_rate: 0.000765287218275009
+batch_size: 64
+small_kernel_merged: false

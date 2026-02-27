@@ -1,0 +1,172 @@
+% =============================================================================
+% Table 10: Statistical Significance Tests — Comprehensive Summary
+% Four panels: (A) Omnibus Friedman tests, (B) Cross-horizon Spearman + Stouffer,
+%              (C) ICC seed reliability, (D) Jonckheere-Terpstra complexity test
+% =============================================================================
+
+% ---- Panel A: Omnibus Non-Parametric Tests ----------------------------------
+\begin{table}[htbp]
+  \centering
+  \begin{threeparttable}
+  \caption{Statistical significance tests — Panel~A: Friedman-Iman-Davenport
+    omnibus tests.  \chisq: Friedman $\chi^2$ statistic (8~df); $F$:
+    Iman-Davenport $F$-statistic; $n$: number of blocks (evaluation points).
+    All tests reject \Hzero at $\alpha = 0.001$.}
+  \label{tab:stat_tests_friedman}
+  \setlength{\tabcolsep}{7pt}%
+  \begin{tabular}{%
+    l%              Scope
+    S[table-format=3.2]%  chi^2
+    S[table-format=3.2]%  F
+    l%              df
+    l%              p-value
+    c%              n
+  }
+    \toprule
+    \textbf{Scope}
+      & {\chisq(8)}
+      & {$F$}
+      & {df}
+      & {$p$}
+      & {$n$} \\
+    \midrule
+    Global (all 12 assets, $h\in\{4,24\}$) & 156.49 & 101.36 & (8,\;184) & $<\!10^{-15}$ & 24 \\
+    Crypto (4~assets, $h\in\{4,24\}$)      &  49.23 &  23.34 & (8,\;56)  & $<\!10^{-15}$ &  8 \\
+    Forex (4~assets, $h\in\{4,24\}$)       &  56.00 &  49.00 & (8,\;56)  & $<\!10^{-15}$ &  8 \\
+    Indices (4~assets, $h\in\{4,24\}$)     &  60.40 & 117.44 & (8,\;56)  & $<\!10^{-15}$ &  8 \\
+    \bottomrule
+  \end{tabular}
+  \end{threeparttable}
+\end{table}
+
+% ---- Panel B: Cross-Horizon Spearman + Stouffer ----------------------------
+\begin{table}[htbp]
+  \centering
+  \begin{threeparttable}
+  \caption{Statistical significance tests — Panel~B: Spearman rank
+    correlations between model rankings at $\hfour$ and $\htwentyfour$, plus
+    Stouffer combined test.  Rankings are based on mean \rmse across three
+    seeds for each of the nine architectures ($n = 9$ per asset).
+    All 12 per-asset correlations are significant at $\alpha = 0.05$.}
+  \label{tab:stat_tests_spearman}
+  \setlength{\tabcolsep}{8pt}%
+  \begin{tabular}{%
+    l%         Category
+    l%         Asset
+    S[table-format=1.4]%  rho
+    l%         p-value
+  }
+    \toprule
+    \textbf{Category} & \textbf{Asset}
+      & {Spearman $\rho$}
+      & {$p$-value} \\
+    \midrule
+    Crypto  & ADA/USDT          & 0.683 & 0.0424 \\
+    Crypto  & BNB/USDT          & 0.917 & 0.0005 \\
+    Crypto  & BTC/USDT          & 0.917 & 0.0005 \\
+    Crypto  & ETH/USDT          & 0.783 & 0.0125 \\
+    \addlinespace
+    Forex   & AUD/USD           & 0.867 & 0.0025 \\
+    Forex   & EUR/USD           & 1.000 & $<\!10^{-9}$ \\
+    Forex   & GBP/USD           & 0.800 & 0.0096 \\
+    Forex   & USD/JPY           & 0.950 & 0.0001 \\
+    \addlinespace
+    Indices & DAX               & 0.883 & 0.0016 \\
+    Indices & Dow Jones         & 0.867 & 0.0025 \\
+    Indices & S\&P~500          & 0.967 & $<\!10^{-4}$ \\
+    Indices & NASDAQ~100        & 0.983 & $<\!10^{-5}$ \\
+    \midrule
+    \multicolumn{2}{l}{\textbf{Stouffer combined} ($n = 12$ assets)}
+      & \multicolumn{1}{S[table-format=1.2]}{6.17}
+      & $3.47\times10^{-10}$ \\
+    \bottomrule
+  \end{tabular}
+  \begin{tablenotes}[flushleft]\footnotesize
+    \item Stouffer combined $Z$-statistic aggregates the 12 per-asset
+      one-sided Spearman $p$-values using the inverse-normal method.
+      The global $p = 3.47\times10^{-10}$ confirms that cross-horizon
+      rank stability is a systematic property of the benchmark.
+  \end{tablenotes}
+  \end{threeparttable}
+\end{table}
+
+% ---- Panel C: ICC Seed Reliability ------------------------------------------
+\begin{table}[htbp]
+  \centering
+  \begin{threeparttable}
+  \caption{Statistical significance tests — Panel~C: Intraclass Correlation
+    Coefficient (\icc; two-way mixed, absolute agreement) for three
+    representative assets at $\htwentyfour$.  High \icc values confirm
+    negligible seed-to-seed variation relative to inter-model differences.}
+  \label{tab:stat_tests_icc}
+  \setlength{\tabcolsep}{8pt}%
+  \begin{tabular}{%
+    l%         Asset
+    S[table-format=1.4]%  ICC
+    S[table-format=4.1]%  F
+    l%         p-value
+  }
+    \toprule
+    \textbf{Asset ($h{=}24$)}
+      & {\icc}
+      & {$F$-statistic}
+      & {$p$-value} \\
+    \midrule
+    BTC/USDT     & 0.9982 & 1650.2 & $<\!10^{-15}$ \\
+    EUR/USD      & 0.9904 &  309.6 & $<\!10^{-15}$ \\
+    S\&P~500     & 0.9987 & 2255.6 & $<\!10^{-15}$ \\
+    \bottomrule
+  \end{tabular}
+  \begin{tablenotes}[flushleft]\footnotesize
+    \item Each \icc computed over 9 models $\times$ 3 seeds.  $F$-statistic
+      tests \Hzero: all seed means are equal.  Values above 0.99 indicate
+      that $>99\%$ of inter-model variance is attributable to architecture
+      rather than random initialisation.
+  \end{tablenotes}
+  \end{threeparttable}
+\end{table}
+
+% ---- Panel D: Jonckheere-Terpstra Complexity Monotonicity Test --------------
+\begin{table}[htbp]
+  \centering
+  \begin{threeparttable}
+  \caption{Statistical significance tests — Panel~D:
+    Jonckheere-Terpstra (\jt) test for a monotonic relationship between
+    model complexity (parameter count) and \rmse rank.  A significant
+    positive result would indicate that more parameters reliably yield
+    better ranks.  Three complexity groups: $\leq\!30\mathrm{K}$,
+    $30\mathrm{K}$--$200\mathrm{K}$, $>\!200\mathrm{K}$ parameters.}
+  \label{tab:stat_tests_jt}
+  \setlength{\tabcolsep}{8pt}%
+  \begin{tabular}{%
+    l%         Category
+    c%         Horizon
+    S[table-format=+1.4]%  JT z-stat
+    S[table-format=1.4]%   p-value
+    c%         Conclusion
+  }
+    \toprule
+    \textbf{Category}
+      & \textbf{Horizon}
+      & {\jt $z$}
+      & {$p$-value}
+      & \textbf{Monotonic?} \\
+    \midrule
+    Crypto  & 4  & +0.348 & 0.364 & No \\
+    Crypto  & 24 & -0.348 & 0.636 & No \\
+    \addlinespace
+    Forex   & 4  & +0.377 & 0.353 & No \\
+    Forex   & 24 & -0.290 & 0.614 & No \\
+    \addlinespace
+    Indices & 4  & -1.248 & 0.894 & No \\
+    Indices & 24 & -1.480 & 0.931 & No \\
+    \bottomrule
+  \end{tabular}
+  \begin{tablenotes}[flushleft]\footnotesize
+    \item No test achieves significance ($\alpha = 0.05$); all $p > 0.35$.
+      Negative $z$ values indicate a tendency for \emph{fewer} parameters
+      to yield better ranks, consistent with the Pareto frontier defined
+      by \dlinear, \patchtst, and \moderntcn (Figure~\ref{fig:complexity}).
+  \end{tablenotes}
+  \end{threeparttable}
+\end{table}

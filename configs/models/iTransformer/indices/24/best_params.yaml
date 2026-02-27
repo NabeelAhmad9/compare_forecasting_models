@@ -1,0 +1,7 @@
+d_model: 96
+d_ff: 128
+e_layers: 2
+n_heads: 16
+dropout: 0.05
+learning_rate: 0.002298752892366083
+batch_size: 128

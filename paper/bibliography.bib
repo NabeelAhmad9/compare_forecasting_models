@@ -1,0 +1,366 @@
+% =============================================================================
+% bibliography.bib — References
+% =============================================================================
+
+% --- Classical Financial Forecasting ---
+
+@article{Box1970,
+  author  = {Box, George E. P. and Jenkins, Gwilym M.},
+  title   = {Time Series Analysis: Forecasting and Control},
+  journal = {Journal of the American Statistical Association},
+  year    = {1970},
+  volume  = {65},
+  number  = {332},
+  pages   = {1509--1526}
+}
+
+@article{Bollerslev1986,
+  author  = {Bollerslev, Tim},
+  title   = {Generalized Autoregressive Conditional Heteroskedasticity},
+  journal = {Journal of Econometrics},
+  year    = {1986},
+  volume  = {31},
+  number  = {3},
+  pages   = {307--327}
+}
+
+@article{Engle1982,
+  author  = {Engle, Robert F.},
+  title   = {Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of {United Kingdom} Inflation},
+  journal = {Econometrica},
+  year    = {1982},
+  volume  = {50},
+  number  = {4},
+  pages   = {987--1007}
+}
+
+@article{Hyndman2008,
+  author  = {Hyndman, Rob J. and Khandakar, Yeasmin},
+  title   = {Automatic Time Series Forecasting: The Forecast Package for {R}},
+  journal = {Journal of Statistical Software},
+  year    = {2008},
+  volume  = {27},
+  number  = {3},
+  pages   = {1--22}
+}
+
+% --- LSTM / RNN ---
+
+@article{Hochreiter1997,
+  author  = {Hochreiter, Sepp and Schmidhuber, J\"{u}rgen},
+  title   = {Long Short-Term Memory},
+  journal = {Neural Computation},
+  year    = {1997},
+  volume  = {9},
+  number  = {8},
+  pages   = {1735--1780}
+}
+
+@article{Gers2000,
+  author  = {Gers, Felix A. and Schmidhuber, J\"{u}rgen and Cummins, Fred},
+  title   = {Learning to Forget: Continual Prediction with {LSTM}},
+  journal = {Neural Computation},
+  year    = {2000},
+  volume  = {12},
+  number  = {10},
+  pages   = {2451--2471}
+}
+
+% --- Transformer-based models ---
+
+@inproceedings{Vaswani2017,
+  author    = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  title     = {Attention is All You Need},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2017},
+  volume    = {30},
+  pages     = {5998--6008}
+}
+
+@inproceedings{Wu2021,
+  author    = {Wu, Haixu and Xu, Jiehui and Wang, Jianmin and Long, Mingsheng},
+  title     = {Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2021},
+  volume    = {34},
+  pages     = {22419--22430}
+}
+
+@inproceedings{Nie2023,
+  author    = {Nie, Yuqi and Nguyen, Nam H. and Sinthong, Phanwadee and Kalagnanam, Jayant},
+  title     = {A Time Series is Worth 64 Words: Long-term Forecasting with Transformers},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2023}
+}
+
+@inproceedings{Liu2024itransformer,
+  author    = {Liu, Yong and Hu, Tengge and Zhang, Haoran and Wu, Haixu and Wang, Shiyu and Ma, Lintao and Long, Mingsheng},
+  title     = {{iTransformer}: Inverted Transformers Are Effective for Time Series Forecasting},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2024}
+}
+
+@inproceedings{Wang2024timexer,
+  author    = {Wang, Yuxuan and Wu, Haixu and Dong, Jiaxiang and Liu, Yong and Qiu, Yunzhong and Zhang, Haoran and Wang, Jianmin and Long, Mingsheng},
+  title     = {{TimeXer}: Empowering Transformers for Time Series Forecasting with Exogenous Variables},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2024}
+}
+
+% --- MLP / Linear models ---
+
+@inproceedings{Zeng2023,
+  author    = {Zeng, Ailing and Chen, Muxi and Zhang, Lei and Xu, Qiang},
+  title     = {Are Transformers Effective for Time Series Forecasting?},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2023},
+  volume    = {37},
+  pages     = {11121--11128}
+}
+
+@inproceedings{Challu2023,
+  author    = {Challu, Cristian and Olivares, Kin G. and Oreshkin, Boris N. and Garza, Federico and Mergenthaler-Canseco, Max and Dubrawski, Artur},
+  title     = {{N-HiTS}: Neural Hierarchical Interpolation for Time Series Forecasting},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2023},
+  volume    = {37},
+  pages     = {6989--6997}
+}
+
+% --- CNN-based models ---
+
+@inproceedings{Wu2023timesnet,
+  author    = {Wu, Haixu and Hu, Tengge and Liu, Yong and Zhou, Hang and Wang, Jianmin and Long, Mingsheng},
+  title     = {{TimesNet}: Temporal 2D-Variation Modeling for General Time Series Analysis},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2023}
+}
+
+@inproceedings{Luo2024moderntcn,
+  author    = {Luo, Donghao and Wang, Xue},
+  title     = {{ModernTCN}: A Modern Pure Convolution Structure for General Time Series Analysis},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2024}
+}
+
+% --- Benchmarking and Reproducibility ---
+
+@article{Makridakis2018,
+  author  = {Makridakis, Spyros and Spiliotis, Evangelos and Assimakopoulos, Vassilios},
+  title   = {The {M4} Competition: Results, Findings, Conclusion and Way Forward},
+  journal = {International Journal of Forecasting},
+  year    = {2018},
+  volume  = {34},
+  number  = {4},
+  pages   = {802--808}
+}
+
+@article{Makridakis2022,
+  author  = {Makridakis, Spyros and Spiliotis, Evangelos and Assimakopoulos, Vassilios},
+  title   = {The {M5} Accuracy Competition: Results, Findings, and Conclusions},
+  journal = {International Journal of Forecasting},
+  year    = {2022},
+  volume  = {38},
+  number  = {4},
+  pages   = {1346--1364}
+}
+
+@article{Hewamalage2021,
+  author  = {Hewamalage, Hansika and Bergmeir, Christoph and Bandara, Kasun},
+  title   = {Recurrent Neural Networks for Time Series Forecasting: Current Status and Future Directions},
+  journal = {International Journal of Forecasting},
+  year    = {2021},
+  volume  = {37},
+  number  = {1},
+  pages   = {388--427}
+}
+
+@article{Lim2021,
+  author  = {Lim, Bryan and Zohren, Stefan},
+  title   = {Time-Series Forecasting with Deep Learning: A Survey},
+  journal = {Philosophical Transactions of the Royal Society A},
+  year    = {2021},
+  volume  = {379},
+  number  = {2194},
+  pages   = {20200209}
+}
+
+% --- Multi-step forecasting strategies ---
+
+@article{Taieb2012,
+  author  = {Ben Taieb, Souhaib and Bontempi, Gianluca and Atiya, Amir F. and Sorjamaa, Antti},
+  title   = {A Review and Comparison of Strategies for Multi-step Ahead Time Series Forecasting Based on the {NN5} Forecasting Competition},
+  journal = {Expert Systems with Applications},
+  year    = {2012},
+  volume  = {39},
+  number  = {8},
+  pages   = {7067--7083}
+}
+
+@article{Chevillon2007,
+  author  = {Chevillon, Guillaume},
+  title   = {Direct Multi-Step Estimation and Forecasting},
+  journal = {Journal of Economic Surveys},
+  year    = {2007},
+  volume  = {21},
+  number  = {4},
+  pages   = {746--785}
+}
+
+% --- Statistical tests ---
+
+@article{Friedman1937,
+  author  = {Friedman, Milton},
+  title   = {The Use of Ranks to Avoid the Assumption of Normality Implicit in the Analysis of Variance},
+  journal = {Journal of the American Statistical Association},
+  year    = {1937},
+  volume  = {32},
+  number  = {200},
+  pages   = {675--701}
+}
+
+@article{Wilcoxon1945,
+  author  = {Wilcoxon, Frank},
+  title   = {Individual Comparisons by Ranking Methods},
+  journal = {Biometrics Bulletin},
+  year    = {1945},
+  volume  = {1},
+  number  = {6},
+  pages   = {80--83}
+}
+
+@article{Demsar2006,
+  author  = {Dem\v{s}ar, Janez},
+  title   = {Statistical Comparisons of Classifiers over Multiple Data Sets},
+  journal = {Journal of Machine Learning Research},
+  year    = {2006},
+  volume  = {7},
+  pages   = {1--30}
+}
+
+@phdthesis{nemenyi1963,
+  author  = {Nemenyi, Peter B.},
+  title   = {Distribution-Free Multiple Comparisons},
+  school  = {Princeton University},
+  year    = {1963}
+}
+
+@article{diebold1995,
+  author  = {Diebold, Francis X. and Mariano, Roberto S.},
+  title   = {Comparing Predictive Accuracy},
+  journal = {Journal of Business \& Economic Statistics},
+  year    = {1995},
+  volume  = {13},
+  number  = {3},
+  pages   = {253--263}
+}
+
+@article{harvey1997,
+  author  = {Harvey, David and Leybourne, Stephen and Newbold, Paul},
+  title   = {Testing the Equality of Prediction Mean Squared Errors},
+  journal = {International Journal of Forecasting},
+  year    = {1997},
+  volume  = {13},
+  number  = {2},
+  pages   = {281--291}
+}
+
+% --- Hyperparameter optimisation ---
+
+@inproceedings{Akiba2019,
+  author    = {Akiba, Takuya and Sano, Shotaro and Yanase, Toshihiko and Ohta, Takeru and Koyama, Masanori},
+  title     = {Optuna: A Next-Generation Hyperparameter Optimization Framework},
+  booktitle = {Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+  year      = {2019},
+  pages     = {2623--2631}
+}
+
+@inproceedings{Bergstra2011,
+  author    = {Bergstra, James and Bardenet, R\'{e}mi and Bengio, Yoshua and K\'{e}gl, Bal\'{a}zs},
+  title     = {Algorithms for Hyper-Parameter Optimization},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2011},
+  volume    = {24},
+  pages     = {2546--2554}
+}
+
+% --- Financial forecasting with deep learning ---
+
+@article{Sezer2020,
+  author  = {Sezer, Omer Berat and Gudelek, Mehmet Ugur and Ozbayoglu, Ahmet Murat},
+  title   = {Financial Time Series Forecasting with Deep Learning: A Systematic Literature Review: 2005--2019},
+  journal = {Applied Soft Computing},
+  year    = {2020},
+  volume  = {90},
+  pages   = {106181}
+}
+
+% --- Temporal Convolutional Networks ---
+
+@article{BaiTCN2018,
+  author  = {Bai, Shaojie and Kolter, J. Zico and Koltun, Vladlen},
+  title   = {An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling},
+  journal = {arXiv preprint arXiv:1803.01271},
+  year    = {2018}
+}
+
+% --- Normalization ---
+
+@inproceedings{Kim2022,
+  author    = {Kim, Taesung and Kim, Jinhee and Tae, Yunwon and Park, Cheonbok and Choo, Jang-Ho and Ko, Junmo},
+  title     = {Reversible Instance Normalization for Accurate Time-Series Forecasting against Distribution Shift},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2022}
+}
+
+% --- Reproducibility in ML ---
+
+@inproceedings{Henderson2018,
+  author    = {Henderson, Peter and Islam, Riashat and Bachman, Philip and Pineau, Joelle and Precup, Doina and Meger, David},
+  title     = {Deep Reinforcement Learning That Matters},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2018},
+  volume    = {32}
+}
+
+@inproceedings{Bouthillier2021,
+  author    = {Bouthillier, Xavier and Delaunay, Pierre and Bronzi, Mirko and Trofimov, Assya and Nichyporuk, Brennan and Szeto, Justin and Sepah, Nazanin and Raff, Edward and Mber, Kanika and Voleti, Harsh and Kahou, Samira Ebrahimi and Pal, Christopher},
+  title     = {Accounting for Variance in Machine Learning Benchmarks},
+  booktitle = {Proceedings of Machine Learning and Systems (MLSys)},
+  year      = {2021},
+  volume    = {3},
+  pages     = {747--769}
+}
+
+% --- PyTorch ---
+
+@inproceedings{Paszke2019,
+  author    = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and K\"{o}pf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Jungjo and Chintala, Soumith},
+  title     = {{PyTorch}: An Imperative Style, High-Performance Deep Learning Library},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2019},
+  volume    = {32},
+  pages     = {8024--8035}
+}
+
+% --- Financial markets and characteristics ---
+
+@article{Cont2001,
+  author  = {Cont, Rama},
+  title   = {Empirical Properties of Asset Returns: Stylized Facts and Statistical Issues},
+  journal = {Quantitative Finance},
+  year    = {2001},
+  volume  = {1},
+  number  = {2},
+  pages   = {223--236}
+}
+
+@article{Fama1970,
+  author  = {Fama, Eugene F.},
+  title   = {Efficient Capital Markets: A Review of Theory and Empirical Work},
+  journal = {The Journal of Finance},
+  year    = {1970},
+  volume  = {25},
+  number  = {2},
+  pages   = {383--417}
+}

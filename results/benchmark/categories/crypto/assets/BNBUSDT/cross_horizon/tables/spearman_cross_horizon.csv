@@ -1,0 +1,2 @@
+category,asset,horizon_low,horizon_high,spearman_rho,p_value,n_models
+crypto,BNBUSDT,4,24,0.9166666666666666,0.0005066190663052084,9

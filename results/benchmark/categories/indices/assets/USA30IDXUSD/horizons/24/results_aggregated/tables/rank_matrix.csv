@@ -1,0 +1,10 @@
+model,rank
+ModernTCN,1.0
+PatchTST,2.0
+N-HiTS,3.0
+TimeXer,4.0
+iTransformer,5.0
+DLinear,6.0
+Autoformer,7.0
+TimesNet,8.0
+LSTM,9.0

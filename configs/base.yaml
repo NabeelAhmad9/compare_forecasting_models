@@ -1,0 +1,22 @@
+# Global project defaults
+
+project_name: compare_forecasting_models
+
+# Device settings
+device: auto  # auto | cpu | cuda | mps
+
+# Directory paths (relative to project root)
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  models_dir: models
+  results_dir: results
+  logs_dir: logs
+  configs_dir: configs
+
+# Logging
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  log_to_file: true
+  system_log: logs/system.log

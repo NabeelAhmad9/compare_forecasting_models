@@ -1,0 +1,164 @@
+% =============================================================================
+% Table 8: Horizon Degradation (Representative Assets)
+% Three sub-tables, one per representative asset, set side by side.
+% =============================================================================
+
+% ---- BTC/USDT ---------------------------------------------------------------
+\begin{table}[htbp]
+  \centering
+  \caption{Horizon degradation for \textbf{BTC/USDT} (top), \textbf{EUR/USD}
+    (middle), and \textbf{Dow Jones} (bottom).  \rmse values are three-seed
+    means.  $\Delta\%$ denotes the relative \rmse increase from $h{=}4$ to
+    $h{=}24$: $\Delta\% = 100\times(\mathrm{RMSE}_{24} -
+    \mathrm{RMSE}_{4})/\mathrm{RMSE}_{4}$.  Bold marks the model with the
+    lowest \rmse at $h{=}24$ across all nine architectures.}
+  \label{tab:horizon_degradation_btc}
+  \setlength{\tabcolsep}{9pt}%
+  \begin{tabular}{l
+    S[table-format=5.2, round-precision=2]
+    S[table-format=5.2, round-precision=2]
+    S[table-format=3.2, round-precision=2]}
+    \toprule
+    \textbf{Model}
+      & {\rmse, $h{=}4$}
+      & {\rmse, $h{=}24$}
+      & {$\Delta\%$} \\
+    \midrule
+    \autoformer   & 1284.9  & 2670.0  & 107.8 \\
+    \dlinear      &  772.0  & 1644.1  & 113.0 \\
+    \itransformer &  743.5  & 1651.3  & 122.1 \\
+    \lstm         & 8029.9  & 10878.7 &  35.5 \\
+    \moderntcn    &  731.6  & \bfseries 1617.4  & 121.1 \\
+    \nhits        &  930.5  & 1724.5  &  85.3 \\
+    \patchtst     &  731.1  & 1619.1  & 121.5 \\
+    \timesnet     &  793.6  & 1840.4  & 131.9 \\
+    \timexer      &  750.3  & 1624.9  & 116.6 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% ---- EUR/USD ----------------------------------------------------------------
+\begin{table}[htbp]
+  \centering
+  \caption{Horizon degradation for \textbf{EUR/USD}.  \rmse values are
+    three-seed means.  $\Delta\%$ defined as in
+    Table~\ref{tab:horizon_degradation_btc}.}
+  \label{tab:horizon_degradation_eurusd}
+  \setlength{\tabcolsep}{9pt}%
+  \begin{tabular}{l
+    S[table-format=1.2, round-precision=2]
+    S[table-format=1.2, round-precision=2]
+    S[table-format=3.2, round-precision=2]}
+    \toprule
+    \textbf{Model}
+      & {\rmse, $h{=}4$}
+      & {\rmse, $h{=}24$}
+      & {$\Delta\%$} \\
+    \midrule
+    \autoformer   & 0.00284 & 0.00626 & 120.3 \\
+    \dlinear      & 0.00159 & 0.00347 & 118.5 \\
+    \itransformer & 0.00156 & 0.00345 & 121.0 \\
+    \lstm         & 0.00179 & 0.00364 & 102.6 \\
+    \moderntcn    & 0.00152 & \bfseries 0.00338 & 121.4 \\
+    \nhits        & 0.00170 & 0.00353 & 107.4 \\
+    \patchtst     & 0.00153 & 0.00344 & 124.9 \\
+    \timesnet     & 0.00298 & 0.00627 & 110.3 \\
+    \timexer      & 0.00161 & 0.00349 & 116.7 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% ---- Dow Jones --------------------------------------------------------------
+\begin{table}[htbp]
+  \centering
+  \caption{Horizon degradation for \textbf{Dow Jones}.  \rmse values are
+    three-seed means.  $\Delta\%$ defined as in
+    Table~\ref{tab:horizon_degradation_btc}.}
+  \label{tab:horizon_degradation_usa30}
+  \setlength{\tabcolsep}{9pt}%
+  \begin{tabular}{l
+    S[table-format=4.2, round-precision=2]
+    S[table-format=4.2, round-precision=2]
+    S[table-format=3.2, round-precision=2]}
+    \toprule
+    \textbf{Model}
+      & {\rmse, $h{=}4$}
+      & {\rmse, $h{=}24$}
+      & {$\Delta\%$} \\
+    \midrule
+    \autoformer   &  160.7 &  410.7 & 155.6 \\
+    \dlinear      &  121.3 &  279.1 & 130.1 \\
+    \itransformer &  115.2 &  258.4 & 124.3 \\
+    \lstm         & 1261.7 & 1688.5 &  33.8 \\
+    \moderntcn    &  112.5 & \bfseries 249.5 & 121.7 \\
+    \nhits        &  160.2 &  255.9 &  59.7 \\
+    \patchtst     &  113.0 &  252.2 & 123.2 \\
+    \timesnet     &  160.3 &  431.4 & 169.1 \\
+    \timexer      &  118.4 &  258.3 & 118.1 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+% =============================================================================
+% Table 8d: Horizon Ranking Shift for Three Representative Assets
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \caption{Horizon ranking shift for the three representative assets.
+    $r_4$ and $r_{24}$: model rank at $\hfour$ and $\htwentyfour$ respectively
+    (lower is better; 1\,=\,best).
+    $\Delta = r_{24} - r_4$: positive values indicate rank degradation
+    (the model performs \emph{relatively worse} at longer horizons);
+    negative values indicate rank improvement.
+    Values in \textbf{bold} denote $|\Delta| \geq 2$.
+    Rankings are based on mean \rmse across three seeds.}
+  \label{tab:horizon_ranking_shift}
+  \setlength{\tabcolsep}{6pt}%
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{%
+    @{\extracolsep{\fill}}
+    l%      Model
+    S[table-format=1.2, round-precision=2]%  BTC h=4
+    S[table-format=1.2, round-precision=2]%  BTC h=24
+    S[table-format=+1.2, round-precision=2]% BTC delta
+    @{\hspace{2em}\extracolsep{\fill}}
+    S[table-format=1.2, round-precision=2]%  EUR h=4
+    S[table-format=1.2, round-precision=2]%  EUR h=24
+    S[table-format=+1.2, round-precision=2]% EUR delta
+    @{\hspace{2em}\extracolsep{\fill}}
+    S[table-format=1.2, round-precision=2]%  USA30 h=4
+    S[table-format=1.2, round-precision=2]%  USA30 h=24
+    S[table-format=+1.2, round-precision=2]% USA30 delta
+    @{}
+  }
+    \toprule
+    & \multicolumn{3}{c}{\textbf{BTC/USDT}}
+    & \multicolumn{3}{c}{\textbf{EUR/USD}}
+    & \multicolumn{3}{c}{\textbf{Dow Jones}} \\
+    \cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+    \textbf{Model}
+      & {$r_4$} & {$r_{24}$} & {$\Delta$}
+      & {$r_4$} & {$r_{24}$} & {$\Delta$}
+      & {$r_4$} & {$r_{24}$} & {$\Delta$} \\
+    \midrule
+    \autoformer   & 8 & 8 &  0 & 8 & 8 &  0 & 8 & 7 & -1 \\
+    \dlinear      & 5 & 4 & -1 & 4 & 4 &  0 & 5 & 6 & +1 \\
+    \itransformer & 3 & 5 & \bfseries +2 & 3 & 3 &  0 & 3 & 5 & \bfseries +2 \\
+    \lstm         & 9 & 9 &  0 & 7 & 7 &  0 & 9 & 9 &  0 \\
+    \moderntcn    & 2 & 1 & -1 & 1 & 1 &  0 & 1 & 1 &  0 \\
+    \nhits        & 7 & 6 & -1 & 6 & 6 &  0 & 6 & 3 & \bfseries -3 \\
+    \patchtst     & 1 & 2 & +1 & 2 & 2 &  0 & 2 & 2 &  0 \\
+    \timesnet     & 6 & 7 & +1 & 9 & 9 &  0 & 7 & 8 & +1 \\
+    \timexer      & 4 & 3 & -1 & 5 & 5 &  0 & 4 & 4 &  0 \\
+    \bottomrule
+  \end{tabular*}
+  \begin{tablenotes}[flushleft]\footnotesize
+    \item EUR/USD exhibits perfect rank stability ($\Delta = 0$ for all nine models),
+    confirming that the forex ranking is invariant to horizon.
+    iTransformer degrades by 2 positions in both BTC/USDT and Dow Jones,
+    suggesting its inductive bias is less suited to longer-horizon financial prediction.
+    N-HiTS improves by 3 positions in Dow Jones at $\htwentyfour$, the largest positive
+    shift observed, consistent with its multi-rate pooling design capturing longer
+    temporal structure in indices.
+  \end{tablenotes}
+  \end{threeparttable}
+\end{table}

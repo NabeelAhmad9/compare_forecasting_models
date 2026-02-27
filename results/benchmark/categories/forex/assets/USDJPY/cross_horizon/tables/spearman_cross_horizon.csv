@@ -1,0 +1,2 @@
+category,asset,horizon_low,horizon_high,spearman_rho,p_value,n_models
+forex,USDJPY,4,24,0.9500000000000001,8.762523965086177e-05,9

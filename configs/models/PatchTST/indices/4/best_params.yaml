@@ -1,0 +1,15 @@
+d_model: 64
+n_heads: 4
+e_layers: 2
+d_ff: 256
+patch_len: 16
+stride: 4
+dropout: 0.05
+fc_dropout: 0.05
+head_dropout: 0.05
+act: gelu
+individual: true
+revin: true
+decomposition: false
+learning_rate: 0.0033706023053513817
+batch_size: 64

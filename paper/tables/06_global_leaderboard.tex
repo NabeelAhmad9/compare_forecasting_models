@@ -1,0 +1,39 @@
+% =============================================================================
+% Table 6: Global Leaderboard
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \caption{Global model ranking aggregated across all 12 assets and both
+    horizons ($h\in\{4,24\}$), categorised by architectural family. Each
+    (asset, horizon) pair contributes one rank based on mean \rmse over
+    three seeds.  Mean and median ranks are computed over 24 evaluation slots.
+    Win~Count indicates the number of slots in which a model achieved rank~1.
+    Bold marks the best value per column.}
+  \label{tab:global_leaderboard}
+  \setlength{\tabcolsep}{6pt}%
+  \begin{tabular}{%
+    l%
+    l%                    Family
+    S[table-format=1.3]%  Mean Rank
+    S[table-format=1.1]%  Median Rank
+    l%                    Wins
+  }
+    \toprule
+    \textbf{Model}
+      & \textbf{Family}
+      & {\textbf{Mean Rank}}
+      & {\textbf{Median Rank}}
+      & \textbf{Wins (of 24)} \\
+    \midrule
+    \textbf{\moderntcn} & CNN           & \bfseries 1.333 & \bfseries 1.0 & \textbf{18~(75.0\%)} \\
+    \patchtst           & Transformer   & 2.000           & 2.0           & 3~(12.5\%)            \\
+    \itransformer       & Transformer   & 3.667           & 3.0           & 0                     \\
+    \timexer            & Transformer   & 4.292           & 4.0           & 0                     \\
+    \dlinear            & MLP / Linear  & 4.958           & 5.0           & 0                     \\
+    \nhits              & MLP / Linear  & 5.250           & 6.0           & 3~(12.5\%)            \\
+    \timesnet           & CNN           & 7.708           & 8.0           & 0                     \\
+    \autoformer         & Transformer   & 7.833           & 8.0           & 0                     \\
+    \lstm               & RNN           & 7.958           & 9.0           & 0                     \\
+    \bottomrule
+  \end{tabular}
+\end{table}

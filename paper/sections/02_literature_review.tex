@@ -1,0 +1,73 @@
+% =============================================================================
+% Section 2: Related Work
+% =============================================================================
+\section{Related Work}
+\label{sec:literature_review}
+
+This section positions the present study within the broader landscape of financial time-series forecasting.  It traces the evolution from classical econometric models through four families of deep learning architectures, reviews multi-step forecasting strategies, and identifies the methodological gaps this benchmark addresses.
+
+% --------------------------------------------------------------------------
+\subsection{Classical and Statistical Approaches}
+\label{sec:classical_forecasting}
+
+The ARIMA family \citep{Box1970} remains a cornerstone of time-series analysis, capturing linear temporal dependencies through differencing and lagged-error terms.  Exponential smoothing methods \citep{Hyndman2008} offer computationally efficient trend--seasonality decomposition, while the ARCH \citep{Engle1982} and GARCH \citep{Bollerslev1986} frameworks provide the standard toolkit for modelling conditional heteroscedasticity in financial returns.
+
+These methods share three fundamental limitations.  First, they assume linearity in the conditional mean or variance, yet financial returns exhibit nonlinear phenomena---leverage effects, long memory, and regime transitions \citep{Cont2001}---that violate these assumptions.  Second, classical models are inherently univariate (or require explicit cross-variable specification), limiting their ability to exploit joint OHLCV information.  Third, multi-step forecasting under these frameworks typically proceeds recursively, compounding prediction errors at longer horizons \citep{Taieb2012}.  These limitations motivate the use of deep learning architectures that learn nonlinear, multivariate mappings directly from data.
+
+% --------------------------------------------------------------------------
+\subsection{Deep Learning Architectures for Time-Series}
+\label{sec:dl_time_series}
+
+Deep learning approaches to time-series forecasting have evolved along four architectural families, each encoding distinct assumptions about temporal structure.  The specific models included in this benchmark are reviewed below, with emphasis on their temporal inductive biases.
+
+\paragraph{Recurrent architectures.}
+Long Short-Term Memory networks \citep{Hochreiter1997, Gers2000} introduced gated recurrence to address vanishing gradients, maintaining a cell state that selectively retains or discards information.  While effective for short-range dependencies, sequential processing limits parallelisation and hinders learning of very long-range patterns.  Surveys confirm that LSTMs served as the default neural forecasting baseline during 2017--2021 \citep{Hewamalage2021, Lim2021}.  In this benchmark, \lstm represents the recurrent family, providing a classical reference point.  Its inductive bias is autoregressive: the hidden state compresses all past information into a fixed-dimensional vector, relying on recurrence to propagate long-range context.
+
+\paragraph{Transformer-based architectures.}
+The self-attention mechanism \citep{Vaswani2017} enables direct modelling of pairwise dependencies across arbitrary temporal lags, overcoming the sequential bottleneck of recurrence.  Four Transformer variants are evaluated:
+
+\begin{itemize}[nosep]
+  \item \autoformer \citep{Wu2021} replaces canonical attention with an auto-correlation mechanism operating in the frequency domain at $\bigO(L \log L)$ complexity, coupled with progressive trend--seasonal decomposition.  Its inductive bias assumes that dominant temporal patterns manifest as periodic auto-correlations detectable via spectral analysis.
+
+  \item \patchtst \citep{Nie2023} segments input series into patches, treats each as a token, and applies a Transformer encoder with channel-independent processing and RevIN normalisation \citep{Kim2022} for distribution-shift mitigation.  Its inductive bias prioritises local temporal coherence within patches while using attention for global inter-patch dependencies.
+
+  \item \itransformer \citep{Liu2024itransformer} inverts the attention paradigm: each variate's full temporal trajectory serves as a token, and attention operates across the variate dimension, directly capturing cross-variable interactions.  Its inductive bias assumes that inter-variate relationships are the primary source of predictive information.
+
+  \item \timexer \citep{Wang2024timexer} separates target and exogenous variables, embedding the patched target alongside learnable global tokens and applying cross-attention to query inverted exogenous representations.  Its inductive bias explicitly separates autoregressive dynamics from exogenous covariate influence.
+\end{itemize}
+
+\paragraph{MLP and linear architectures.}
+The necessity of attention for time-series forecasting has been challenged \citep{Zeng2023}, demonstrating that \dlinear---a decomposition-based model with dual independent linear layers mapping seasonal and trend components, without hidden layers, activations, or attention---can match or exceed Transformer performance on standard benchmarks.  Its inductive bias assumes that temporal patterns are adequately captured by linear projections of decomposed components.
+
+\nhits \citep{Challu2023} employs a hierarchical stack of MLP blocks with multi-rate pooling: each block operates at a different temporal resolution, produces coefficients via a multi-layer perceptron, and interpolates them to the forecast horizon through basis-function expansion.  Its inductive bias prioritises multi-scale temporal structure through hierarchical signal decomposition.  Together, these results raise the question of whether attention contributes meaningfully to forecasting accuracy---a question this benchmark addresses.
+
+\paragraph{Convolutional architectures.}
+Temporal convolutional networks (TCNs) apply causal, dilated convolutions to capture long-range dependencies through hierarchical receptive fields \citep{BaiTCN2018}.  The two convolutional models in this benchmark---\timesnet and \moderntcn---each depart from the standard TCN template in distinct ways:
+
+\timesnet \citep{Wu2023timesnet} transforms the forecasting problem from 1D to 2D by identifying dominant FFT-based periods, reshaping the sequence into 2D tensors indexed by period length and intra-period position, and applying Inception-style 2D convolutions.  Its inductive bias assumes that temporal dynamics decompose into inter-period and intra-period variations best captured through spatial convolutions.
+
+\moderntcn \citep{Luo2024moderntcn} employs large-kernel depthwise convolutions with structural reparameterisation (dual branches merged at inference), multi-stage downsampling, and optional RevIN normalisation.  Its inductive bias holds that local temporal patterns at multiple scales, captured through large receptive fields with efficient depthwise operations, suffice for accurate forecasting without frequency-domain or attention mechanisms.
+
+A key question is whether these architectural differences yield \emph{consistent} and \emph{statistically significant} performance differences on financial data, or whether the experimental protocol dominates observed rankings.  The present study disentangles these effects through the controlled protocol described in Section~\ref{sec:experimental_design}.
+
+% --------------------------------------------------------------------------
+\subsection{Multi-Step Forecasting Strategies}
+\label{sec:multistep_strategies}
+
+Multi-step-ahead prediction admits three principal strategies \citep{Taieb2012, Chevillon2007}.  The \emph{recursive} (iterated) strategy applies a one-step model iteratively, feeding predictions back as inputs; this approach is straightforward but accumulates errors geometrically with the horizon length.  The \emph{direct} strategy trains independent output heads for each future step, avoiding error accumulation at the cost of ignoring inter-step temporal coherence.  The \emph{multi-input multi-output} (MIMO) strategy produces all horizon steps in a single forward pass, preserving inter-step dependencies without iterative error propagation.
+
+This benchmark adopts \emph{direct multi-step forecasting}: each model outputs all $h$ forecast steps simultaneously ($h \in \{4, 24\}$) in a single forward pass, matching the native output design of all nine architectures.  No model feeds predictions back as inputs.  Two separate experiments per horizon use distinct lookback windows ($w = 24$ for $\hfour$; $w = 96$ for $\htwentyfour$), enabling isolation of horizon-dependent degradation from architecture-dependent effects.  Three considerations motivate this choice: (i)~it avoids the error-accumulation confound of recursive strategies; (ii)~it matches every architecture's native mode, preventing protocol mismatch; and (iii)~it enables clean cross-horizon comparison (H2) by ensuring that $\hfour$ and $\htwentyfour$ results differ only in task difficulty.
+
+% --------------------------------------------------------------------------
+\subsection{Benchmarking Practices and Identified Gaps}
+\label{sec:benchmarking_gap}
+
+Several prior studies have compared deep learning architectures for time-series forecasting, but persistent methodological limitations constrain the conclusions that can be drawn.  The most relevant benchmarks are reviewed below, mapped to the five gaps from Section~\ref{sec:research_gap}.
+
+Large-scale forecasting competitions have advanced standardised evaluation methodologies.  The M4 competition \citep{Makridakis2018} introduced a common evaluation protocol across 100{,}000 series but focused on macroeconomic and demographic data, did not include modern deep learning architectures (released after 2020), and did not apply pairwise statistical corrections (\textbf{G1}, \textbf{G4}, \textbf{G5}).  The M5 competition \citep{Makridakis2022} extended to retail sales forecasting with hierarchical structure but again excluded recent Transformer, TCN, and MLP architectures (\textbf{G5}).
+
+Within the deep learning literature, a comprehensive benchmark of recurrent networks \citep{Hewamalage2021} excluded Transformer- and CNN-based alternatives and evaluated a single horizon (\textbf{G3}, \textbf{G5}).  The competitiveness of linear models against Transformers was demonstrated \citep{Zeng2023}, but with default hyperparameters for competitors and a single seed (\textbf{G1}, \textbf{G2}).  \timesnet was benchmarked against multiple baselines \citep{Wu2023timesnet} but with uncontrolled HPO budgets and single-seed evaluation (\textbf{G1}, \textbf{G2}).  \patchtst was introduced with strong benchmark results \citep{Nie2023} but on non-financial datasets and without multi-seed replication (\textbf{G2}, \textbf{G5}).  \itransformer was evaluated across standard time-series benchmarks \citep{Liu2024itransformer} but without pairwise statistical tests or multi-horizon degradation analysis (\textbf{G3}, \textbf{G4}).  Within the financial forecasting literature specifically, a comprehensive survey \citep{Sezer2020} noted the absence of controlled experimental comparisons without providing one.
+
+Table~\ref{tab:prior_studies} summarises these prior studies and their gap coverage.  The central finding is that \emph{no prior study simultaneously addresses G1--G5}: every existing benchmark leaves at least two gaps uncontrolled.  The present study fills this compound gap by providing the first controlled, multi-seed, multi-horizon, multi-asset-class comparison with full statistical validation for financial time-series forecasting.
+
+\input{tables/01_prior_studies}

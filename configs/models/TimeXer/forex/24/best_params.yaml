@@ -1,0 +1,12 @@
+d_model: 64
+patch_len: 4
+d_ff: 256
+e_layers: 3
+n_heads: 4
+dropout: 0.15000000000000002
+factor: 3
+activation: gelu
+use_norm: true
+target_idx: 3
+learning_rate: 0.0011623364244752177
+batch_size: 128

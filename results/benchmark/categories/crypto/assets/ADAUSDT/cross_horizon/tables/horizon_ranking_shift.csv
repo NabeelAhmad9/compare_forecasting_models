@@ -1,0 +1,10 @@
+model,horizon_4_rank,horizon_24_rank,shift
+Autoformer,9.0,9.0,0.0
+DLinear,4.0,5.0,1.0
+LSTM,8.0,7.0,-1.0
+ModernTCN,3.0,2.0,-1.0
+N-HiTS,1.0,6.0,5.0
+PatchTST,2.0,1.0,-1.0
+TimeXer,6.0,4.0,-2.0
+TimesNet,7.0,8.0,1.0
+iTransformer,5.0,3.0,-2.0

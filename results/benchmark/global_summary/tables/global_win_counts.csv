@@ -1,0 +1,4 @@
+model,wins,total_comparisons,win_rate
+ModernTCN,18,24,0.75
+N-HiTS,3,24,0.125
+PatchTST,3,24,0.125

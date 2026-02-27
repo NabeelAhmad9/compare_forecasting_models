@@ -1,0 +1,2 @@
+category,asset,horizon_low,horizon_high,spearman_rho,p_value,n_models
+indices,USA500IDXUSD,4,24,0.9666666666666667,2.155031274835775e-05,9

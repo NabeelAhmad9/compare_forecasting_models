@@ -1,0 +1,34 @@
+% =============================================================================
+% Table 3: Model Architectures
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \caption{Summary of the nine deep learning architectures evaluated.  All
+    models receive OHLCV input of shape $(B,\,w,\,5)$ and produce direct
+    multi-step forecasts of shape $(B,\,h)$.  Family abbreviations:
+    RNN~= recurrent, MLP~= multi-layer perceptron,
+    TCN~= temporal convolutional network, TF~= Transformer.}
+  \label{tab:model_architectures}
+  \small
+  \setlength{\tabcolsep}{4pt}%
+  \begin{tabular}{%
+    l%          Model
+    c%          Family
+    p{5.5cm}%   Key Mechanism
+    l%          Reference
+  }
+    \toprule
+    \textbf{Model} & \textbf{Family} & \textbf{Key Mechanism} & \textbf{Reference} \\
+    \midrule
+    \autoformer   & TF  & Auto-correlation \& series decomposition        & \citep{Wu2021} \\
+    \dlinear      & MLP & Linear layers with trend--seasonal decomposition & \citep{Zeng2023} \\
+    \itransformer & TF  & Inverted attention on variate tokens             & \citep{Liu2024itransformer} \\
+    \lstm         & RNN & Gated recurrent cells + dense MLP projection head & \citep{Hochreiter1997} \\
+    \moderntcn    & TCN & Large-kernel depthwise convolutions with patching & \citep{Luo2024moderntcn} \\
+    \nhits        & MLP & Hierarchical interpolation with multi-rate pooling & \citep{Challu2023} \\
+    \patchtst     & TF  & Channel-independent patch-based Transformer      & \citep{Nie2023} \\
+    \timesnet     & TCN & 2D temporal variation via FFT + Inception blocks  & \citep{Wu2023timesnet} \\
+    \timexer      & TF  & Exogenous-variable-aware cross-attention          & \citep{Wang2024timexer} \\
+    \bottomrule
+  \end{tabular}
+\end{table}

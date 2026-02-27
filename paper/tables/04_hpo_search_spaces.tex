@@ -1,0 +1,77 @@
+% =============================================================================
+% Table 4: HPO Search Spaces (Summary)
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \caption{Hyperparameter search spaces per model.  All models share learning
+    rate $\in [5\times10^{-4},\,5\times10^{-3}]$ (log-uniform) and batch
+    size $\in\{64,128\}$.  Only architecture-specific parameters are shown.
+    HPO uses Optuna TPE with \ntrials trials per (model $\times$ horizon
+    $\times$ asset class) on representative assets (BTC/USDT, EUR/USD,
+    Dow Jones) only.}
+  \label{tab:hpo_search_spaces}
+  \small
+  \setlength{\tabcolsep}{6pt}%
+  \renewcommand{\arraystretch}{0.92}%
+  \begin{tabular}{%
+    l%          Model
+    l%          Hyperparameter
+    p{5.2cm}%   Range / Choices
+  }
+    \toprule
+    \textbf{Model} & \textbf{Hyperparameter} & \textbf{Range / Choices} \\
+    \midrule
+    \multirow{5}{*}{\autoformer}
+      & Model dimension          & $\{64, 128\}$ \\
+      & Attention heads          & $\{4, 8\}$ \\
+      & Enc./dec.\ layers        & $\{1, 2\}$ each \\
+      & Feedforward dimension    & $\{64, 128\}$ \\
+      & Dropout rate             & $[0.0, 0.2]$, step~$0.05$ \\
+    \midrule
+    \multirow{2}{*}{\dlinear}
+      & Moving-average kernel    & $[3, 51]$, step~$2$ \\
+      & Per-channel mapping      & $\{\text{true}, \text{false}\}$ \\
+    \midrule
+    \multirow{4}{*}{\itransformer}
+      & Model dimension          & $\{96, 112\}$ \\
+      & Feedforward dimension    & $\{128, 256\}$ \\
+      & Encoder layers           & $[2, 4]$ \\
+      & Attention heads          & $\{4, 8, 16\}$ \\
+    \midrule
+    \multirow{4}{*}{\lstm}
+      & Hidden state size        & $\{64, 128\}$ \\
+      & Recurrent layers         & $[1, 3]$ \\
+      & Projection head width    & $\{64, 128\}$ \\
+      & Bidirectional            & $\{\text{true}, \text{false}\}$ \\
+    \midrule
+    \multirow{4}{*}{\moderntcn}
+      & Patch size               & $\{8, 16\}$ \\
+      & Channel dimensions       & $[32, 64, 96]$ \\
+      & RevIN normalisation      & $\{\text{true}, \text{false}\}$ \\
+      & Dropout / head dropout  & $[0.0, 0.2]$, step~$0.05$ \\
+    \midrule
+    \multirow{4}{*}{\nhits}
+      & Number of blocks         & $[2, 3]$ \\
+      & Hidden layer width       & $\{64, 96\}$ \\
+      & Layers per block         & $[3, 6]$ \\
+      & Pooling kernel sizes     & $\{[2,4,8],\,[4,8,12]\}$ \\
+    \midrule
+    \multirow{4}{*}{\patchtst}
+      & Model dimension          & $\{64\}$ \\
+      & Encoder layers           & $[1, 3]$ \\
+      & Patch length             & $\{16, 24\}$ \\
+      & Stride                   & $\{4, 8\}$ \\
+    \midrule
+    \multirow{3}{*}{\timesnet}
+      & Model dimension          & $\{24, 32\}$ \\
+      & Feedforward dimension    & $\{32, 64\}$ \\
+      & Encoder layers           & $[2, 3]$ \\
+    \midrule
+    \multirow{4}{*}{\timexer}
+      & Model dimension          & $\{64, 96\}$ \\
+      & Feedforward dimension    & $\{128, 256\}$ \\
+      & Encoder layers           & $[2, 3]$ \\
+      & Attention heads          & $\{4, 8\}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}

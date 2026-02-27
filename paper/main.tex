@@ -1,0 +1,329 @@
+% =============================================================================
+% main.tex — Main document
+% =============================================================================
+\documentclass[12pt, a4paper]{article}
+
+% ---------------------------------------------------------------------------
+% Page layout
+% ---------------------------------------------------------------------------
+\usepackage[
+  top=2.0cm, bottom=2.0cm,
+  left=2.0cm, right=2.0cm,
+  headheight=14pt
+]{geometry}
+
+% ---------------------------------------------------------------------------
+% Font stack  — newtx gives Time-Roman body with matching math (superior to
+% mathptmx: better kerning, proper bold-math, no glyph substitution warnings)
+% ---------------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newtxtext}          % Times-style text
+\usepackage{newtxmath}          % Matching math, supersedes mathptmx
+\usepackage[scaled=0.92]{helvet}% Helvetica for sans-serif headings
+\usepackage{microtype}          % Character protrusion + font expansion
+\usepackage{textcomp}           % Additional text companion symbols
+
+% ---------------------------------------------------------------------------
+% Line & paragraph spacing
+% ---------------------------------------------------------------------------
+\usepackage{setspace}
+\setstretch{1.25}               % Comfortable reading density; journal-like
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{4pt plus 1pt minus 1pt}
+
+% ---------------------------------------------------------------------------
+% Mathematics  (newtxmath provides amsmath, amssymb, amsfonts internally)
+% ---------------------------------------------------------------------------
+% amsmath loaded explicitly to guarantee availability of \eqref, \split, etc.
+% newtxmath is compatible with a prior \usepackage{amsmath}.
+\usepackage{amsmath}
+\usepackage{bm}                 % bold math symbols
+
+% ---------------------------------------------------------------------------
+% Tables — full professional toolkit
+% ---------------------------------------------------------------------------
+\usepackage{booktabs}           % \toprule / \midrule / \bottomrule
+\usepackage{multirow}
+\usepackage{array}              % extended column types
+\usepackage{siunitx}
+\sisetup{
+  round-mode          = places,
+  round-precision     = 4,
+  table-format        = 1.4,
+  table-number-alignment = center,
+  reset-text-series   = false,
+  text-series-to-math = true,   % replaces deprecated detect-weight=true
+}
+\usepackage{threeparttable}     % table notes (TNotes)
+\usepackage{tabularx}           % auto-width X columns
+\usepackage{longtable}          % multi-page tables
+\usepackage{pdflscape}          % landscape pages
+
+% Global table row spacing and column padding
+\renewcommand{\arraystretch}{1.22}
+\setlength{\tabcolsep}{5.5pt}
+
+% ---------------------------------------------------------------------------
+% Figures & floats
+% ---------------------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{afterpage}          % \afterpage{\clearpage} for deferred page flushes
+\usepackage[section]{placeins}  % \FloatBarrier — auto-barrier at section boundaries only;
+                                % manual \FloatBarrier used sparingly within sections
+
+% Fine-tune float placement: allow more floats per page and reduce stranded text
+\setcounter{topnumber}{5}          % up to 5 floats at top of a page
+\setcounter{bottomnumber}{3}       % up to 3 floats at bottom
+\setcounter{totalnumber}{8}        % up to 8 floats on a single page
+\renewcommand{\topfraction}{0.88}  % top floats may occupy 88 % of page
+\renewcommand{\bottomfraction}{0.55}
+\renewcommand{\textfraction}{0.07} % text requires only 7 % — minimises stranded text
+\renewcommand{\floatpagefraction}{0.75} % float-only page must be 75 % full
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 4pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+
+% ---------------------------------------------------------------------------
+% Captions — professional journal style
+% ---------------------------------------------------------------------------
+\usepackage[
+  font      = small,            % caption text slightly smaller than body
+  labelfont = {bf, sf, small},  % "Figure X." / "Table X." in bold sans-serif small
+  labelsep  = period,           % period after label, not colon
+  skip      = 6pt,              % vertical gap between float and caption
+  justification = justified,    % full-width justified captions
+  singlelinecheck = false,      % always justify, even single-line captions
+]{caption}
+% Sub-figure captions: even smaller, labelled (a), (b), …
+\captionsetup[subfigure]{
+  font      = footnotesize,
+  labelfont = {bf, sf, footnotesize},
+  skip      = 4pt,
+}
+% Table captions go ABOVE the table — add a little extra space below
+\captionsetup[table]{
+  position  = top,
+  skip      = 6pt,
+}
+
+% ---------------------------------------------------------------------------
+% Colors and hyperlinks
+% ---------------------------------------------------------------------------
+\usepackage[dvipsnames]{xcolor}
+\definecolor{linkblue}{RGB}{0, 53, 107}   % dark navy — less glaring than MidnightBlue
+
+% Bibliography — BibLaTeX with Biber backend (loaded before hyperref).
+% natbib=true provides \citep{} / \citet{} as aliases for \parencite{} / \textcite{}.
+% Each \citep{} produces a single hyperlink unit in the compiled PDF.
+\usepackage[
+  backend      = biber,
+  style        = authoryear,
+  maxcitenames = 2,
+  mincitenames = 1,
+  natbib       = true,
+]{biblatex}
+\addbibresource{bibliography.bib}
+\renewcommand*{\nameyeardelim}{\addcomma\space} % Enforce (Author, Year) formatting.
+\setlength{\bibitemsep}{5pt plus 2pt minus 1pt}  % Consistent bibliography entry spacing
+
+% hyperref loaded last (except cleveref)
+\usepackage[
+  colorlinks  = true,
+  linkcolor   = linkblue,
+  citecolor   = linkblue,
+  urlcolor    = linkblue,
+  bookmarks   = true,
+  pdfstartview= FitH,
+]{hyperref}
+\urlstyle{same}                 % URLs in body font, not monospaced
+
+% Ensure each citation is a single hyperlink unit in the PDF (author + year together).
+\DeclareFieldFormat{bibhyperref}{\bibhyperref{#1}}
+\DeclareFieldFormat{textcitehyperref}{\bibhyperref{#1}}
+\savebibmacro{cite}
+\savebibmacro{textcite}
+\renewbibmacro*{cite}{%
+  \printtext[bibhyperref]{%
+    \restorebibmacro{cite}%
+    \usebibmacro{cite}}}
+\renewbibmacro*{textcite}{%
+  \ifboolexpr{
+    ( not test {\iffieldundef{prenote}} and test {\ifnumequal{\value{citecount}}{1}} )
+    or
+    ( not test {\iffieldundef{postnote}} and test {\ifnumequal{\value{citecount}}{\value{citetotal}}} )
+  }
+    {\DeclareFieldAlias{textcitehyperref}{noformat}}
+    {}%
+  \printtext[textcitehyperref]{%
+    \restorebibmacro{textcite}%
+    \usebibmacro{textcite}}}
+
+% ---------------------------------------------------------------------------
+% Miscellaneous
+% ---------------------------------------------------------------------------
+\usepackage{xspace}
+\usepackage{enumitem}
+\setlist{
+  nosep,
+  topsep      = 5pt,
+  itemsep     = 2pt,
+  parsep      = 1pt,
+  leftmargin  = 1.8em,
+}                               % Consistent, balanced list spacing globally
+
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows.meta, positioning, fit, backgrounds, calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ---------------------------------------------------------------------------
+% Widow and orphan control
+% ---------------------------------------------------------------------------
+\widowpenalty  = 10000
+\clubpenalty   = 10000
+\displaywidowpenalty = 10000
+
+% ---------------------------------------------------------------------------
+% Section heading format — sans-serif hierarchy with balanced spacing
+% ---------------------------------------------------------------------------
+\usepackage{titlesec}
+
+% --- Format: clear sans-serif hierarchy ---
+\titleformat{\section}
+  {\Large\bfseries\sffamily}             % Large bold sans-serif
+  {\thesection}{0.8em}{}                  % Number + gap
+\titleformat{\subsection}
+  {\large\bfseries\sffamily}             % large bold sans-serif
+  {\thesubsection}{0.7em}{}               % Number + gap
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\sffamily}        % normalsize bold sans-serif
+  {\thesubsubsection}{0.6em}{}            % Number + gap
+\titleformat{\paragraph}[runin]
+  {\normalsize\bfseries}                 % Bold run-in
+  {}{0em}{}                               % Standard run-in paragraph
+
+% --- Spacing: consistent vertical rhythm ---
+\titlespacing*{\section}      {0pt}{22pt plus 4pt minus 2pt}{10pt plus 2pt minus 1pt}
+\titlespacing*{\subsection}   {0pt}{16pt plus 3pt minus 2pt}{8pt plus 2pt minus 1pt}
+\titlespacing*{\subsubsection}{0pt}{12pt plus 2pt minus 1pt}{6pt plus 1pt}
+\titlespacing*{\paragraph}    {0pt}{10pt plus 2pt minus 1pt}{0.6em}
+
+% ---------------------------------------------------------------------------
+% Custom macros and path setup
+% ---------------------------------------------------------------------------
+\makeatletter
+\def\input@path{{sections/}{tables/}{figures/}}
+\makeatother
+\graphicspath{{figures/}}
+
+\input{macros}
+
+% ---------------------------------------------------------------------------
+% Header / footer — clean running heads with page numbers
+% ---------------------------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}                                        % Clear all fields
+\fancyhead[L]{\small\sffamily\nouppercase{\leftmark}}   % Section name (left)
+\fancyhead[R]{\small\sffamily\thepage}                  % Page number (right)
+\renewcommand{\headrulewidth}{0.4pt}               % Thin header rule
+\fancypagestyle{plain}{%                            % For title / chapter pages
+  \fancyhf{}%
+  \fancyfoot[C]{\small\sffamily\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+% ---------------------------------------------------------------------------
+% Abstract environment refinement
+% ---------------------------------------------------------------------------
+\usepackage{changepage}          % For adjustwidth
+\renewenvironment{abstract}{%
+  \vspace{0.8em}%
+  \noindent\rule{\textwidth}{0.6pt}%
+  \vspace{0.4em}%
+  \begin{adjustwidth}{1.5em}{1.5em}%
+  \small%
+  \noindent{\sffamily\bfseries Abstract.}\quad\ignorespaces
+}{%
+  \end{adjustwidth}%
+  \vspace{0.4em}%
+  \noindent\rule{\textwidth}{0.6pt}%
+  \vspace{1.2em}%
+}
+
+% ---------------------------------------------------------------------------
+% Footnote styling
+% ---------------------------------------------------------------------------
+\renewcommand{\footnoterule}{%
+  \kern-3pt\hrule width 0.35\textwidth height 0.4pt\kern 2.6pt%
+}
+
+% --- Helper for optional figures (graceful fallback when PDF not yet generated) ---
+\newcommand{\maybeincludegraphics}[2][]{%
+  \IfFileExists{#2}{\includegraphics[#1]{#2}}{%
+    \fbox{\parbox{0.85\textwidth}{\centering\small\itshape[Figure placeholder: \detokenize{#2}]}}%
+  }%
+}
+
+% =============================================================================
+\begin{document}
+
+% ---------------------------------------------------------------------------
+% Title block
+% ---------------------------------------------------------------------------
+\title{%
+  {\sffamily\bfseries\LARGE A Controlled Comparison of Deep Learning Architectures\\[3pt]
+  for Multi-Horizon Financial Forecasting}\\[8pt]
+  {\sffamily\large Evidence from 918 Experiments}%
+}
+
+\author{%
+  % Author(s) to be inserted
+}
+
+\date{}
+\maketitle
+\thispagestyle{plain}
+
+% ---------------------------------------------------------------------------
+% Abstract
+% ---------------------------------------------------------------------------
+\begin{abstract}
+Multi-horizon price forecasting is central to portfolio allocation, risk management, and algorithmic trading, yet deep learning architectures have proliferated faster than rigorous comparisons on financial data can assess them. Existing benchmarks are weakened by uncontrolled hyperparameter budgets, single-seed evaluation, narrow asset-class coverage, and absent pairwise statistical correction. This study compares \nmodels deep learning architectures---\autoformer, \dlinear, \itransformer, \lstm, \moderntcn, \nhits, \patchtst, \timesnet, and \timexer---from four families (Transformer, MLP, CNN, RNN) across three asset classes (cryptocurrency, forex, equity indices) and two forecasting horizons ($h \in \{4, 24\}$ hours). All 918 runs follow a five-stage protocol: fixed-seed Bayesian hyperparameter optimisation, configuration freezing per asset class, multi-seed final training, metric aggregation with uncertainty quantification, and statistical validation. \moderntcn achieves the best mean rank (1.333) with a 75\% first-place rate across 24 evaluation points; \patchtst ranks second (2.000). The global rank leaderboard reveals a clear three-tier structure separating the top pair from a middle cluster and a bottom tier. Architecture explains 99.90\% of raw \rmse variance versus 0.01\% for seed randomness. Rankings remain stable across horizons despite $2$--$2.5\times$ error amplification. Directional accuracy is indistinguishable from 50\% across all 54 model--category--horizon combinations, indicating that MSE-trained architectures lack directional skill at hourly resolution. Four practical implications follow: (i)~large-kernel temporal convolutions and patch-based Transformers consistently outperform alternatives; (ii)~the complexity--performance relationship is non-monotonic, with architectural inductive bias mattering more than raw capacity; (iii)~three-seed replication suffices given negligible seed variance; and (iv)~directional forecasting requires explicit loss-function redesign. The full codebase, data, trained models, and evaluation outputs are released for independent replication.
+
+\medskip
+\noindent{\sffamily\bfseries Keywords:} financial time-series forecasting; deep learning; model benchmarking; multi-horizon forecasting; hyperparameter optimisation; reproducibility; seed robustness; directional accuracy
+
+\smallskip
+\noindent{\sffamily\bfseries JEL Classification:} C45, C52, C53, G17
+\end{abstract}
+\clearpage
+
+% ---------------------------------------------------------------------------
+% Main sections
+% ---------------------------------------------------------------------------
+\input{sections/01_introduction}
+\input{sections/02_literature_review}
+\input{sections/03_experimental_design}
+\input{sections/04_results}
+\input{sections/05_discussion}
+\input{sections/06_conclusion}
+\input{sections/07_reproducibility}
+
+% ---------------------------------------------------------------------------
+% Bibliography
+% ---------------------------------------------------------------------------
+\clearpage
+\printbibliography
+
+% ---------------------------------------------------------------------------
+% Appendix
+% ---------------------------------------------------------------------------
+\clearpage
+\appendix
+\input{sections/appendix}
+
+\end{document}

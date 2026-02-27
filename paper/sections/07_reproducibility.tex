@@ -1,0 +1,53 @@
+% =============================================================================
+% Section 7: Reproducibility Statement
+% =============================================================================
+\section{Reproducibility Statement}
+\label{sec:reproducibility}
+
+All artefacts required to reproduce the reported results are publicly available in the accompanying repository.
+
+% --------------------------------------------------------------------------
+\subsection{Code and Data Availability}
+\label{sec:code_data}
+
+The repository contains the complete source code, version-controlled configuration files, and data.  The codebase follows a modular organisation separating data preprocessing, model implementations, training, evaluation, and benchmarking into dedicated subpackages.  All experimental parameters are declared in YAML configuration files rather than embedded in source code.
+
+Released artefacts include preprocessed windowed datasets with split metadata, HPO trial logs and best configurations, all 648 trained model checkpoints, and complete evaluation outputs (per-seed metrics, aggregated statistics, benchmark summaries, statistical test results, and figures). 
+% --------------------------------------------------------------------------
+\subsection{Determinism Controls}
+\label{sec:determinism}
+
+Randomness is managed through a centralised seed-management module
+(\texttt{src/utils/seed.py}) invoked at the start of every experimental run.
+Seeds are applied consistently to the Python standard library, NumPy,
+PyTorch CPU and CUDA random number generators, and the
+\texttt{PYTHONHASHSEED} environment variable.  The cuDNN backend is
+configured with \texttt{deterministic=True} and
+\texttt{benchmark=False}.  DataLoader workers derive their seeds
+deterministically from the primary seed, preserving consistent
+data-loading order across runs.
+
+PyTorch's fully deterministic algorithm mode
+(\texttt{use\_deterministic\_algorithms})
+was not enabled, so minor floating-point variation remains possible
+across different GPU architectures.  This limitation is acknowledged
+in Section~\ref{sec:limitations} and mitigated by the three-seed
+replication protocol.
+
+% --------------------------------------------------------------------------
+\subsection{Configuration Versioning}
+\label{sec:config_versioning}
+
+The configuration hierarchy captures all experimental degrees of freedom: HPO sampler settings and trial budgets; final training schedules, seed lists, and early-stopping criteria; per-model hyperparameter search spaces; dataset window sizes, split ratios, and horizon definitions; and asset category assignments.  After HPO, the best hyperparameter set for each (model, category, horizon) triple is serialised as a frozen configuration file (Table~\ref{tab:best_hyperparameters}) and held fixed for all subsequent stages.
+
+% --------------------------------------------------------------------------
+\subsection{Execution Overview}
+\label{sec:execution}
+
+The pipeline proceeds through three sequential stages---hyperparameter optimisation, multi-seed final training, and benchmarking with statistical validation---each accessible via a unified command-line interface.  Stages may be executed independently with optional filtering by model, seed, horizon, or configuration path.  Training supports automatic checkpoint resumption, restoring model weights, optimiser and scheduler states, and all random-number-generator states from the most recent checkpoint.
+
+% --------------------------------------------------------------------------
+\subsection{Environment Specification}
+\label{sec:environment}
+
+The software environment is fully specified by the repository's \texttt{environment.yml} (Conda; Python version, deep learning framework, CUDA toolkit) and \texttt{requirements.txt} (pinned library versions).  All experiments were run using PyTorch \citep{Paszke2019} on CUDA-enabled hardware.  Results are reproducible within the same software environment, subject to standard floating-point and hardware-level numerical variation.

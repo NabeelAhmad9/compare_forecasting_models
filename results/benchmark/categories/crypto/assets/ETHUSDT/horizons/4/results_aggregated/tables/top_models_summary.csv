@@ -1,0 +1,6 @@
+model,rank
+N-HiTS,1.0
+ModernTCN,2.0
+PatchTST,3.0
+iTransformer,4.0
+TimeXer,5.0

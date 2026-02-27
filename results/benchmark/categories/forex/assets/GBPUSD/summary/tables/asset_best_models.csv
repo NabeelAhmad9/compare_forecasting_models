@@ -1,0 +1,3 @@
+horizon,best_model,rmse
+4,PatchTST,0.0017825390640144791
+24,ModernTCN,0.003947871941354048

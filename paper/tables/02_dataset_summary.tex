@@ -1,0 +1,108 @@
+% =============================================================================
+% Table 2: Dataset Summary
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \caption{Dataset summary.  All assets use H1 (hourly) frequency.  The most
+    recent 30{,}000 windowed samples are retained per (asset, horizon) pair,
+    split chronologically into 70\%/15\%/15\% train/val/test partitions.
+    Window lengths: $w=24$ for $h=4$ and $w=96$ for $h=24$.  Features: OHLCV
+    (5 channels); target: close price.}
+  \label{tab:dataset_summary}
+  \setlength{\tabcolsep}{6pt}%
+  \begin{tabular}{%
+    l%          Category
+    l%          Asset
+    l%          Date Range
+    r%          Train
+    r%          Val
+    r%          Test
+    r%          Total
+  }
+    \toprule
+    \textbf{Category} & \textbf{Asset} & \textbf{Date Range}
+      & \textbf{Train} & \textbf{Val} & \textbf{Test} & \textbf{Total} \\
+    \midrule
+    \multirow{4}{*}{Crypto}
+      & BTC/USDT  & 2021-03 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+      & ETH/USDT  & 2021-03 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+      & BNB/USDT  & 2021-03 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+      & ADA/USDT  & 2021-05 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+    \midrule
+    \multirow{4}{*}{Forex}
+      & EUR/USD   & 2017-12 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+      & USD/JPY   & 2017-12 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+      & GBP/USD   & 2017-12 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+      & AUD/USD   & 2017-12 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+    \midrule
+    \multirow{4}{*}{Indices}
+      & Dow Jones   & 2019-01 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+      & S\&P~500    & 2019-01 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+      & NASDAQ~100  & 2019-01 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+      & DAX         & 2019-02 -- 2026-02 & 21{,}000 & 4{,}500 & 4{,}500 & 30{,}000 \\
+    \midrule
+    \multicolumn{2}{l}{\textbf{Total per horizon}} & ---
+      & 252{,}000 & 54{,}000 & 54{,}000 & 360{,}000 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% =============================================================================
+% Table 2b: Distributional Statistics per Asset
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \caption{Distributional statistics of hourly log returns for all twelve
+    assets.  All series reject the Augmented Dickey--Fuller unit-root null
+    at $p < 0.001$, confirming return stationarity.}
+  \label{tab:distributional_stats}
+  \setlength{\tabcolsep}{5pt}%
+  \begin{threeparttable}
+  \begin{tabular}{%
+    l%          Category
+    l%          Asset
+    r%          Mean return (x1e-4)
+    r%          Volatility (%)
+    r%          Skewness
+    r%          Kurtosis
+    r%          ACF(1)
+    l%          ADF p-value
+  }
+    \toprule
+    \textbf{Cat.} & \textbf{Asset}
+      & $\bar{\mu}_r$ (${\times}10^{-4}$)
+      & $\sigma_r$ (\%)
+      & Skew
+      & Kurt
+      & ACF(1)
+      & ADF $p$ \\
+    \midrule
+    \multirow{4}{*}{Crypto}
+      & BTC/USDT  & $+0.4$ & 0.783 & $-0.47$ & $+35.8$ & $-0.043$ & $<$0.001 \\
+      & ETH/USDT  & $+0.3$ & 0.973 & $-0.56$ & $+27.3$ & $-0.026$ & $<$0.001 \\
+      & BNB/USDT  & $+0.8$ & 1.107 & $+0.08$ & $+35.0$ & $-0.077$ & $<$0.001 \\
+      & ADA/USDT  & $\phantom{+}0.0$ & 1.187 & $-0.05$ & $+19.2$ & $-0.085$ & $<$0.001 \\
+    \midrule
+    \multirow{4}{*}{Forex}
+      & EUR/USD   & $\phantom{+}0.0$ & 0.109 & $-0.01$ & $+15.2$ & $-0.010$ & $<$0.001 \\
+      & USD/JPY   & $+0.1$ & 0.119 & $-0.98$ & $+46.6$ & $-0.002$ & $<$0.001 \\
+      & GBP/USD   & $\phantom{+}0.0$ & 0.115 & $-1.66$ & $+95.8$ & $-0.018$ & $<$0.001 \\
+      & AUD/USD   & $\phantom{+}0.0$ & 0.141 & $-0.07$ & $+17.9$ & $-0.020$ & $<$0.001 \\
+    \midrule
+    \multirow{4}{*}{Indices}
+      & Dow Jones   & $+0.2$ & 0.225 & $-0.57$ & $+60.8$ & $-0.012$ & $<$0.001 \\
+      & S\&P~500    & $+0.2$ & 0.235 & $-1.13$ & $+90.2$ & $-0.026$ & $<$0.001 \\
+      & NASDAQ~100  & $+0.3$ & 0.286 & $-0.70$ & $+47.7$ & $-0.014$ & $<$0.001 \\
+      & DAX         & $+0.2$ & 0.262 & $-1.74$ & $+83.0$ & $-0.011$ & $<$0.001 \\
+    \bottomrule
+  \end{tabular}
+  \begin{tablenotes}[flushleft]\small
+    \item All return distributions exhibit excess kurtosis (heavy tails) consistent with the
+    stylised facts of financial markets; equities and forex show negative skewness (downside
+    asymmetry), while crypto skewness is near zero.  Negative ACF(1) values indicate
+    mild mean-reversion in hourly returns.  Volatility spans two orders of magnitude
+    across asset classes (crypto $\approx 1\%$, forex $\approx 0.1\%$, indices $\approx 0.2\%$),
+    reflecting differences in leverage, liquidity, and trading hours.
+  \end{tablenotes}
+  \end{threeparttable}
+\end{table}

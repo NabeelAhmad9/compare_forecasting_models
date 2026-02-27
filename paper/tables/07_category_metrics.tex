@@ -1,0 +1,59 @@
+
+
+% siunitx setup (CRITICAL)
+\sisetup{
+  detect-weight          = true,
+  text-series-to-math    = true,
+  table-number-alignment = center
+}
+
+% =============================================================================
+% Table 7: Category-Level Metrics (RMSE and MAE, averaged over assets and seeds)
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \caption{Category-level mean \rmse and \mae averaged across all assets within
+    each category and across both horizons ($h\in\{4,24\}$).  Values are
+    aggregated over 4~assets $\times$ 2~horizons $\times$ 3~seeds.  Bold
+    marks the best (lowest) value per category and metric.  \lstm is
+    included for completeness but excluded from ranking discussions
+    due to convergence failures.}
+  \label{tab:category_metrics}
+  \footnotesize
+  \setlength{\tabcolsep}{7pt}%
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{%
+    l%
+    S[table-format=4.2, round-mode=places, round-precision=2] @{\hspace{2pt}}
+    S[table-format=4.2, round-mode=places, round-precision=2]%  Crypto
+    S[table-format=1.4, round-mode=places, round-precision=4] @{\hspace{2pt}}
+    S[table-format=1.4, round-mode=places, round-precision=4]%  Forex
+    S[table-format=4.2, round-mode=places, round-precision=2] @{\hspace{2pt}}
+    S[table-format=4.2, round-mode=places, round-precision=2]%  Indices
+  }
+    \toprule
+    & \multicolumn{2}{c}{\textbf{Crypto}}
+    & \multicolumn{2}{c}{\textbf{Forex}}
+    & \multicolumn{2}{c}{\textbf{Indices}} \\
+    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+    \textbf{Model}
+      & {\rmse} & {\mae}
+      & {\rmse} & {\mae}
+      & {\rmse} & {\mae} \\
+    \midrule
+    \autoformer         & 532.21  & 393.83  & 0.2068 & 0.1551 & 179.66  & 136.24  \\
+    \dlinear            & 323.48  & 220.87  & 0.1279 & 0.0940 & 123.80  &  90.67  \\
+    \itransformer       & 320.83  & 217.99  & 0.1136 & 0.0785 & 113.72  &  79.13  \\
+    \lstm               & 2398.94 & 2041.58 & 3.6679 & 3.5858 & 1548.56 & 1478.21 \\
+    \textbf{\moderntcn} 
+                        & \bfseries 314.66 & \bfseries 211.14 
+                        & \bfseries 0.1098 & \bfseries 0.0750 
+                        & \bfseries 110.89 & \bfseries 76.09 \\
+    \nhits              & 352.91  & 255.77  & 0.2356 & 0.1977 & 135.01  & 101.04  \\
+    \patchtst           & 314.87  & 211.70  & 0.1108 & 0.0761 & 111.71  &  77.04  \\
+    \timesnet           & 352.92  & 249.41  & 0.2127 & 0.1596 & 172.98  & 131.61  \\
+    \timexer            & 318.38  & 215.24  & 0.1174 & 0.0815 & 114.09  &  79.19  \\
+    \bottomrule
+  \end{tabular}%
+  }%
+\end{table}

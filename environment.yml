@@ -1,0 +1,20 @@
+name: forecasting
+channels:
+  - defaults
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=1.24
+  - pandas>=2.0
+  - scipy>=1.10
+  - scikit-learn>=1.2
+  - matplotlib>=3.7
+  - seaborn>=0.12
+  - pytorch>=2.0
+  - pyyaml>=6.0
+  - jupyter
+  - ipykernel
+  - tqdm
+  - pip:
+    - optuna>=3.3

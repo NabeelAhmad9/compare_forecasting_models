@@ -1,0 +1,28 @@
+# iTransformer hyperparameter search space for Optuna HPO
+
+search_space:
+  d_model:
+    type: categorical
+    choices: [96 , 112]  # Reduced from 128 to ensure H4 stays above 180K
+  d_ff:
+    type: categorical
+    choices: [ 128, 256]  # Range allows 241K-290K for H24
+  e_layers:
+    type: int
+    low: 2
+    high: 4  # Allow 4 layers for upper range exploration
+  n_heads:
+    type: categorical
+    choices: [4, 8 , 16]  # Expanded choices (n_heads doesn't affect param count significantly)
+  dropout:
+    type: float
+    low: 0.0
+    high: 0.2
+    step: 0.05
+  learning_rate:
+    type: loguniform
+    low: 0.0005
+    high: 0.005  
+  batch_size:
+    type: categorical
+    choices: [64, 128]

@@ -1,0 +1,369 @@
+% =============================================================================
+% Section 4: Results
+% =============================================================================
+\section{Results}
+\label{sec:results}
+
+This section presents findings from 918 experimental runs: 648 final training runs (9~models $\times$ 12~assets $\times$ 2~horizons $\times$ 3~seeds) plus 270 HPO trials.  Results are organised by the four hypotheses from Section~\ref{sec:hypotheses}.  All claims reference specific tables or figures; mechanistic interpretation is deferred to Section~\ref{sec:discussion}.
+
+% --------------------------------------------------------------------------
+\subsection{Global Performance Rankings}
+\label{sec:global_rankings}
+
+Table~\ref{tab:global_leaderboard} presents the global leaderboard, ranking \nmodels models across four architectural families by mean \rmse rank across all \nassets assets and both horizons (24~evaluation points per model).  Three distinct performance tiers emerge:
+
+\begin{itemize}[nosep]
+  \item \textbf{Top tier:} \moderntcn (CNN; mean rank 1.333, median 1.0) and \patchtst (Transformer; mean rank 2.000, median 2.0).
+  \item \textbf{Middle tier:} \itransformer (3.667), \timexer (4.292), \dlinear (4.958), and \nhits (5.250), spanning the Transformer and MLP / Linear families.
+  \item \textbf{Bottom tier:} \timesnet (7.708), \autoformer (7.833), and \lstm (7.958).
+\end{itemize}
+
+The separation between tiers is substantial: the gap between the top tier (ranks 1--2) and bottom tier (ranks 7--9) spans more than 5.5 rank positions, and performance does not correlate uniformly with model family. Both the top and bottom tiers contain CNN and Transformer-based architectures, suggesting that specific implementation details (e.g., patching, large-kernel convolutions) matter more than broad architectural classes.
+
+\input{tables/06_global_leaderboard}
+
+In terms of win counts, \moderntcn achieves the lowest \rmse on 18 of 24~evaluation points (75.0\% win rate), while \nhits and \patchtst each win 3~points (12.5\%).  No other architecture achieves a single first-place finish.
+
+Table~\ref{tab:per_asset_best_models} disaggregates these wins by asset and horizon. \moderntcn's dominance is concentrated in forex and equity indices (16 of 16~wins), while its cryptocurrency record is more contested: \nhits wins on ETH/USDT (both horizons) and ADA/USDT ($\hfour$), and \patchtst wins on BTC/USDT ($\hfour$; $\rmse = 731.05$ vs.\ \moderntcn's $731.63$, $\Delta = 0.08\%$) and ADA/USDT ($\htwentyfour$).  Notably, no model other than \moderntcn achieves the lowest \rmse on any forex or equity index asset at $\htwentyfour$, underscoring its superior long-horizon generalisation outside the cryptocurrency domain.
+
+\input{tables/12_per_asset_best_models}
+
+Figure~\ref{fig:global_heatmap} displays the \rmse heatmap across all evaluation points.  The body panel excludes \lstm to reveal finer distinctions among the eight modern architectures (the all-models variant appears in Appendix~\ref{sec:app_dual_plots}).  \moderntcn and \patchtst consistently occupy the lowest-error cells.  Figure~\ref{fig:global_rank_comparison} presents the rank distribution, confirming the three-tier structure.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\textwidth]{figures/03_global_performance/global_metric_heatmap_no_lstm.pdf}
+  \caption{Global \rmse heatmap across eight modern architectures and 24 evaluation points (12~assets $\times$ 2~horizons).  Lighter cells indicate lower error.  \moderntcn and \patchtst consistently achieve the lowest \rmse values across all asset--horizon combinations.  \lstm is excluded for visual clarity; the full nine-model variant is provided in Appendix~\ref{sec:app_dual_plots}, Figure~\ref{fig:app_global_heatmap_all}.  Values represent mean \rmse across three seeds.}
+  \label{fig:global_heatmap}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/03_global_performance/global_rank_comparison.pdf}
+  \caption{Global mean rank comparison across 24 evaluation points (12~assets $\times$ 2~horizons).  Lower values indicate better performance.  Three distinct tiers are visible: \moderntcn and \patchtst (ranks 1--2), a middle group of four models (ranks 3--6), and a bottom group comprising \timesnet, \autoformer, and \lstm (ranks 7--9).  Error bars represent rank standard deviation across evaluation points.}
+  \label{fig:global_rank_comparison}
+\end{figure}
+
+% --------------------------------------------------------------------------
+\subsection{Category-Level Analysis}
+\label{sec:category_analysis}
+
+Table~\ref{tab:category_metrics} reports category-level aggregated \rmse and \mae for each model, providing the asset-class dimension of H1.  Error magnitudes differ by several orders of magnitude across categories due to underlying price scales, but relative model ordering is preserved.
+
+\input{tables/07_category_metrics}
+
+\paragraph{Cryptocurrency.}
+\moderntcn achieves the lowest mean \rmse (314.66), closely followed by \patchtst (314.87; $\Delta = 0.07\%$) and \timexer (318.38).  \itransformer (320.83) and \dlinear (323.48) are competitive within a 3\% range of the leader.  \lstm exhibits errors approximately $7.6\times$ higher than the best model (2{,}398.94), reflecting fundamental convergence difficulties under the standard training protocol.  \nhits (352.91), \autoformer (532.21), and \timesnet (352.92) form the lower-performing group.
+
+\paragraph{Forex.}
+\moderntcn leads (mean \rmse 0.1098), followed by \patchtst (0.1108; $\Delta = 0.9\%$) and \itransformer (0.1136).  \timexer (0.1174) and \dlinear (0.1279) remain competitive on an absolute scale.  \lstm (3.668) is approximately $33\times$ worse than the leader, while \nhits (0.2356), \autoformer (0.2068), and \timesnet (0.2127) form the lower tier.
+
+\paragraph{Equity indices.}
+\moderntcn achieves the lowest \rmse (110.89), with \patchtst (111.71; $\Delta = 0.7\%$), \itransformer (113.72), and \timexer (114.09) in close succession.  \dlinear (123.80) and \nhits (135.01) are moderately higher.  \timesnet (172.98), \autoformer (179.67), and \lstm (1{,}548.56) trail substantially.
+
+\paragraph{Cross-category ranking consistency.}
+Across all three categories, \moderntcn and \patchtst consistently occupy the top two positions (Figure~\ref{fig:category_boxplot}).  This consistency is confirmed by the \rmse--\mae concordance in Figure~\ref{fig:category_scatter}: near-perfect linear correlation between the two error metrics shows that rankings are robust to metric choice.  Category dendrograms and per-category performance matrices appear in Appendix~\ref{sec:app_category_rankings} (Figures~\ref{fig:app_category_hierarchical_rankings} and~\ref{fig:app_category_performance_matrices}); \moderntcn and \patchtst cluster at the top of every dendrogram.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/04_category_analysis/category_rank_boxplot_no_lstm.pdf}
+  \caption{Category-level rank distributions across assets within each category, excluding \lstm for visual clarity.  \moderntcn exhibits the tightest rank distribution (consistently rank~1 across all categories), indicating stable cross-asset performance.  The full nine-model variant is provided in Appendix~\ref{sec:app_dual_plots}.  Boxes show interquartile range; whiskers extend to the most extreme rank observed.}
+  \label{fig:category_boxplot}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/04_category_analysis/category_scatter_rmse_mae_no_lstm.pdf}
+  \caption{Category-level \rmse vs.\ \mae scatter plot for eight modern architectures.  Each point represents one model's mean error within a category.  The near-perfect linear correlation ($R^2 > 0.99$) confirms that model rankings are consistent across the two error metrics, indicating that findings based on \rmse generalise to \mae.  The full nine-model variant is provided in Appendix~\ref{sec:app_dual_plots}.}
+  \label{fig:category_scatter}
+\end{figure}
+
+
+% --------------------------------------------------------------------------
+\subsection{Cross-Horizon Degradation}
+\label{sec:horizon_degradation}
+
+Table~\ref{tab:horizon_degradation_btc} presents \rmse at $\hfour$ and $\htwentyfour$ for each representative asset (BTC/USDT, EUR/USD, Dow Jones), along with the percentage degradation ($\Delta\% = 100 \times (\text{RMSE}_{h=24} - \text{RMSE}_{h=4}) / \text{RMSE}_{h=4}$).  Table~\ref{tab:horizon_ranking_shift} provides the corresponding rank shift $\Delta = r_{24} - r_4$ for each model, isolating relative ordering changes from absolute error magnitudes.
+
+\input{tables/08_horizon_degradation}
+
+All models exhibit higher \rmse at $\htwentyfour$ relative to $\hfour$, consistent with the established understanding that prediction uncertainty grows with the forecast window.  However, degradation rates vary meaningfully across architectures and assets:
+
+\paragraph{BTC/USDT.}
+Degradation ranges from 85.3\% (\nhits) to 131.9\% (\timesnet) among modern architectures.  The top-tier models \moderntcn ($\Delta\% = 121.1$) and \patchtst ($\Delta\% = 121.5$) exhibit nearly identical degradation.  \lstm shows the lowest relative degradation (35.5\%), not because of strong long-horizon performance, but because its $\hfour$ errors are already substantially elevated (8{,}029.9 vs.\ 731.6 for \moderntcn).
+
+\paragraph{EUR/USD.}
+Degradation magnitudes are comparable: \moderntcn ($\Delta\% = 121.4$) and \patchtst ($\Delta\% = 124.9$) degrade similarly, while \nhits ($\Delta\% = 107.4$) shows the lowest degradation among modern architectures.
+
+\paragraph{Dow Jones.}
+\timesnet exhibits the highest degradation (169.1\%), followed by \autoformer (155.6\%).  \nhits shows notably lower degradation (59.7\%), suggesting that its hierarchical multi-rate pooling may capture multi-scale patterns that transfer across horizons.
+
+\paragraph{Cross-horizon rank stability.}
+Despite $2$--$2.5\times$ absolute error amplification, top-tier models maintain their relative ranking across horizons for all three representative assets: \moderntcn and \patchtst hold positions 1--2 at both $\hfour$ and $\htwentyfour$.  Rank shifts are concentrated in the middle tier; for example, \nhits improves by 3~ranks on Dow Jones (from rank~6 to rank~3), while \itransformer drops by 2~ranks on BTC/USDT (from rank~3 to rank~5).  EUR/USD rankings are perfectly stable across horizons.  A comprehensive heatmap of per-model per-asset degradation percentages appears in Appendix~\ref{sec:app_horizon_sensitivity} (Figure~\ref{fig:app_horizon_sensitivity_heatmap}).  Section~\ref{sec:qualitative_fidelity} provides complementary qualitative evidence through actual-versus-predicted overlays.
+
+Figure~\ref{fig:asset_model_comparison_grouped} extends this analysis to all twelve assets.  \moderntcn and \patchtst consistently occupy the lowest-error positions across all assets and both horizons, confirming that their inductive biases---large-kernel convolutions and patch-based self-attention---generalise robustly to extended temporal contexts.  Conversely, \timesnet and \autoformer show the most pronounced degradation, suggesting that their multi-periodicity mechanisms are susceptible to fidelity loss at longer horizons in high-noise financial domains.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{figures/04_category_analysis/asset_model_comparison_grouped_no_lstm.pdf}
+  \caption{Cross-horizon \rmse comparison for eight modern architectures across twelve assets.  Each asset group displays \rmse at $\hfour$ and $\htwentyfour$.  The top-tier architectures (\moderntcn, \patchtst) maintain superior rankings across both horizons, while middle-tier models exhibit varying sensitivity to the forecast window length.}
+  \label{fig:asset_model_comparison_grouped}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/05_horizon_analysis/horizon_degradation_lineplot_no_lstm.pdf}
+  \caption{Cross-horizon \rmse degradation for eight modern architectures across representative assets.  Lines connect each model's \rmse at $\hfour$ and $\htwentyfour$.  All architectures exhibit absolute error growth, but degradation magnitudes are architecture-dependent: \nhits degrades least, while \timesnet and \autoformer exhibit the steepest increase.  \moderntcn and \patchtst maintain top-tier performance at both horizons.  The full nine-model variant is provided in Appendix~\ref{sec:app_dual_plots}.}
+  \label{fig:horizon_degradation}
+\end{figure}
+
+
+% --------------------------------------------------------------------------
+\subsection{Seed Robustness and Variance Decomposition}
+\label{sec:seed_robustness}
+
+The two-factor variance decomposition (Table~\ref{tab:variance_decomposition}) is reported in three panels: raw \rmse, z-score normalised \rmse across all nine models, and z-score normalised \rmse excluding the \lstm outlier.
+
+\input{tables/09_variance_decomposition}
+
+\paragraph{Raw panel.}
+On the original price scale, architecture absorbs 99.90\% of total sum-of-squares variance, versus 0.01\% for seed and 0.09\% for the residual.  This extreme dominance is largely an artefact of \lstm's outlier \rmse values: a single model $7{-}33\times$ above the median inflates $\mathrm{SS}_{\text{model}}$ relative to all other terms.
+
+\paragraph{Z-normalised panels: all models.}
+After z-scoring each model's \rmse within each (asset, horizon) slot, the architecture factor falls to \textbf{48.32\%}, seed to \textbf{0.04\%}, and the residual rises to \textbf{51.64\%}.  The large residual reflects genuine heterogeneity in which model excels on a given asset--horizon combination---a meaningful signal rather than noise.
+
+\paragraph{Z-normalised panel: modern models only.}
+Excluding \lstm, architecture recovers to \textbf{68.33\%} (seed: 0.02\%; residual: 31.66\%), confirming that architecture remains the dominant factor even among competitive modern models, though asset--horizon context contributes substantially.
+
+In all three panels, seed variance is negligible ($\leq 0.04\%$): rankings are stable with respect to random initialisation and three seeds suffice.
+
+Per-asset variance decompositions corroborate the global result.  At $\hfour$, architecture accounts for 99.75\% of variance on BTC/USDT, 97.44\% on EUR/USD, and 99.08\% on Dow Jones; seed fractions are 0.02\%, 0.35\%, and 0.01\% respectively.  Even EUR/USD, with the highest relative seed contribution, shows seed variance two orders of magnitude below the architecture factor.  At $\htwentyfour$, the pattern tightens further: architecture explains 99.86\% on BTC/USDT (seed: 0.02\%), confirming that initialisation effects diminish---rather than amplify---at longer horizons.
+
+Figure~\ref{fig:robustness}(a) displays seed-to-seed \rmse variation per model as a violin plot.  Inter-seed variance is negligible relative to inter-model differences across all nine architectures: even \lstm, which has the highest absolute seed variance, shows seed-induced variation that is small relative to its distance from the nearest competitor.  Figure~\ref{fig:robustness}(b) provides a pie chart of the raw variance decomposition; the z-normalised breakdown appears in Table~\ref{tab:variance_decomposition}.  Per-asset seed-variance box plots and scatter plots for all three representative assets appear in Appendix~\ref{sec:app_robustness} (Figures~\ref{fig:app_seed_boxplot_h4}--\ref{fig:app_scatter_seed_h24}).
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/06_robustness/seed_variance_violin.pdf}
+    \caption{Seed variance violin plot.}
+    \label{fig:seed_violin}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/06_robustness/variance_decomposition_pie.pdf}
+    \caption{Variance decomposition (raw).}
+    \label{fig:variance_pie}
+  \end{subfigure}
+  \caption{Seed robustness analysis.  (a)~Violin plot of seed-to-seed \rmse variation.  Inter-seed variation is negligible relative to inter-model differences across all nine architectures.  (b)~Two-factor variance decomposition on raw price-scale \rmse: architecture explains 99.90\%, seed 0.01\%, residual 0.09\%.  After z-score normalisation within each (asset, horizon) slot, the architecture share falls to 48.3\% (68.3\% excluding \lstm); see Table~\ref{tab:variance_decomposition} for the full dual-panel breakdown.}
+  \label{fig:robustness}
+\end{figure}
+
+
+% --------------------------------------------------------------------------
+\subsection{Directional Accuracy}
+\label{sec:directional_accuracy}
+
+Directional accuracy (\da) quantifies the fraction of forecasts that correctly predict the sign of the next price change.  Table~\ref{tab:directional_accuracy} reports mean \da\ per model, category, and horizon.
+
+\input{tables/11_directional_accuracy}
+
+Across all 9~models $\times$ 3~categories $\times$ 2~horizons ($=54$ combinations), mean \da\ is \textbf{50.08\%}.  No combination deviates meaningfully from 50\% and no horizon trend is discernible.
+
+MSE-trained deep learning architectures produce directional forecasts equivalent to a fair coin flip on hourly financial data.  This is consistent with the weak-form efficient-market hypothesis at hourly resolution and with MSE training's regression-to-the-mean bias.  Section~\ref{sec:economic_interpretation} discusses implications for trading strategies.
+
+
+% --------------------------------------------------------------------------
+\subsection{Statistical Significance Tests}
+\label{sec:statistical_tests}
+
+Tables~\ref{tab:stat_tests_friedman}--\ref{tab:stat_tests_jt} report the full battery of statistical tests, providing formal confirmation of the descriptive findings in Sections~\ref{sec:global_rankings}--\ref{sec:directional_accuracy}.
+
+\input{tables/10_statistical_tests}
+
+\paragraph{Global Friedman-Iman-Davenport test.}
+The Friedman-Iman-Davenport test on all 24~evaluation points (12~assets $\times$ 2~horizons) yields $F(8,184) = 101.36$, $p < 10^{-15}$ (Friedman $\chisq(8) = 156.49$, $p = 8.67 \times 10^{-30}$), firmly rejecting the null hypothesis that all nine architectures perform equivalently.  Table~\ref{tab:stat_tests_friedman} indicates that exactly the same conclusion holds within every individual asset class: crypto ($F = 23.34$), forex ($F = 49.00$), and indices ($F = 117.44$), each with $p < 10^{-15}$.
+
+\paragraph{Post-hoc Holm-Wilcoxon pairwise tests (global).}
+Of the $\binom{9}{2} = 36$ pairwise Wilcoxon comparisons at the global level ($n = 24$ observations), 33~are statistically significant after Holm correction ($\alpha = 0.05$).  The three non-significant pairs are all \emph{intra-tier}: \timexer~vs.~\itransformer ($p_\text{Holm} = 0.480$), \autoformer~vs.~\timesnet ($p_\text{Holm} = 0.529$), and \dlinear~vs.~\nhits ($p_\text{Holm} = 0.529$) --- confirming that only neighbouring models within the same performance tier are statistically indistinguishable.
+
+At the per-category level ($n = 8$: 4~assets $\times$ 2~horizons), no pairwise comparison reaches significance after Holm correction (all $p_\text{Holm} > 0.28$).  This reflects a \emph{power constraint}, not an absence of effect: with $n = 8$, the minimum achievable Wilcoxon $p$-value is $0.0078$; the Holm step-down procedure requires the most extreme raw $p$-value to beat $0.05/36 = 0.0014$, which is unattainable at this sample size.  The per-category result is thus consistent with---and subsumed by---the decisive global test.
+
+\paragraph{Critical difference diagram.}
+Figure~\ref{fig:cd_diagram} visualises the Holm-Wilcoxon significance structure as a critical difference (CD) diagram.  The horizontal axis represents mean rank across all $N = 24$ evaluation blocks ($k = 9$ models); lower values denote superior performance.  Each model is placed at its exact mean rank derived from \texttt{global\_ranking\_aggregated.csv}.  Thick horizontal bars connect pairs that are \emph{not} statistically distinguishable after Holm correction ($\alpha = 0.05$); all unlabelled pairs are significant.
+
+Three intra-tier equivalence groups emerge directly from the pairwise test results.  Within the middle tier, \itransformer (rank~3.667) and \timexer (rank~4.292) are statistically indistinguishable ($p_\text{Holm} = 0.480$), as are \dlinear (rank~4.958) and \nhits (rank~5.250) ($p_\text{Holm} = 0.529$).  Within the bottom tier, \timesnet (rank~7.708) and \autoformer (rank~7.833) are statistically equivalent ($p_\text{Holm} = 0.529$).  All 33~remaining comparisons are statistically significant, including every cross-tier comparison.  In particular, the top-tier boundary is unambiguous: \moderntcn (rank~1.333) and \patchtst (rank~2.000) are each significantly superior to every model in the middle and bottom tiers ($p_\text{Holm} \leq 0.028$ in all cases).
+
+The bracketed interval labelled $\cdfive = 2.451$ in the upper-left corner displays the Nemenyi critical difference computed as $\mathrm{CD} = q_{0.05}(9)\sqrt{k(k+1)/(6N)} = 3.102 \times \sqrt{90/144}$, where $q_{0.05}(9) = 3.102$ is the studentised range critical value at $\alpha = 0.05$ for $k = 9$ and $N = 24$.  This bracket is shown as a reference only; all significance claims in this paper are derived from the more powerful Holm-corrected Wilcoxon procedure rather than the Nemenyi threshold.  Notably, the full rank span from \moderntcn to \lstm ($\Delta r = 6.625$) exceeds $2.7 \times \cdfive$, confirming that the top-to-bottom separation is not a boundary case but an overwhelming statistical gap.
+
+\begin{figure}[htbp]
+  \centering
+  \input{figures/critical_difference}
+  \caption{Critical difference diagram for \nmodels forecasting architectures
+           across $N = 24$ evaluation blocks (12~assets $\times$ 2~horizons).
+           Models are placed at their exact mean \rmse rank; lower rank is better.
+           Thick horizontal bars connect models that are \emph{not} statistically
+           distinguishable at $\alpha = 0.05$ under Holm-corrected Wilcoxon tests
+           (\texttt{holm\_wilcoxon.csv}):
+           \itransformer--\timexer ($p_\text{Holm} = 0.480$),
+           \dlinear--\nhits ($p_\text{Holm} = 0.529$), and
+           \timesnet--\autoformer ($p_\text{Holm} = 0.529$).
+           All other 33 pairwise comparisons are significant.
+           The bracketed interval (upper left) shows the Nemenyi critical
+           difference $\cdfive = 2.451$ ($k = 9$, $N = 24$, $q_{0.05} = 3.102$)
+           for reference only.}
+  \label{fig:cd_diagram}
+\end{figure}
+
+\paragraph{Cross-horizon Spearman rank correlations and Stouffer combination.}
+Table~\ref{tab:stat_tests_spearman} reports the Spearman $\rho$ between model rankings at $\hfour$ and $\htwentyfour$ for all twelve assets.  All 12~correlations are positive and statistically significant ($p < 0.05$), with $\rho$ ranging from $0.683$ (ADA/USDT) to $1.000$ (EUR/USD).  The Stouffer combined statistic $\stoufferz = 6.17$ ($p = 3.47 \times 10^{-10}$) confirms that cross-horizon rank stability is a globally systematic property: no single architecture's ranking collapses between the two horizons.
+
+\paragraph{Intraclass Correlation Coefficient (\icc).}
+\icc(3,k) analysis for three representative assets at $\htwentyfour$ (Table~\ref{tab:stat_tests_icc}) yields ICC $> 0.990$ in all cases, with $F$-statistics ranging from 309.6 to 2255.6 ($p < 10^{-15}$).  These values indicate that more than 99\% of inter-model variance arises from architecture rather than random initialisation, corroborating the $\leq 0.04\%$ seed contribution in Table~\ref{tab:variance_decomposition}.  At $\hfour$, ICC remains high: 0.9966 (BTC/USDT, $F = 873.9$), 0.9668 (EUR/USD, $F = 88.4$), and 0.9864 (Dow Jones, $F = 218.2$), all with $p < 10^{-11}$.  EUR/USD's comparatively lower $\hfour$ ICC reflects the tighter model clustering on this low-volatility pair rather than genuine seed instability, as even 96.7\% remains far above conventional reliability thresholds.
+
+\paragraph{Diebold-Mariano pairwise tests.}
+For BTC/USDT at $\htwentyfour$, Holm-corrected Diebold-Mariano (\dm) tests show that the top cluster (\moderntcn, \patchtst, \timexer, \dlinear, \itransformer) is internally partially distinguishable.  Specifically, \moderntcn~vs.~\patchtst is not significant ($p_\text{Holm} = 0.453$), and \moderntcn~vs.~\timexer is borderline ($p_\text{Holm} = 0.094$), while all comparisons to \lstm, \autoformer, and \timesnet are highly significant ($p < 10^{-14}$).
+
+EUR/USD at $\htwentyfour$ exhibits a sharper separation structure.  \moderntcn is statistically \emph{distinguishable} from \patchtst ($t_\text{DM} = -10.17$, $p_\text{Holm} = 2.77 \times 10^{-24}$) and from \timexer ($t_\text{DM} = -9.21$, $p_\text{Holm} = 3.30 \times 10^{-20}$)---unlike BTC/USDT, where these top-tier differences are not significant.  The non-significant pairs on EUR/USD are \dlinear~vs.~\patchtst ($p_\text{Holm} = 0.122$), \dlinear~vs.~\timexer ($p_\text{Holm} = 0.187$), \dlinear~vs.~\itransformer ($p_\text{Holm} = 0.187$), and \itransformer~vs.~\patchtst ($p_\text{Holm} = 0.717$).  Thus, on the most liquid and low-noise forex pair, \moderntcn's superiority is statistically unambiguous, whereas the middle cluster (\dlinear, \itransformer, \patchtst, \timexer) remains internally indistinguishable.  This asset-dependent DM separability suggests that the statistical power to discriminate the top two architectures depends on the signal-to-noise properties of the underlying market.
+
+These results confirm that the top-tier boundary (\moderntcn and \patchtst) is not artefactual, but that fine-grained rankings within the three-to-five-model cluster should be interpreted with appropriate caution across individual assets.
+
+\paragraph{Jonckheere-Terpstra test for complexity monotonicity.}
+The Jonckheere-Terpstra (\jt) test for a monotonic rank-descending trend with increasing parameter count finds no significant relationship in any of the six category--horizon combinations tested (all $p > 0.35$; Table~\ref{tab:stat_tests_jt}).  Four of the six $z$-values are negative, indicating that fewer parameters tend to yield \emph{better} ranks on average.  This formally corroborates the non-monotonic complexity--performance finding (Section~\ref{sec:complexity}).
+
+\paragraph{Directional accuracy z-tests.}
+One-sample z-tests on directional accuracy confirm that no architecture's \da\ deviates significantly from the 50\% null (all Holm-corrected $p > 0.43$ for BTC/USDT at $\htwentyfour$), corroborating the aggregate finding in Section~\ref{sec:directional_accuracy}.  The test with the largest $|z|$ is \itransformer ($z = 0.263$, $p_\text{Holm} = 1.0$), confirming that no model possesses directional skill at this resolution.
+
+
+% --------------------------------------------------------------------------
+\subsection{Complexity--Performance Relationship}
+\label{sec:complexity}
+
+The relationship between model complexity, measured by trainable parameter count, and forecasting performance is shown in Figure~\ref{fig:complexity}.  The analysis focuses on modern architectures, excluding the \lstm baseline.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/07_efficiency/complexity_vs_performance_h4_no_lstm.pdf}
+    \caption{Horizon $h=4$.}
+    \label{fig:complexity_h4}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/07_efficiency/complexity_vs_performance_h24_no_lstm.pdf}
+    \caption{Horizon $h=24$.}
+    \label{fig:complexity_h24}
+  \end{subfigure}
+  \caption{Complexity--performance trade-off (excluding \lstm). The horizontal axis represents the number of trainable parameters (log scale); the vertical axis represents the mean \rmse rank across all assets and seeds. The Pareto frontier is clearly defined by \dlinear, \patchtst, and \moderntcn.}
+  \label{fig:complexity}
+\end{figure}
+
+The empirical results reveal several insights:
+
+\paragraph{Pareto-efficient architectures.}
+A distinct Pareto frontier is defined by \dlinear, \patchtst, and \moderntcn.  \dlinear (approx.\ 1{,}000 parameters) represents the extreme efficiency point, achieving mid-tier performance (rank~5) with minimal capacity.  \patchtst (approx.\ 103K) and \moderntcn (approx.\ 230K) occupy the optimal region, providing the lowest \rmse ranks globally by deploying parameters into inductive biases suited to financial time series.
+
+\paragraph{Diminishing returns at high complexity.}
+Beyond approximately $2.5 \times 10^5$ parameters, returns diminish sharply.  \autoformer (approx.\ 438K) and \itransformer (approx.\ 253K) do not improve commensurately with their larger capacity. \autoformer's rank is consistently lower than the simpler \dlinear, suggesting that excess capacity without appropriate temporal decomposition may lead to overfitting on volatile OHLCV features.
+
+\paragraph{Horizon consistency.}
+Comparing Figure~\ref{fig:complexity_h4} and Figure~\ref{fig:complexity_h24} shows that the efficiency profile remains stable across horizons.  Absolute errors increase at $h=24$, but relative model positions on the complexity--performance plane are preserved, indicating that architectural efficiency is a robust property of the model design.
+
+% --------------------------------------------------------------------------
+\subsection{Qualitative Forecast Fidelity}
+\label{sec:qualitative_fidelity}
+
+Quantitative metrics efficiently rank architectures but compress multi-dimensional forecast behaviour into scalar summaries.  This subsection complements the tabular evidence with actual-versus-predicted overlays, organised along three dimensions: short-horizon tracking ($\hfour$), medium-horizon behaviour ($\htwentyfour$, step~12), and long-horizon degradation ($\htwentyfour$, step~24).  All plots use seed~123; analogous patterns hold across seeds given the near-zero seed variance established in Section~\ref{sec:seed_robustness}.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\paragraph{Short-horizon tracking fidelity ($h = 4$, steps 1 and 4).}
+
+Figure~\ref{fig:pred_btc_h4_step1_step4} presents \moderntcn's actual-versus-predicted overlay on BTC/USDT at $\hfour$ for steps~1 and~4 of the forecast vector.  At step~1 (Figure~\ref{fig:pred_btc_h4_step1}), the predicted curve closely mirrors the actual price trajectory, capturing both direction and amplitude of hourly movements.  This near-perfect alignment is consistent with \moderntcn's lowest category-level \rmse in cryptocurrency (314.66; Table~\ref{tab:category_metrics}).  At step~4 (Figure~\ref{fig:pred_btc_h4_step4}), overall alignment is maintained, but the predicted curve shows modest amplitude attenuation during high-volatility episodes---a visual signature of the regression-to-the-mean effect inherent in MSE-optimised multi-step predictors.  No systematic phase shift or directional bias appears in either panel.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_1.pdf}
+    \caption{Step~1 ($+$1 hour ahead).}
+    \label{fig:pred_btc_h4_step1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_4.pdf}
+    \caption{Step~4 ($+$4 hours ahead).}
+    \label{fig:pred_btc_h4_step4}
+  \end{subfigure}
+  \caption{Actual versus predicted close price for \moderntcn on BTC/USDT, $h = 4$ (seed~123).  (a)~At step~1, the model tracks the actual price with high fidelity, capturing directional turns and amplitude fluctuations.  (b)~At step~4, trend structure is preserved but short-lived volatility spikes are modestly attenuated, consistent with MSE-induced shrinkage.  No systematic phase shift is observed.}
+  \label{fig:pred_btc_h4_step1_step4}
+\end{figure}
+
+Figure~\ref{fig:pred_short_contrast} juxtaposes \patchtst on EUR/USD and \timexer on Dow Jones, both at $\hfour$, step~1.  The EUR/USD panel (Figure~\ref{fig:pred_eurusd_patchtst_h4_step1}) shows that \patchtst's predictions follow the low-amplitude, mean-reverting dynamics of the currency pair with high precision, corroborating its category-leading \rmse in forex (0.1108; Table~\ref{tab:category_metrics}).  The Dow Jones panel (Figure~\ref{fig:pred_dji_timexer_h4_step1}) shows the middle-tier \timexer (rank~4): it tracks the general directional drift but exhibits a wider deviation band and less precise recovery of sharp reversals---a qualitative reflection of the rank gap between the top and middle tiers.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/08_predictions/forex/PatchTST/4/actual_vs_pred_step_1.pdf}
+    \caption{\patchtst on EUR/USD, step~1 ($h = 4$).}
+    \label{fig:pred_eurusd_patchtst_h4_step1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/08_predictions/indices/TimeXer/4/actual_vs_pred_step_1.pdf}
+    \caption{\timexer on Dow Jones, step~1 ($h = 4$).}
+    \label{fig:pred_dji_timexer_h4_step1}
+  \end{subfigure}
+  \caption{Cross-architecture, cross-asset contrast at $h = 4$, step~1 (seed~123).  (a)~\patchtst on EUR/USD (rank~2) tracks the low-amplitude, mean-reverting forex dynamics with high accuracy.  (b)~\timexer on Dow Jones (rank~4) captures the directional structure but with a wider deviation band, illustrating the qualitative signature of the rank gap between top and middle tiers.}
+  \label{fig:pred_short_contrast}
+\end{figure}
+
+Figure~\ref{fig:pred_itransformer_btc} provides a direct comparison between the third-ranked \itransformer and the top-ranked \moderntcn on BTC/USDT at $\hfour$.  Both models track the actual price trajectory closely at step~1, but at step~4 \itransformer exhibits slightly more amplitude attenuation during volatile episodes.  This visual difference is consistent with the small but consistent \rmse gap between \itransformer (743.5) and \moderntcn (731.6) on BTC/USDT at $\hfour$ (Table~\ref{tab:horizon_degradation_btc}).
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_1.pdf}
+    \caption{\itransformer on BTC/USDT, step~1 ($h = 4$).}
+    \label{fig:pred_btc_itransformer_h4_step1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_4.pdf}
+    \caption{\itransformer on BTC/USDT, step~4 ($h = 4$).}
+    \label{fig:pred_btc_itransformer_h4_step4}
+  \end{subfigure}
+  \caption{\itransformer (rank~3) on BTC/USDT at $\hfour$ (seed~123).  (a)~At step~1, tracking fidelity is comparable to \moderntcn (Figure~\ref{fig:pred_btc_h4_step1}).  (b)~At step~4, slightly more amplitude attenuation is visible relative to \moderntcn (Figure~\ref{fig:pred_btc_h4_step4}), consistent with the 1.6\% \rmse gap.  The inverted attention mechanism produces qualitatively similar but measurably weaker temporal representations for short-horizon cryptocurrency forecasting.}
+  \label{fig:pred_itransformer_btc}
+\end{figure}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\paragraph{Medium-horizon behaviour ($h = 24$, step 12).}
+
+Figure~\ref{fig:pred_medium_horizon} presents step-12 overlays from two model--asset pairings at the midpoint of the $\htwentyfour$ vector.  \moderntcn on EUR/USD (Figure~\ref{fig:pred_eurusd_moderntcn_h24_step12}) shows that macro-directional structure is preserved 12 hours ahead: the predicted series follows multi-session trends while understandably missing the sharpest intra-session swings.  \patchtst on Dow Jones (Figure~\ref{fig:pred_dji_patchtst_h24_step12}) similarly maintains directional integrity at step~12, but with a visibly wider error envelope than at $\hfour$---confirming the $2$--$2.5\times$ \rmse amplification (Table~\ref{tab:horizon_degradation_btc}).  Both panels show that the dominant degradation signature is amplitude attenuation rather than phase error or directional reversal.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/08_predictions/forex/ModernTCN/24/actual_vs_pred_step_12.pdf}
+    \caption{\moderntcn on EUR/USD, step~12 ($h = 24$).}
+    \label{fig:pred_eurusd_moderntcn_h24_step12}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{figures/08_predictions/indices/PatchTST/24/actual_vs_pred_step_12.pdf}
+    \caption{\patchtst on Dow Jones, step~12 ($h = 24$).}
+    \label{fig:pred_dji_patchtst_h24_step12}
+  \end{subfigure}
+  \caption{Medium-horizon actual-versus-predicted overlays at step~12 of the $h = 24$ forecast vector (seed~123).  (a)~\moderntcn on EUR/USD: directional content is preserved 12 hours ahead while high-frequency amplitude is dampened.  (b)~\patchtst on Dow Jones: directional integrity is maintained but the forecast envelope is wider than at $\hfour$, corroborating the $2$--$2.5\times$ \rmse amplification (Table~\ref{tab:horizon_degradation_btc}).  Both top architectures exhibit amplitude attenuation as the primary degradation mode.}
+  \label{fig:pred_medium_horizon}
+\end{figure}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\paragraph{Long-horizon degradation ($h = 24$, step 24).}
+
+Figure~\ref{fig:pred_long_horizon} presents the 24-step-ahead overlay for \moderntcn on BTC/USDT---the most demanding combination in the benchmark, pairing the highest price volatility with the maximum forecast depth.  The predicted series retains directional drift but shows progressive amplitude compression beyond step~12, with increasingly imprecise oscillatory reversal timing.  These characteristics are consistent with \moderntcn's \rmse degradation from 731.6 ($\hfour$) to 1{,}617.4 ($\htwentyfour$; Table~\ref{tab:horizon_degradation_btc})---a 121.1\% increase that, while substantial, does not erase directional signal or introduce systematic bias.  Long-horizon predictions are \emph{trend-indicative} rather than instance-specific: architectures differ not in whether degradation occurs but in how gracefully their temporal representations transfer to the maximum horizon.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.80\textwidth]{figures/08_predictions/crypto/ModernTCN/24/actual_vs_pred_step_24.pdf}
+  \caption{Long-horizon overlay: \moderntcn on BTC/USDT, $h = 24$, step~24 (seed~123).  The model retains directional integrity and captures low-frequency trend components, but high-amplitude intra-day reversals are under-predicted.  This pattern---directional fidelity without amplitude precision---is the signature of MSE-optimised direct multi-step forecasting at the maximum horizon.  The \rmse at $h = 24$ (1{,}617.4) represents a 121.1\% degradation relative to $\hfour$ (731.6; Table~\ref{tab:horizon_degradation_btc}).}
+  \label{fig:pred_long_horizon}
+\end{figure}

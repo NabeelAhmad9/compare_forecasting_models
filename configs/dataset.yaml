@@ -1,0 +1,39 @@
+# Dataset configuration
+max_samples: 30000
+# Input features (columns in raw CSV)
+features:
+  - open
+  - high
+  - low
+  - close
+  - volume
+
+# Target column for forecasting
+target: close
+
+# Lookback window size (number of past time steps as input)
+window_size: [24, 96]  
+# Forecasting horizons
+horizons: [4, 24]
+# short-term: 4 hours ahead
+# long-term: 24 hours ahead
+
+# Data splitting ratios (time-based, chronological order)
+split:
+  train: 0.7
+  val: 0.15
+  test: 0.15
+
+# Scaling method
+scaler_type: standard  # standard | minmax | robust
+
+# CSV format (no headers in raw files)
+csv_columns:
+  - datetime
+  - open
+  - high
+  - low
+  - close
+  - volume
+
+datetime_format: "%Y-%m-%d %H:%M"

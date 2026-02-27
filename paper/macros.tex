@@ -1,0 +1,104 @@
+% =============================================================================
+% macros.tex — Custom macros for the paper
+% =============================================================================
+
+% ---------------------------------------------------------------------------
+% Metric abbreviations
+% ---------------------------------------------------------------------------
+\newcommand{\rmse}{\textsc{rmse}\xspace}
+\newcommand{\mae}{\textsc{mae}\xspace}
+\newcommand{\da}{\textsc{da}\xspace}
+\newcommand{\mse}{\textsc{mse}\xspace}
+
+% ---------------------------------------------------------------------------
+% Horizon macros
+% ---------------------------------------------------------------------------
+\newcommand{\hfour}{\ensuremath{h=4}\xspace}
+\newcommand{\htwentyfour}{\ensuremath{h=24}\xspace}
+% ---------------------------------------------------------------------------
+% Experimental counts
+% ---------------------------------------------------------------------------
+\newcommand{\nmodels}{nine\xspace}
+\newcommand{\Nmodels}{Nine\xspace}
+\newcommand{\nassets}{12\xspace}
+\newcommand{\nseeds}{3\xspace}
+\newcommand{\nhorizons}{2\xspace}
+\newcommand{\ntrials}{5\xspace}
+
+% ---------------------------------------------------------------------------
+% Model name macros (exact capitalisation)
+% ---------------------------------------------------------------------------
+\newcommand{\autoformer}{Autoformer\xspace}
+\newcommand{\dlinear}{DLinear\xspace}
+\newcommand{\itransformer}{iTransformer\xspace}
+\newcommand{\lstm}{LSTM\xspace}
+\newcommand{\moderntcn}{ModernTCN\xspace}
+\newcommand{\nhits}{N-HiTS\xspace}
+\newcommand{\patchtst}{PatchTST\xspace}
+\newcommand{\timesnet}{TimesNet\xspace}
+\newcommand{\timexer}{TimeXer\xspace}
+
+% ---------------------------------------------------------------------------
+% Convenience macros
+% ---------------------------------------------------------------------------
+\newcommand{\eg}{e.g.,\xspace}
+\newcommand{\ie}{i.e.,\xspace}
+\newcommand{\cf}{cf.\xspace}
+\newcommand{\etal}{et~al.\xspace}
+\newcommand{\vs}{vs.\xspace}
+
+% ---------------------------------------------------------------------------
+% Statistical test macros
+% ---------------------------------------------------------------------------
+\newcommand{\pvalue}{\ensuremath{p}\nobreakdash-value\xspace}
+\newcommand{\pval}[1]{\ensuremath{p = #1}}     % inline p-value: \pval{0.005}
+% Statistical test name abbreviations
+\newcommand{\chisq}{\ensuremath{\chi^2}\xspace}
+\newcommand{\Hzero}{\ensuremath{H_0}\xspace}
+\newcommand{\cdfive}{\ensuremath{\mathrm{CD}_{0.05}}\xspace}
+\newcommand{\nem}{Nemenyi\xspace}
+\newcommand{\dm}{\textsc{dm}\xspace}
+\newcommand{\dmstat}{\ensuremath{t_{\mathrm{DM}}}\xspace}
+\newcommand{\icc}{\textsc{icc}\xspace}         % Intraclass Correlation Coefficient
+\newcommand{\jt}{\textsc{jt}\xspace}           % Jonckheere-Terpstra
+\newcommand{\stoufferz}{\ensuremath{Z_\mathrm{S}}\xspace}  % Stouffer combined Z
+
+% ---------------------------------------------------------------------------
+% Asset class macros
+% ---------------------------------------------------------------------------
+\newcommand{\crypto}{cryptocurrency\xspace}
+\newcommand{\forex}{forex\xspace}
+\newcommand{\indices}{equity indices\xspace}
+
+% ---------------------------------------------------------------------------
+% Mathematical notation
+% ---------------------------------------------------------------------------
+\newcommand{\bX}{\ensuremath{\mathbf{X}}}
+\newcommand{\by}{\ensuremath{\mathbf{y}}}
+\newcommand{\byhat}{\ensuremath{\hat{\mathbf{y}}}}
+\newcommand{\btheta}{\ensuremath{\boldsymbol{\theta}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\bigO}{\ensuremath{\mathcal{O}}}
+
+% ---------------------------------------------------------------------------
+% Table helpers
+% ---------------------------------------------------------------------------
+% Best-value cell: bold, works inside S columns (siunitx)
+\newcommand{\best}[1]{\bfseries #1}
+
+% Dagger for LSTM footnotes in tables
+\newcommand{\lstmdagger}{$^{\dagger}$}
+
+% Centered bold column header in S-type column
+\newcommand{\thead}[1]{\multicolumn{1}{c}{\textbf{#1}}}
+
+% Horizontal rule substitute that respects booktabs spacing
+\newcommand{\midrulethick}{\specialrule{0.08em}{1pt}{1pt}}
+
+% ---------------------------------------------------------------------------
+% Section reference shorthands
+% ---------------------------------------------------------------------------
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\appref}[1]{Appendix~\ref{#1}}

@@ -1,0 +1,75 @@
+# PatchTST hyperparameter search space for Optuna HPO
+
+search_space:
+  # Transformer architecture hyperparameters
+  d_model:
+    type: categorical
+    choices: [64]
+
+  n_heads:
+    type: categorical
+    choices: [4, 8]
+
+  e_layers:
+    type: int
+    low: 1
+    high: 3
+
+  d_ff:
+    type: categorical
+    choices: [256]
+
+  # Patching hyperparameters (critical for PatchTST)
+  patch_len:
+    type: categorical
+    choices: [16, 24]
+
+  stride:
+    type: categorical
+    choices: [4, 8]
+
+  # Regularization
+  dropout:
+    type: float
+    low: 0.0
+    high: 0.2
+    step: 0.05
+
+  fc_dropout:
+    type: float
+    low: 0.0
+    high: 0.2
+    step: 0.05
+
+  head_dropout:
+    type: float
+    low: 0.0
+    high: 0.2
+    step: 0.05
+
+  # Architecture choices
+  act:
+    type: categorical
+    choices: ["gelu"]
+    
+  individual:
+    type: categorical
+    choices: [true]   # Only the best option for financial TS
+
+  revin:
+    type: categorical
+    choices: [true]   # Stabilizes series, improves convergence
+
+  decomposition:
+    type: categorical
+    choices: [false]  # Not needed for typical financial series
+
+  # Training hyperparameters
+  learning_rate:
+    type: loguniform
+    low: 0.0005
+    high: 0.005  
+
+  batch_size:
+    type: categorical
+    choices: [64, 128]

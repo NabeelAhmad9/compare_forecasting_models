@@ -1,0 +1,43 @@
+% =============================================================================
+% Table 9 (revised): Two-Factor Variance Decomposition — z-normalised, dual panel
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \begin{threeparttable}
+  \caption{Two-factor variance decomposition of forecast \rmse.
+    Raw (untransformed) and z-normalised (within each asset--horizon slot)
+    panels are shown with and without \lstm.  Seed variance is negligible
+    ($<\!0.1\,\%$) in all cases.}
+  \label{tab:variance_decomposition}
+  \setlength{\tabcolsep}{9pt}%
+  \begin{tabular}{%
+    l%
+    S[table-format=2.2]%   Raw (all)
+    S[table-format=2.2]%   z-norm all
+    S[table-format=2.2]%   z-norm no LSTM
+  }
+    \toprule
+    \textbf{Factor}
+      & {\textbf{Raw (\%)}}
+      & {\textbf{$z$-norm, all (\%)}}
+      & {\textbf{$z$-norm, no \lstm (\%)}} \\
+    \midrule
+    \textbf{Model (architecture)}  & \bfseries 99.90 & \bfseries 48.32 & \bfseries 68.33 \\
+    Seed (initialisation)          &  0.01 &  0.04 &  0.02 \\
+    Residual (model$\times$slot)   &  0.09 & 51.64 & 31.66 \\
+    \bottomrule
+  \end{tabular}
+  \begin{tablenotes}[flushleft]\footnotesize
+    \item \textbf{Raw} panel: pooled variance decomposition on untransformed \rmse;
+      \lstm's errors ($7\times$--$33\times$ higher than best model) dominate
+      the model sum of squares, inflating the Model fraction to 99.90\,\%.
+    \item \textbf{$z$-norm} panels: \rmse standardised within each
+      (asset, horizon) slot before ANOVA, removing price-magnitude scale
+      effects across asset classes.
+    \item Residual ($\approx\!32$--$52\,\%$) reflects model$\times$slot
+      interaction: each architecture has a context-dependent advantage on
+      different asset--horizon combinations.  Seed variance ($<\!0.1\,\%$)
+      is negligible across all three panels, validating the three-seed protocol.
+  \end{tablenotes}
+  \end{threeparttable}
+\end{table}

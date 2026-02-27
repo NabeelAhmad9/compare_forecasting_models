@@ -1,0 +1,7 @@
+hidden_size: 128
+num_layers: 1
+mlp_hidden_size: 128
+bidirectional: true
+dropout: 0.15000000000000002
+learning_rate: 0.004349796564256661
+batch_size: 64

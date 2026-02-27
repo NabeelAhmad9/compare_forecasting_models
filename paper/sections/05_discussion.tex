@@ -1,0 +1,123 @@
+% =============================================================================
+% Section 5: Discussion
+% =============================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+This section interprets the empirical findings from Section~\ref{sec:results}, adjudicating each hypothesis, analysing architectural mechanisms, and discussing economic implications, connections to prior work, and limitations.
+
+% --------------------------------------------------------------------------
+\subsection{Hypothesis Adjudication}
+\label{sec:hypothesis_adjudication}
+
+\paragraph{H1: Ranking Non-Uniformity --- SUPPORTED.}
+The global leaderboard (Table~\ref{tab:global_leaderboard}) reveals a clear, consistent hierarchy: \moderntcn (mean rank 1.333, 75\% win rate) and \patchtst (mean rank 2.000) lead across all 24 evaluation points, separated by more than 5.5~ranks from the bottom tier (\timesnet, \autoformer, \lstm).  The per-asset best-model matrix (Table~\ref{tab:per_asset_best_models}) shows that \moderntcn's wins span all three asset classes and both horizons, with \nhits and \patchtst achieving niche first-place finishes exclusively on cryptocurrency assets and short horizons.  The Friedman-Iman-Davenport test confirms this non-uniformity at the global level with $F(8,184) = 101.36$, $p < 10^{-15}$ (Table~\ref{tab:stat_tests_friedman}), and the same result holds within each asset class.  Post-hoc Holm-Wilcoxon tests (Section~\ref{sec:statistical_tests}) establish that 33 of 36~pairwise differences are statistically significant; the only non-significant pairs are intra-tier neighbours (\timexer~vs.~\itransformer, \autoformer~vs.~\timesnet, \dlinear~vs.~\nhits).  The \moderntcn--\patchtst gap (0.667 mean rank difference) is not individually significant by Diebold-Mariano on BTC/USDT ($p_\text{Holm} = 0.453$), reflecting near-equivalent top-tier performance rather than statistical equivalence across the full distribution.
+
+\paragraph{H2: Cross-Horizon Ranking Stability --- SUPPORTED.}
+Top-tier rankings (\moderntcn, \patchtst) are preserved at both $\hfour$ and $\htwentyfour$ across all three representative assets (Tables~\ref{tab:horizon_degradation_btc} and~\ref{tab:horizon_ranking_shift}).  EUR/USD rankings are perfectly stable; BTC/USDT and Dow Jones exhibit rank shifts confined to the middle tier (\nhits improves by 3~ranks on Dow Jones; \itransformer drops by 2~on BTC/USDT).  This stability is formally confirmed by Spearman cross-horizon rank correlations: all 12~assets yield $\rho \geq 0.683$ with $p < 0.05$ (Table~\ref{tab:stat_tests_spearman}), including $\rho = 1.000$ for EUR/USD.  The Stouffer combined $\stoufferz = 6.17$ ($p = 3.47 \times 10^{-10}$) confirms this as a systematic, not asset-specific, property.  Error amplification of $2.0$--$2.5\times$ at the longer horizon reflects increased task difficulty rather than differential model degradation.  Figure~\ref{fig:pred_long_horizon} provides qualitative confirmation: \moderntcn retains directional correlation with BTC/USDT at step~24 despite the \rmse increase.
+
+\paragraph{H3: Variance Dominance --- STRONGLY SUPPORTED.}
+The two-factor decomposition (Table~\ref{tab:variance_decomposition}) is reported in three panels to separate scale artefacts from structural effects.\footnote{We reserve \emph{strongly supported} for hypotheses where the effect holds at $>$99\% magnitude across all analysis panels; the remaining hypotheses are labelled \emph{supported}.}  On the raw price scale, architecture explains 99.90\% of variance---driven by \lstm's outlier errors ($7$--$33\times$ the category median).  After z-score normalisation, architecture accounts for 48.32\% (seed: 0.04\%; residual: 51.64\%); excluding \lstm, it rises to 68.33\% (seed: 0.02\%).  The residual reflects genuine model--slot interaction: no single architecture dominates every slot.  Across all panels, seed variance is negligible ($\leq 0.04\%$), validating three-seed replication as sufficient.  This conclusion is independently corroborated by \icc analysis: for three representative assets at $\htwentyfour$, \icc $> 0.990$ with $F > 309$ ($p < 10^{-15}$; Table~\ref{tab:stat_tests_icc}), confirming that $>99\%$ of inter-model variance is attributable to architecture rather than random seed.  Per-asset decompositions extend this result to $\hfour$, where architecture still explains 97.4\%--99.7\% of variance (Section~\ref{sec:seed_robustness}), confirming that seed-invariance holds at both forecast depths.
+
+\paragraph{H4: Non-Monotonic Complexity--Performance --- SUPPORTED.}
+The complexity--performance scatter (Figure~\ref{fig:complexity}) demonstrates a non-monotonic relationship between trainable parameter count and mean \rmse rank.  \dlinear (approximately 1{,}000 parameters) achieves rank~5, while \autoformer (approximately 438{,}000 parameters) and \lstm (approximately 172{,}000 parameters) achieve ranks 8--9.  \moderntcn (approximately 230{,}000 parameters) and \patchtst (approximately 103{,}000 parameters) occupy the top positions with moderate parameter budgets.  The Jonckheere-Terpstra test for a monotonic complexity-rank relationship finds no significant trend in any of the six category--horizon combinations (all $p > 0.35$; Table~\ref{tab:stat_tests_jt}); four of the six $z$-values are negative, suggesting an inverse tendency.  This formally confirms that \emph{how} parameters are deployed---the specific temporal inductive bias---determines forecast quality, not the raw quantity of learnable weights.
+
+% --------------------------------------------------------------------------
+\subsection{Architecture-Specific Insights}
+\label{sec:architecture_insights}
+
+\paragraph{ModernTCN.}
+\moderntcn's consistent superiority (rank~1 on 18/24 evaluation points) is consistent with complementary design features: large-kernel depthwise convolutions capture multi-range temporal dependencies without quadratic attention cost; multi-stage downsampling enables hierarchical feature extraction suited to the multi-scale dynamics of financial series; and RevIN normalisation mitigates distributional shift between training and test periods.  All of this is achieved with approximately 230{,}000 parameters---a moderate footprint.
+
+\paragraph{PatchTST.}
+\patchtst's consistent second-place ranking supports the view that patch-based tokenisation offers an effective compromise between local pattern recognition and global dependency modelling.  Segmenting the input into patches reduces the token count, enabling attention over temporally coherent segments, while channel-independent processing prevents cross-feature leakage---appropriate given the heterogeneous scales of OHLCV components.  The narrow \moderntcn--\patchtst gap (0.667 mean rank difference) suggests that both architectures capture the relevant temporal structure through distinct mechanisms.
+
+\paragraph{iTransformer and TimeXer.}
+\itransformer's inverted attention paradigm (rank~3) shows that computing attention across the five OHLCV features rather than across time steps is effective for multivariate financial forecasting.  \timexer (rank~4) further separates target and exogenous variables through cross-attention, but the marginal improvement suggests that explicit target--exogenous decomposition adds complexity without proportionate benefit when all input features are closely correlated.
+
+\paragraph{DLinear and N-HiTS.}
+\dlinear's fifth-place ranking with approximately 1{,}000 parameters and no nonlinear activations corroborates the finding that simple linear mappings can be surprisingly effective \citep{Zeng2023}.  Its trend--seasonal decomposition captures the dominant low-frequency structure of financial series at minimal cost.  \nhits (rank~6) benefits from multi-rate pooling across temporal resolutions but processes only the target channel, potentially limiting cross-feature exploitation.  Its notably lower cross-horizon degradation on BTC/USDT (85.3\% vs.\ 121\% for \moderntcn; Table~\ref{tab:horizon_degradation_btc}) suggests that hierarchical temporal decomposition transfers well across horizons for trending series.  Notably, \nhits achieves the lowest \rmse on ETH/USDT (both horizons) and ADA/USDT ($\hfour$)---both lower-capitalisation, higher-volatility cryptocurrency assets---accounting for all three of its first-place finishes (Table~\ref{tab:per_asset_best_models}).  This suggests that its multi-rate pooling is particularly suited to the superimposed multi-scale oscillatory patterns characteristic of altcoin markets, where multiple speculative timescales dominate the price dynamics.
+
+\paragraph{TimesNet, Autoformer, and LSTM.}
+\timesnet (rank~7) and \autoformer (rank~8) both employ frequency-domain inductive biases---FFT-based 2D reshaping and auto-correlation, respectively---that presuppose periodic structure largely absent in hourly financial data.  Their designs are better suited to domains with strong seasonality such as electricity demand or weather forecasting.
+
+\lstm's consistently poor performance (worst-ranked across all conditions; errors $7$--$33\times$ higher than the best model) confirms that the recurrent architecture is not competitive for multi-step financial forecasting.  Compressing all temporal context into a fixed-dimensional hidden state severely limits representation capacity for direct multi-step prediction.
+
+% --------------------------------------------------------------------------
+\subsection{Asset-Class Dynamics}
+\label{sec:asset_dynamics}
+
+The three asset classes present distinct forecasting challenges shaped by different market microstructures (Section~\ref{sec:asset_universe}).  Cryptocurrency markets exhibit the highest absolute errors (mean \rmse 314--2{,}399; Table~\ref{tab:category_metrics}) due to elevated price levels, 24/7 trading, and speculative volatility.  Forex markets produce the smallest errors (0.110--3.668), reflecting low price magnitudes and high liquidity, while equity indices occupy an intermediate position (111--1{,}549).
+
+Despite these scale differences, \emph{relative rankings are largely preserved}: \moderntcn and \patchtst consistently occupy the top two positions in every category (Table~\ref{tab:category_metrics}, Figure~\ref{fig:category_boxplot}), indicating general-purpose temporal modelling capabilities rather than class-specific advantages.
+
+Mid-tier variation is more pronounced.  \timexer ranks 3rd in cryptocurrency but 4th in forex and indices.  \nhits (rank~6 overall) performs relatively better on cryptocurrency, where multi-rate pooling may better capture multi-scale volatility.  \dlinear performs better on forex (rank~5), where simpler, mean-reverting dynamics may be well-approximated by linear projections.
+
+\paragraph{Asset-specific niche advantages.}
+The per-asset best-model matrix (Table~\ref{tab:per_asset_best_models}) reveals a finer-grained picture than category-level rankings.  \nhits achieves the lowest \rmse on ETH/USDT at both horizons and on ADA/USDT at $\hfour$---all lower-capitalisation cryptocurrency assets characterised by higher relative volatility and more pronounced multi-scale dynamics.  This suggests that \nhits's hierarchical multi-rate pooling, which decomposes the input at several temporal resolutions, captures the superimposed short- and medium-term oscillation patterns that dominate altcoin price series.  \patchtst wins on BTC/USDT at $\hfour$ (with a margin of only 0.08\% over \moderntcn), on ADA/USDT at $\htwentyfour$, and on GBP/USD at $\hfour$, indicating that patch-based self-attention is competitive for short-horizon prediction on assets with diverse temporal structure.
+
+Critically, no model other than \moderntcn wins on any forex or equity index evaluation point at $\htwentyfour$.  This long-horizon, cross-category dominance---16 out of 16~possible wins outside the cryptocurrency domain at $\htwentyfour$---suggests that the combination of large-kernel depthwise convolutions and multi-stage downsampling provides the most transferable temporal representations when the forecast window extends.
+
+\paragraph{Statistical separability varies by market microstructure.}
+Diebold-Mariano tests reveal that the top-tier gap is market-dependent.  On EUR/USD ($\htwentyfour$), \moderntcn is statistically separable from every other architecture, including \patchtst ($p_\text{Holm} = 2.77 \times 10^{-24}$; Section~\ref{sec:statistical_tests}).  On BTC/USDT at the same horizon, \moderntcn~vs.~\patchtst is not significant ($p_\text{Holm} = 0.453$).  This disparity reflects the differing signal-to-noise ratios: EUR/USD's lower intrinsic noise amplifies small but consistent performance differences into statistical separability, whereas BTC/USDT's high volatility masks the same differences.  Practitioners operating in low-noise markets can thus have higher confidence in \moderntcn's superiority; in high-noise crypto markets, the top-tier models should be treated as near-equivalent.
+
+% --------------------------------------------------------------------------
+\subsection{Economic Interpretation}
+\label{sec:economic_interpretation}
+
+While this study evaluates forecasting \emph{accuracy} rather than trading \emph{profitability}, several economically relevant observations emerge.
+
+\paragraph{Cost of model selection error.}
+The \rmse gap between \moderntcn and the worst modern alternative (\autoformer) ranges from 60\%--70\% across categories (Table~\ref{tab:category_metrics}); the gap to \lstm is an order of magnitude larger.  Where forecast error translates into sizing or timing errors, systematic architecture evaluation yields substantial returns relative to default model selection.
+
+\paragraph{Directional accuracy.}
+The mean \da across all 54 model--category--horizon combinations is 50.08\%, with no combination deviating meaningfully from the 50\% baseline (Table~\ref{tab:directional_accuracy}).  MSE-optimised architectures do not exhibit directional skill at hourly resolution.  Application to directional trading would require explicit directional loss functions or post-processing of point forecasts into probabilistic signals.
+
+\paragraph{Variance decomposition implication.}
+Architecture choice explains the overwhelming majority of forecast variance while seed explains $\leq 0.04\%$.  The practical corollary: effort invested in architecture selection yields far higher returns than effort spent on seed selection or initialisation-based ensembles.
+
+\paragraph{Caveat.}
+These economic interpretations are preliminary.  \rmse and \mae measure statistical accuracy, not economic value.  Trading performance requires consideration of transaction costs, market impact, slippage, position sizing, and risk-adjusted returns (Sharpe ratio, maximum drawdown).  This study provides the statistical foundation for economic evaluations but does not assess trading profitability.
+
+% --------------------------------------------------------------------------
+\subsection{Comparison with Prior Literature}
+\label{sec:prior_comparison}
+
+\paragraph{Linear models are competitive.}
+\dlinear's fifth-place ranking with approximately 1{,}000 parameters is consistent with the finding that linear temporal mappings can match or exceed more complex alternatives \citep{Zeng2023}.  This benchmark extends that finding from standard time-series benchmarks (ETTh, Weather, Electricity) to financial data across three asset classes under controlled HPO.
+
+\paragraph{Patch-based attention is effective.}
+\patchtst's consistent second-place ranking supports the view that patch tokenisation is an effective strategy for time-series Transformers \citep{Nie2023}, and this effectiveness extends to financial data across asset classes and horizons.
+
+\paragraph{Seed variance is small in financial forecasting.}
+The 99.90\% raw model vs.\ 0.01\% seed decomposition (z-normalised: 48.3\% vs.\ 0.04\%) extends prior work documenting the importance of separating implementation variance from algorithmic performance \citep{Bouthillier2021}.  In financial forecasting with fixed splits and deterministic preprocessing, seed variance is even smaller than in the general settings examined there, justifying the three-seed protocol.
+
+\paragraph{Recurrent models are not competitive.}
+The order-of-magnitude inferiority of \lstm corroborates prior observations on the declining competitiveness of recurrent architectures \citep{Lim2021, Hewamalage2021}.  This study provides the most controlled evidence to date for this conclusion in the financial domain.
+
+\paragraph{Positioning relative to compound gap.}
+Prior studies (Table~\ref{tab:prior_studies}) address at most two or three of the five gaps.  This study simultaneously addresses: controlled HPO~(G1), multi-seed evaluation~(G2), multi-horizon analysis~(G3), formal pairwise statistical correction with Holm-Wilcoxon and Diebold-Mariano tests~(G4), and multi-asset-class coverage~(G5).  All five methodological gaps are therefore addressed, placing this study at the intersection of rigorous experimental design and financial time-series benchmarking.
+
+% --------------------------------------------------------------------------
+\subsection{Limitations and Threats to Validity}
+\label{sec:limitations}
+
+The following limitations are organised by severity, from most impactful to least:
+
+\begin{enumerate}[label=\textbf{L\arabic*.}]
+  \item \textbf{HPO budget.}  Five Optuna trials represent a limited search budget.  Models with larger search spaces may be disadvantaged.  Increasing the budget may shift mid-tier rankings, though top-tier positions appear robust.
+
+  \item \textbf{Statistical validation.}  A comprehensive battery of formal statistical tests is reported (Section~\ref{sec:statistical_tests} and Tables~\ref{tab:stat_tests_friedman}--\ref{tab:stat_tests_jt}), including Friedman-Iman-Davenport omnibus tests, Holm-Wilcoxon pairwise comparisons, Diebold-Mariano tests, Spearman/Stouffer cross-horizon correlations, \icc, and Jonckheere-Terpstra complexity tests.  The main remaining limitation is that per-category pairwise Wilcoxon tests are underpowered due to small block size ($n = 8$); a categorical-level study with more assets per class would overcome this constraint.
+
+  \item \textbf{Feature set.}  The OHLCV-only restriction, while essential for fair comparison, may underestimate models designed to exploit technical indicators, order-book data, or sentiment features.  Rankings could differ under richer input configurations.
+
+  \item \textbf{Temporal scope.}  All experiments use H1 (hourly) frequency.  Generalisability to higher frequencies (tick-level, M1) or lower frequencies (H4, daily) is not established.  The relative importance of different inductive biases may change with the characteristic time scale.
+
+  \item \textbf{Asset universe.}  Twelve instruments across three asset classes provide a representative but not exhaustive sample.  Commodities, fixed income, and emerging-market instruments are absent.
+
+  \item \textbf{Horizon granularity.}  Degradation is characterised at only two points ($\hfour$ and $\htwentyfour$).  Intermediate horizons ($h = 8, 12, 16$) would yield smoother degradation curves and more precise characterisation of architecture-specific scaling behaviour.
+
+  \item \textbf{Effect-size reporting.}  A critical difference diagram (Figure~\ref{fig:cd_diagram}) visualises the Holm-Wilcoxon significance structure, and Diebold--Mariano pairwise tests are reported for representative assets (Section~\ref{sec:statistical_tests}).  However, Cohen's~$d$ standardised effect sizes---which would facilitate cross-study comparison---are not computed.  While the Holm-adjusted \pvalue{}s and rank differences provide implicit effect scaling, explicit $d$~values remain a useful complement and are identified as future work.
+
+  \item \textbf{Out-of-sample recency.}  The test set comprises the final 15\% of historical data, evaluated in batch.  A live forward-walk evaluation with rolling retraining would provide stronger evidence for real-time deployment.
+\end{enumerate}

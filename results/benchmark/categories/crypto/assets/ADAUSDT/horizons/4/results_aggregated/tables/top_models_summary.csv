@@ -1,0 +1,6 @@
+model,rank
+N-HiTS,1.0
+PatchTST,2.0
+ModernTCN,3.0
+DLinear,4.0
+iTransformer,5.0

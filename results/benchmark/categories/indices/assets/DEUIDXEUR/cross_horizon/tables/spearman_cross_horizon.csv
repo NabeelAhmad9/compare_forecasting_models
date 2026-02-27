@@ -1,0 +1,2 @@
+category,asset,horizon_low,horizon_high,spearman_rho,p_value,n_models
+indices,DEUIDXEUR,4,24,0.8833333333333333,0.0015905004234978686,9

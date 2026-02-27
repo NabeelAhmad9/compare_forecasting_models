@@ -1,0 +1,56 @@
+% =============================================================================
+% Table 12: Per-Asset Best Model Matrix
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \begin{threeparttable}
+  \caption{Best-performing model per asset and horizon, determined by lowest
+    mean \rmse across three seeds.  \moderntcn achieves the lowest \rmse
+    on 18 of 24~evaluation points (75\%); \nhits wins on 3~points
+    (all in cryptocurrency); \patchtst wins on 3~points (one crypto,
+    one crypto, one forex).  Bold highlights non-\moderntcn winners,
+    revealing niche asset-specific advantages.}
+  \label{tab:per_asset_best_models}
+  \setlength{\tabcolsep}{7pt}%
+  \begin{tabular}{l l l l}
+    \toprule
+    \textbf{Category} & \textbf{Asset}
+      & \textbf{Best at $\hfour$}
+      & \textbf{Best at $\htwentyfour$} \\
+    \midrule
+    \multirow{4}{*}{Crypto}
+      & BTC/USDT    & \textbf{\patchtst}  & \moderntcn          \\
+      & ETH/USDT    & \textbf{\nhits}     & \textbf{\nhits}     \\
+      & BNB/USDT    & \moderntcn          & \moderntcn          \\
+      & ADA/USDT    & \textbf{\nhits}     & \textbf{\patchtst}  \\
+    \addlinespace
+    \multirow{4}{*}{Forex}
+      & EUR/USD     & \moderntcn          & \moderntcn          \\
+      & USD/JPY     & \moderntcn          & \moderntcn          \\
+      & GBP/USD     & \textbf{\patchtst}  & \moderntcn          \\
+      & AUD/USD     & \moderntcn          & \moderntcn          \\
+    \addlinespace
+    \multirow{4}{*}{Indices}
+      & DAX         & \moderntcn          & \moderntcn          \\
+      & Dow Jones   & \moderntcn          & \moderntcn          \\
+      & S\&P~500    & \moderntcn          & \moderntcn          \\
+      & NASDAQ~100  & \moderntcn          & \moderntcn          \\
+    \midrule
+    \multicolumn{2}{l}{\textbf{Win count summary}}
+      & \multicolumn{2}{l}{\moderntcn: 18\quad \nhits: 3\quad \patchtst: 3} \\
+    \bottomrule
+  \end{tabular}
+  \begin{tablenotes}[flushleft]\footnotesize
+    \item \nhits wins exclusively on lower-capitalisation cryptocurrency
+      assets (ETH/USDT, ADA/USDT), suggesting that its hierarchical
+      multi-rate pooling is particularly suited to the high-frequency,
+      multi-scale volatility structure of altcoin markets.
+    \item \patchtst wins at $\hfour$ on BTC/USDT ($\rmse = 731.05$
+      vs.\ \moderntcn's $731.63$; $\Delta = 0.08\%$) and on
+      GBP/USD, but cedes to \moderntcn at $\htwentyfour$ in both cases.
+    \item No model other than \moderntcn wins on any forex or equity index
+      asset at $\htwentyfour$, underscoring its superior long-horizon
+      generalisation.
+  \end{tablenotes}
+  \end{threeparttable}
+\end{table}

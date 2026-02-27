@@ -1,0 +1,39 @@
+# Asset definitions grouped by category
+# Representative assets are used for HPO (Stage 1)
+
+categories:
+  crypto:
+    representative: BTCUSDT
+    assets:
+      - name: BTCUSDT
+        file: BTCUSDT_H1.csv
+      - name: ETHUSDT
+        file: ETHUSDT_H1.csv
+      - name: BNBUSDT
+        file: BNBUSDT_H1.csv
+      - name: ADAUSDT
+        file: ADAUSDT_H1.csv
+
+  forex:
+    representative: EURUSD
+    assets:
+      - name: EURUSD
+        file: EURUSD_H1.csv
+      - name: USDJPY
+        file: USDJPY_H1.csv
+      - name: GBPUSD
+        file: GBPUSD_H1.csv
+      - name: AUDUSD
+        file: AUDUSD_H1.csv
+
+  indices:
+    representative: USA30IDXUSD
+    assets:
+      - name: USA30IDXUSD
+        file: USA30IDXUSD_H1.csv
+      - name: USA500IDXUSD
+        file: USA500IDXUSD_H1.csv
+      - name: USATECHIDXUSD
+        file: USATECHIDXUSD_H1.csv
+      - name: DEUIDXEUR
+        file: DEUIDXEUR_H1.csv

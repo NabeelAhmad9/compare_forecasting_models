@@ -1,0 +1,37 @@
+% =============================================================================
+% Table 1: Prior Comparative Studies
+% =============================================================================
+\begin{table}[htbp]
+  \centering
+  \caption{Summary of prior comparative studies in time-series forecasting.
+    Columns indicate the number of models evaluated, number of datasets or asset
+    classes, horizons tested, whether multi-seed evaluation was performed, and
+    whether post-hoc pairwise statistical tests were applied.}
+  \label{tab:prior_studies}
+  \small
+  \setlength{\tabcolsep}{3pt}%
+  \begin{tabular}{%
+    p{2.9cm}%  Study
+    @{\hspace{5pt}} c%  Models
+    @{\hspace{5pt}} c%  Datasets
+    @{\hspace{5pt}} c%  Horizons
+    @{\hspace{5pt}} c%  Multi-Seed
+    @{\hspace{5pt}} c%  Pairwise Tests
+    @{\hspace{5pt}} c%  Open Code
+  }
+    \toprule
+    \textbf{Study} & \textbf{Models} & \textbf{Datasets} & \textbf{Horizons}
+      & \textbf{Multi-Seed} & \textbf{Pairwise Tests} & \textbf{Open Code} \\
+    \midrule
+    \citep{Makridakis2018} (M4)   & Many     & 100K series & Multiple & No  & No  & Partial \\
+    \citep{Hewamalage2021}        & RNN only & 6           & Multiple & No  & No  & Partial \\
+    \citep{Zeng2023}              & 6        & 9           & 4        & No  & No  & Yes     \\
+    \citep{Wu2023timesnet}        & 8        & 8           & 4        & No  & No  & Yes     \\
+    \citep{Nie2023}               & 7        & 8           & 4        & No  & No  & Yes     \\
+    \citep{Liu2024itransformer}   & 8        & 7           & 4        & No  & No  & Yes     \\
+    \midrule
+    \textbf{Present study}        & \textbf{9} & \textbf{12 (3 classes)} & \textbf{2}
+      & \textbf{Yes (3)} & \textbf{Yes} & \textbf{Yes} \\
+    \bottomrule
+  \end{tabular}
+\end{table}

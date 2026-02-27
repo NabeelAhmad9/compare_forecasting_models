@@ -1,0 +1,3 @@
+horizon,best_model,rmse
+4,ModernTCN,16.955287855279938
+24,ModernTCN,35.91006046924806

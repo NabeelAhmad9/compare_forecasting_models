@@ -1,0 +1,2 @@
+category,asset,horizon_low,horizon_high,spearman_rho,p_value,n_models
+forex,EURUSD,4,24,1.0,0.0,9
