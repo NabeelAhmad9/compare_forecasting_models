@@ -1,9 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.1.17)  26 FEB 2026 16:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.1.17)  26 FEB 2026 18:20
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**c:/Users/Nabeel/Desktop/compare_forecasting_models/paper/main.tex
+(c:/Users/Nabeel/Desktop/compare_forecasting_models/paper/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
 (c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -22,18 +23,14 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-)
-(c:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-)
-(c:/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+ (c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count283
@@ -48,50 +45,35 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen155
 \Gm@layoutvoffset=\dimen156
 \Gm@dimlist=\toks18
-)
-(c:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-)
-(c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks19
 \inpenc@posthook=\toks20
-)
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/newtxtext.sty
-Package: newtxtext 2024/04/01 v1.744(Michael Sharpe) latex and unicode latex su
-pport for TeXGyreTermesX
-
-`newtxtext' v1.744, 2024/04/01 Text macros taking advantage of TeXGyre Termes a
-nd its extensions (msharpe)
-(c:/texlive/2025/texmf-dist/tex/latex/xpatch/xpatch.sty
-(c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/newtx/newtxtext.sty
+Package: newtxtext 2024/04/01 v1.744(Michael Sharpe) latex and unicode latex support for TeXGyreTermesX
+ `newtxtext' v1.744, 2024/04/01 Text macros taking advantage of TeXGyre Termes and its extensions (msharpe) (c:/texlive/2025/texmf-dist/tex/latex/xpatch/xpatch.sty (c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2025-12-29 L3 programming layer (loader) 
-
-(c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+ (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count286
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
-
-(c:/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2025-10-09 L3 Experimental document command parser
-)
-(c:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count287
-))
-(c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
-)
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+) (c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -101,47 +83,36 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-)
-(c:/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
-
-(c:/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(c:/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks21
 \XKV@tempa@toks=\toks22
 \XKV@tempb@toks=\toks23
 )
 \XKV@depth=\count288
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(c:/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
-)
-(c:/texlive/2025/texmf-dist/tex/generic/xstring/xstring.sty
-(c:/texlive/2025/texmf-dist/tex/generic/xstring/xstring.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/xstring/xstring.sty (c:/texlive/2025/texmf-dist/tex/generic/xstring/xstring.tex
 \xs_counta=\count289
 \xs_countb=\count290
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
-)
-(c:/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-)
-(c:/texlive/2025/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+) (c:/texlive/2025/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 LaTeX Font Info:    Setting ntxLF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxTLF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxOsF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxTOsF sub-encoding to TS1/0 on input line 24.
-
-(c:/texlive/2025/texmf-dist/tex/generic/kastrup/binhex.tex)
+ (c:/texlive/2025/texmf-dist/tex/generic/kastrup/binhex.tex)
 \ntx@tmpcnta=\count291
 \ntx@cnt=\count292
-
-(c:/texlive/2025/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/fontaxes/fontaxes.sty
 Package: fontaxes 2026-01-02 v2.0.2 Font selection axes (deprecated)
 Applying: [2024-11-01] Use figureversions if present on input line 74.
-
-(c:/texlive/2025/texmf-dist/tex/latex/figureversions/figureversions.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/figureversions/figureversions.sty
 Package: figureversions 2025-04-29 v1.0.1 Figure versions
 )
 Already applied: [0000-00-00] Fall back to v1 on input line 76.
@@ -161,29 +132,23 @@ Already applied: [0000-00-00] Fall back to v1 on input line 76.
 \tx@dimBB=\dimen169
 \tx@dimC=\dimen170
 LaTeX Info: Redefining \oldstylenums on input line 902.
-)
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/newtxmath.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/newtx/newtxmath.sty
 Package: newtxmath 2024/09/22 v1.754
-
-`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
-) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+ `newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
-
-(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
 \ex@=\dimen171
-))
-(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen172
-)
-(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count293
@@ -233,13 +198,11 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-)
-(c:/texlive/2025/texmf-dist/tex/latex/oberdiek/centernot.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/oberdiek/centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
 \tx@cntz=\count305
-
-(c:/texlive/2025/texmf-dist/tex/generic/kastrup/binhex.tex)
+ (c:/texlive/2025/texmf-dist/tex/generic/kastrup/binhex.tex)
 \tx@Isdigit=\count306
 \tx@IsAlNum=\count307
 \tx@tA=\toks29
@@ -313,20 +276,17 @@ Now handling font encoding LMX ...
 ... no UTF-8 mapping file for font encoding LMX
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 664.
 LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 6
-64.
+(Font)              `largesymbols' in the math version `normal' on input line 664.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 664.
 LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 664
-.
+(Font)              `largesymbols' in the math version `bold' on input line 664.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 664.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 665.
 \symlargesymbolsTXA=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
-
 (Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 679.
 \tx@sbptoks=\toks31
 LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 902.
@@ -347,8 +307,7 @@ LaTeX Info: Redefining \Bbbk on input line 2847.
 LaTeX Info: Redefining \not on input line 2995.
 ) (c:/texlive/2025/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
-)
-(c:/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
 \MT@toks=\toks32
 \MT@tempbox=\box55
@@ -362,33 +321,27 @@ LaTeX Info: Redefining \textls on input line 1449.
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 \MT@listname@count=\count309
-
-(c:/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+ (c:/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
-
 LaTeX Info: Redefining \lsstyle on input line 944.
 LaTeX Info: Redefining \lslig on input line 944.
 \MT@outer@space=\skip54
 )
 Package microtype Info: Loading configuration file microtype.cfg.
-
-(c:/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg
+ (c:/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
-)
-(c:/texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-)
-(c:/texlive/2025/texmf-dist/tex/latex/tools/bm.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup8
 \symboldletters=\mathgroup9
 \symboldsymbols=\mathgroup10
 \symboldlargesymbols=\mathgroup11
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
-)
-(c:/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen181
 \lightrulewidth=\dimen182
@@ -407,15 +360,13 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count312
 \@lastruleclass=\count313
 \@thisrulewidth=\dimen193
-)
-(c:/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip55
 \multirow@cntb=\count314
 \multirow@dima=\skip56
 \bigstrutjot=\dimen194
-)
-(c:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen195
 \ar@mcellbox=\box56
@@ -424,8 +375,7 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \extratabsurround=\skip57
 \backup@length=\skip58
 \ar@cellbox=\box57
-)
-(c:/texlive/2025/texmf-dist/tex/latex/siunitx/siunitx.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
 \l__siunitx_number_uncert_offset_int=\count315
 \l__siunitx_number_exponent_fixed_int=\count316
@@ -441,19 +391,13 @@ Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
 \l__siunitx_angle_marker_box=\box58
 \l__siunitx_angle_unit_box=\box59
 \l__siunitx_compound_count_int=\count325
-
-(c:/texlive/2025/texmf-dist/tex/latex/translations/translations.sty
-Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
- (CN)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(c:/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+ (c:/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -473,12 +417,10 @@ Package pdftexcmds Info: \pdfdraftmode found.
 \l__siunitx_unit_tmp_int=\count326
 \l__siunitx_unit_position_int=\count327
 \l__siunitx_unit_total_int=\count328
-)
-(c:/texlive/2025/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box66
-)
-(c:/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@col@width=\dimen258
 \TX@old@table=\dimen259
@@ -487,8 +429,7 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@delta=\dimen262
 \TX@cols=\count329
 \TX@ftn=\toks35
-)
-(c:/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip59
 \LTright=\skip60
@@ -506,42 +447,31 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \c@LT@tables=\count333
 \c@LT@chunks=\count334
 \LT@p@ftn=\toks36
-)
-(c:/texlive/2025/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
-
-(c:/texlive/2025/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
-Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PD
-F (HO)
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/lscape.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PDF (HO)
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 ))
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-))
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen264
 \Gin@req@width=\dimen265
-)
-(c:/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
-
-(c:/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
-(c:/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen266
 \captionmargin=\dimen267
@@ -556,8 +486,7 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count335
 \c@continuedfloat=\count336
 Package caption Info: longtable package is loaded.
-
-(c:/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: threeparttable package is loaded.
@@ -566,44 +495,34 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count337
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count338
-)
-(c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count339
 \float@exts=\toks37
 \float@box=\box72
 \@float@everytoks=\toks38
 \@floatcapt=\box73
-)
-(c:/texlive/2025/texmf-dist/tex/latex/tools/afterpage.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
 \AP@output=\toks39
 \AP@partial=\box74
 \AP@footins=\box75
-)
-(c:/texlive/2025/texmf-dist/tex/latex/placeins/placeins.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
-)
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/dvipsnam.def
+) (c:/texlive/2025/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-)
-(c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
-
-(c:/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-
-(c:/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))
-(c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count340
-
-(c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
+ (c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-(c:/texlive/2025/texmf-dist/tex/latex/url/url.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -666,8 +585,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \c@mincompwidth=\count386
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
-
-(c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -758,14 +676,12 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip84
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
-
-(c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-compat.def
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
-
-(c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 \c@textcitecount=\count455
 \c@textcitetotal=\count456
@@ -783,29 +699,24 @@ File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
-
-(c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-natbib.def
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-natbib.def
 File: blx-natbib.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
- overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined, overwriting.
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
-
-(c:/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
 File: authoryear.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
-
-(c:/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count464
 \c@bbx:relatedtotal=\count465
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
-
-(c:/texlive/2025/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
 File: authoryear.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -817,8 +728,7 @@ Package biblatex Info: Redefining '\textcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
-
-(c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.cfg
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -827,52 +737,39 @@ Package biblatex Info: ... and expl3
 (biblatex)             2025-12-29 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
-
-(c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
-))
-(c:/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
-
-(c:/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+ (c:/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(c:/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(c:/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
-
-(c:/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count466
-)
-(c:/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
-)
+) (c:/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen274
 \Hy@linkcounter=\count467
 \Hy@pagecounter=\count468
-
-(c:/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (c:/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(c:/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count469
-
-(c:/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+ (c:/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -889,13 +786,10 @@ Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count470
 LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen275
-
-(c:/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+ (c:/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(c:/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+ (c:/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count471
 \Field@Width=\dimen276
@@ -912,27 +806,21 @@ Package hyperref Info: PDF/A mode OFF on input line 6108.
 \c@Hfootnote=\count474
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(c:/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+ (c:/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
 \Fld@listcount=\count475
 \c@bookmark@seq@number=\count476
-
-(c:/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
-
-(c:/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+ (c:/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-84.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
 \Hy@SectionHShift=\skip85
-)
-(c:/texlive/2025/texmf-dist/tex/latex/tools/xspace.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-)
-(c:/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip86
 \enit@outerparindent=\dimen278
@@ -940,35 +828,22 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@inbox=\box76
 \enit@count@id=\count477
 \enitdp@description=\count478
-)
-(c:/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+) (c:/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks41
 \pgfutil@tempdima=\dimen279
 \pgfutil@tempdimb=\dimen280
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box77
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
 Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(c:/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+ (c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks42
 \pgfkeys@temptoks=\toks43
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.co
-de.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks44
 ))
 \pgf@x=\dimen281
@@ -995,56 +870,28 @@ de.tex
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
 Driver file for pgf: pgfsys-pdftex.def
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+))) (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfsyssoftpath@smallbuffer@items=\count484
 \pgfsyssoftpath@bigbuffer@items=\count485
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen291
 \pgfmath@count=\count486
 \pgfmath@box=\box78
 \pgfmath@toks=\toks48
 \pgfmath@stack@operand=\toks49
 \pgfmath@stack@operation=\toks50
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
-x)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
-.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
-ex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
-de.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
-x)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
-etics.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count487
-))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@picminx=\dimen292
 \pgf@picmaxx=\dimen293
@@ -1060,109 +907,75 @@ File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@yy=\dimen303
 \pgf@zx=\dimen304
 \pgf@zy=\dimen305
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
-e.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@path@lastx=\dimen306
 \pgf@path@lasty=\dimen307
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
-x
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@shorten@end@additional=\dimen308
 \pgf@shorten@start@additional=\dimen309
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box79
 \pgf@hbox=\box80
 \pgf@layerbox@main=\box81
 \pgf@picture@serial@count=\count488
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
-.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgflinewidth=\dimen310
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
-ode.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@pt@x=\dimen311
 \pgf@pt@y=\dimen312
 \pgf@pt@temp=\dimen313
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
-de.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowsep=\dimen314
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@max=\dimen315
 \pgf@sys@shading@range@num=\count489
 \pgf@shadingcount=\count490
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfexternal@startupbox=\box82
 ) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
-.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
-x
+))) (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodeparttextbox=\box83
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
-y
+) (c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@nodesepstart=\dimen316
 \pgf@nodesepend=\dimen317
-)
-(c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
-y
+) (c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-)) (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(c:/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen318
 \pgffor@skip=\dimen319
 \pgffor@stack=\toks51
 \pgffor@toks=\toks52
-))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
-de.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@plot@mark@count=\count491
 \pgfplotmarksize=\dimen320
@@ -1183,65 +996,37 @@ File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikznumberofchildren=\count493
 \tikznumberofcurrentchild=\count494
 \tikz@fig@count=\count495
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmatrixcurrentrow=\count496
 \pgfmatrixcurrentcolumn=\count497
 \pgf@matrix@numberofcolumns=\count498
 )
 \tikz@expandcount=\count499
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarytopaths.code.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-braryshapes.code.tex
+))) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-braryshapes.geometric.code.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.g
-eometric.code.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-braryshapes.misc.code.tex
+)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
 File: tikzlibraryshapes.misc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.m
-isc.code.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
 File: pgflibraryshapes.misc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-braryshapes.symbols.code.tex
+)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
 File: tikzlibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.s
-ymbols.code.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
 File: pgflibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-braryshapes.arrows.code.tex
+)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
 File: tikzlibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.a
-rrows.code.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
 File: pgflibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-braryshapes.callouts.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.c
-allouts.code.tex))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-braryshapes.multipart.code.tex
+)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex
+(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
 File: tikzlibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.m
-ultipart.code.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodepartlowerbox=\box88
 \pgfnodeparttwobox=\box89
@@ -1263,102 +1048,39 @@ File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodepartsevenbox=\box105
 \pgfnodepartsixbox=\box106
 \pgfnodepartfivebox=\box107
-)))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.cod
-e.tex
+))) (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowinset=\dimen329
 \pgfarrowlength=\dimen330
 \pgfarrowwidth=\dimen331
 \pgfarrowlinewidth=\dimen332
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarypositioning.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-braryfit.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
 File: tikzlibraryfit.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarybackgrounds.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@layerbox@background=\box108
 \pgf@layerboxsaved@background=\box109
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarycalc.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2025/texmf-dist/tex/latex/pgfplots/pgfplots.sty (c:/texlive/2025/
-texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+) (c:/texlive/2025/texmf-dist/tex/latex/pgfplots/pgfplots.sty (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2025/08/14 v1.18.2 Data Visualization (1.18.2)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 \t@pgfplots@toka=\toks53
 \t@pgfplots@tokb=\toks54
 \t@pgfplots@tokc=\toks55
 \pgfplots@tmpa=\dimen333
 \c@pgfplots@coordindex=\count500
 \c@pgfplots@scanlineindex=\count501
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.te
-x))
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfs
-upp_loader.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfs
-upp_pgfutil-common-lists.tex))
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
-cture.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
-ctureext.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.co
-de.tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
 \c@pgfplotsarray@tmp=\count502
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.c
-ode.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.c
-ode.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
 \c@pgfplotstable@counta=\count503
 \t@pgfplotstable@a=\toks56
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.co
-de.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.
-tex))
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.te
-x)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfsh
-ading.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
 \c@pgfplotslibrarysurf@no=\count504
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
-ding.pgfsys-pdftex.def)))
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.t
-ex
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex
-))) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.t
-ex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarydecorations.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.t
-ex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
 \pgfdecoratedcompleteddistance=\dimen334
 \pgfdecoratedremainingdistance=\dimen335
 \pgfdecoratedinputsegmentcompleteddistance=\dimen336
@@ -1369,17 +1091,7 @@ ex
 \pgfdecorationsegmentlength=\dimen340
 )
 \tikz@lib@dec@box=\box110
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarydecorations.pathmorphing.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
-orations.pathmorphing.code.tex))
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarydecorations.pathreplacing.code.tex
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
-orations.pathreplacing.code.tex))
-(c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.conto
-urlua.code.tex)
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
 \pgfplots@numplots=\count506
 \pgfplots@xmin@reg=\dimen341
 \pgfplots@xmax@reg=\dimen342
@@ -1387,13 +1099,9 @@ urlua.code.tex)
 \pgfplots@ymax@reg=\dimen344
 \pgfplots@zmin@reg=\dimen345
 \pgfplots@zmax@reg=\dimen346
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-braryplotmarks.code.tex
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.
-tex
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (c:/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
@@ -1406,10 +1114,8 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen349
 \titlewidthlast=\dimen350
 \titlewidthfirst=\dimen351
-)
-(./macros.tex) (c:/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+) (./macros.tex) (c:/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-
 \f@nch@headwidth=\skip89
 \f@nch@offset@elh=\skip90
 \f@nch@offset@erh=\skip91
@@ -1425,32 +1131,26 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip101
 \f@nch@widthR=\skip102
 \@temptokenb=\toks58
-)
-(c:/texlive/2025/texmf-dist/tex/latex/changepage/changepage.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count507
 \cp@tempcnt=\count508
 )
-LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line
- 272.
-
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 272.
+ (c:/texlive/2025/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 272.
-Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 272.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 272.
 \@quotelevel=\count509
 \@quotereset=\count510
  (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 272.
-LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
- 272.
-
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/omlntxmi.fd
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 272.
+ (c:/texlive/2025/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
 LaTeX Font Info:    ... okay on input line 272.
@@ -1465,26 +1165,20 @@ LaTeX Font Info:    ... okay on input line 272.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 272.
 LaTeX Font Info:    ... okay on input line 272.
 LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 272.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-272.
-
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/untxexa.fd
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 272.
+ (c:/texlive/2025/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
 LaTeX Font Info:    ... okay on input line 272.
 LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 272.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 272.
-
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/lmsntxsy.fd
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 272.
+ (c:/texlive/2025/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
 LaTeX Font Info:    ... okay on input line 272.
 LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 272.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 272.
-
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/lmxntxexx.fd
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 272.
+ (c:/texlive/2025/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
 LaTeX Font Info:    ... okay on input line 272.
@@ -1542,12 +1236,9 @@ LaTeX Font Info:    ... okay on input line 272.
 \everyMPtoPDFconversion=\toks60
 ) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@mv@tabular=\count517
 \c@mv@boldtabular=\count518
@@ -1570,17 +1261,12 @@ Package microtype Info: Patching command `\showhyphens'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-
-(c:/texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+ (c:/texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+) (c:/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-(c:/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionar
-y-english.trsl
-File: translations-basic-dictionary-english.trsl (english translation file `tra
-nslations-basic-dictionary')
-)
-Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 272.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 272.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: changepage package is loaded.
 \caption@adjustwidth@hsize=\dimen354
@@ -1600,7 +1286,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
-(./main.bbl)
+ (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 272.
 Package biblatex Info: Reference segment=0 on input line 272.
 Package hyperref Info: Link coloring ON on input line 272.
@@ -1609,13 +1295,11 @@ Package hyperref Info: Link coloring ON on input line 272.
 \openout5 = `main.out'.
 
 
-Package pgfplots notification 'compat/show suggested version=true': document ha
-s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 20.74pt on input line 289.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 28
-9.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 289.
 (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
@@ -1631,10 +1315,8 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 13.24796pt on input line 289.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 14.4pt on input line 289.
-LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
-e 289.
-
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/ot1minntx.fd
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 289.
+ (c:/texlive/2025/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
@@ -1665,10 +1347,8 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
 (Font)              scaled to size 10.5pt on input line 289.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
 (Font)              scaled to size 7.9pt on input line 289.
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-289.
-
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/untxmia.fd
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 289.
+ (c:/texlive/2025/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
@@ -1677,10 +1357,8 @@ LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
 (Font)              scaled to size 10.5pt on input line 289.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
 (Font)              scaled to size 7.9pt on input line 289.
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-289.
-
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/untxsym.fd
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 289.
+ (c:/texlive/2025/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
@@ -1689,10 +1367,8 @@ LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
 (Font)              scaled to size 10.5pt on input line 289.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
 (Font)              scaled to size 7.9pt on input line 289.
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-289.
-
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/untxsyc.fd
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 289.
+ (c:/texlive/2025/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
@@ -1816,12 +1492,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
  [1
 
-{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/
-texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dv
-ips/newtx/ntx-ec-tlf.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-
-ot1-tlf.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc
-}]
-(./sections/01_introduction.tex
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] (./sections/01_introduction.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 17.28pt on input line 4.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
@@ -1917,22 +1588,17 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/ntxtlf/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
- [4])
-(./sections/02_literature_review.tex [5]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input lin
-e 30.
-
-(c:/texlive/2025/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
+ [4]) (./sections/02_literature_review.tex [5]
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 30.
+ (c:/texlive/2025/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 30.
- [6{c:/texlive/2025/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [7]
-(./tables/01_prior_studies.tex
+ [6{c:/texlive/2025/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [7] (./tables/01_prior_studies.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.95pt on input line 9.
-)) (./sections/03_experimental_design.tex
-[8]
+)) (./sections/03_experimental_design.tex [8]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 11.03998pt on input line 38.
  [9] [10] (./tables/02_dataset_summary.tex
@@ -1944,8 +1610,7 @@ File: figures/01_sample_data.pdf Graphic file (type pdf)
 <use figures/01_sample_data.pdf>
 Package pdftex.def Info: figures/01_sample_data.pdf  used on input line 90.
 (pdftex.def)             Requested size: 483.69687pt x 313.59343pt.
- [11] [12]
-(./tables/03_model_architectures.tex
+ [11] [12] (./tables/03_model_architectures.tex
 Underfull \hbox (badness 1715) in paragraph at lines 27--27
 []|\T1/ntxtlf/m/n/10.95 (+20) Large-kernel depth-wise con-vo-lu-
  []
@@ -1963,8 +1628,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--31
 ) [13 <./figures/01_sample_data.pdf>] [14] (./tables/04_hpo_search_spaces.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.1pt on input line 33.
-)
-[15] (./tables/05_best_hyperparameters.tex
+) [15] (./tables/05_best_hyperparameters.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 12.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
@@ -2047,28 +1711,19 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 5.5pt on input line 60.
 
 Underfull \hbox (badness 10000) in paragraph at lines 60--60
-[]|\T1/ntxtlf/m/n/10 (+20) blocks$[]\OT1/minntx/m/n/10 2$\T1/ntxtlf/m/n/10 (+20
-) , hidden$[]\OT1/minntx/m/n/10 64$\T1/ntxtlf/m/n/10 (+20) , layers$[]\OT1/minn
-tx/m/n/10 3$\T1/ntxtlf/m/n/10 (+20) , pool$[]\LMS/ntxsy/m/n/10 »\OT1/minntx/m/n
-/10 4\OML/ntxmi/m/it/10 ; \OT1/minntx/m/n/10 8\OML/ntxmi/m/it/10 ; \OT1/minntx/
-m/n/10 12\LMS/ntxsy/m/n/10 ¼$\T1/ntxtlf/m/n/10 (+20) ,
+[]|\T1/ntxtlf/m/n/10 (+20) blocks$[]\OT1/minntx/m/n/10 2$\T1/ntxtlf/m/n/10 (+20) , hidden$[]\OT1/minntx/m/n/10 64$\T1/ntxtlf/m/n/10 (+20) , layers$[]\OT1/minntx/m/n/10 3$\T1/ntxtlf/m/n/10 (+20) , pool$[]\LMS/ntxsy/m/n/10 »\OT1/minntx/m/n/10 4\OML/ntxmi/m/it/10 ; \OT1/minntx/m/n/10 8\OML/ntxmi/m/it/10 ; \OT1/minntx/m/n/10 12\LMS/ntxsy/m/n/10 ¼$\T1/ntxtlf/m/n/10 (+20) ,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 60--60
-[]|\T1/ntxtlf/m/n/10 (+20) blocks$[]\OT1/minntx/m/n/10 3$\T1/ntxtlf/m/n/10 (+20
-) , hidden$[]\OT1/minntx/m/n/10 96$\T1/ntxtlf/m/n/10 (+20) , layers$[]\OT1/minn
-tx/m/n/10 4$\T1/ntxtlf/m/n/10 (+20) , pool$[]\LMS/ntxsy/m/n/10 »\OT1/minntx/m/n
-/10 4\OML/ntxmi/m/it/10 ; \OT1/minntx/m/n/10 8\OML/ntxmi/m/it/10 ; \OT1/minntx/
-m/n/10 12\LMS/ntxsy/m/n/10 ¼$\T1/ntxtlf/m/n/10 (+20) ,
+[]|\T1/ntxtlf/m/n/10 (+20) blocks$[]\OT1/minntx/m/n/10 3$\T1/ntxtlf/m/n/10 (+20) , hidden$[]\OT1/minntx/m/n/10 96$\T1/ntxtlf/m/n/10 (+20) , layers$[]\OT1/minntx/m/n/10 4$\T1/ntxtlf/m/n/10 (+20) , pool$[]\LMS/ntxsy/m/n/10 »\OT1/minntx/m/n/10 4\OML/ntxmi/m/it/10 ; \OT1/minntx/m/n/10 8\OML/ntxmi/m/it/10 ; \OT1/minntx/m/n/10 12\LMS/ntxsy/m/n/10 ¼$\T1/ntxtlf/m/n/10 (+20) ,
  []
 
 ) [16]
 <figures/02_pipeline_diagram.pdf, id=705, 523.17957pt x 743.77972pt>
 File: figures/02_pipeline_diagram.pdf Graphic file (type pdf)
 <use figures/02_pipeline_diagram.pdf>
-Package pdftex.def Info: figures/02_pipeline_diagram.pdf  used on input line 20
-1.
+Package pdftex.def Info: figures/02_pipeline_diagram.pdf  used on input line 201.
 (pdftex.def)             Requested size: 483.69687pt x 687.6677pt.
 
 
@@ -2084,8 +1739,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.8pt on input line 215.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.6pt on input line 215.
- [19]) (./sections/04_results.tex
-(./tables/06_global_leaderboard.tex
+ [19]) (./sections/04_results.tex (./tables/06_global_leaderboard.tex
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
 (Font)              scaled to size 12.0pt on input line 28.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
@@ -2116,23 +1770,16 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/ntxtlf/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-)
-[20] [21]
-<figures/03_global_performance/global_metric_heatmap_no_lstm.pdf, id=825, 801.2
-8712pt x 421.50914pt>
-File: figures/03_global_performance/global_metric_heatmap_no_lstm.pdf Graphic f
-ile (type pdf)
+) [20] [21]
+<figures/03_global_performance/global_metric_heatmap_no_lstm.pdf, id=825, 801.28712pt x 421.50914pt>
+File: figures/03_global_performance/global_metric_heatmap_no_lstm.pdf Graphic file (type pdf)
 <use figures/03_global_performance/global_metric_heatmap_no_lstm.pdf>
-Package pdftex.def Info: figures/03_global_performance/global_metric_heatmap_no
-_lstm.pdf  used on input line 35.
+Package pdftex.def Info: figures/03_global_performance/global_metric_heatmap_no_lstm.pdf  used on input line 35.
 (pdftex.def)             Requested size: 411.14528pt x 216.27887pt.
-<figures/03_global_performance/global_rank_comparison.pdf, id=828, 711.16441pt 
-x 421.49345pt>
-File: figures/03_global_performance/global_rank_comparison.pdf Graphic file (ty
-pe pdf)
+<figures/03_global_performance/global_rank_comparison.pdf, id=828, 711.16441pt x 421.49345pt>
+File: figures/03_global_performance/global_rank_comparison.pdf Graphic file (type pdf)
 <use figures/03_global_performance/global_rank_comparison.pdf>
-Package pdftex.def Info: figures/03_global_performance/global_rank_comparison.p
-df  used on input line 42.
+Package pdftex.def Info: figures/03_global_performance/global_rank_comparison.pdf  used on input line 42.
 (pdftex.def)             Requested size: 338.58632pt x 200.67453pt.
  (./tables/07_category_metrics.tex
 
@@ -2166,77 +1813,50 @@ LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
 (Font)              scaled to size 7.3pt on input line 58.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
 (Font)              scaled to size 5.5pt on input line 58.
-) [22 <./figures/03_global_performance/global_metric_heatmap_no_lstm.pdf> <./fi
-gures/03_global_performance/global_rank_comparison.pdf>]
-<figures/04_category_analysis/category_rank_boxplot_no_lstm.pdf, id=979, 710.92
-474pt x 421.55687pt>
-File: figures/04_category_analysis/category_rank_boxplot_no_lstm.pdf Graphic fi
-le (type pdf)
+) [22 <./figures/03_global_performance/global_metric_heatmap_no_lstm.pdf> <./figures/03_global_performance/global_rank_comparison.pdf>]
+<figures/04_category_analysis/category_rank_boxplot_no_lstm.pdf, id=979, 710.92474pt x 421.55687pt>
+File: figures/04_category_analysis/category_rank_boxplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/04_category_analysis/category_rank_boxplot_no_lstm.pdf>
-Package pdftex.def Info: figures/04_category_analysis/category_rank_boxplot_no_
-lstm.pdf  used on input line 69.
+Package pdftex.def Info: figures/04_category_analysis/category_rank_boxplot_no_lstm.pdf  used on input line 69.
 (pdftex.def)             Requested size: 362.77264pt x 215.11337pt.
  [23]
-<figures/04_category_analysis/category_scatter_rmse_mae_no_lstm.pdf, id=987, 70
-8.50023pt x 566.03346pt>
-File: figures/04_category_analysis/category_scatter_rmse_mae_no_lstm.pdf Graphi
-c file (type pdf)
+<figures/04_category_analysis/category_scatter_rmse_mae_no_lstm.pdf, id=987, 708.50023pt x 566.03346pt>
+File: figures/04_category_analysis/category_scatter_rmse_mae_no_lstm.pdf Graphic file (type pdf)
 <use figures/04_category_analysis/category_scatter_rmse_mae_no_lstm.pdf>
-Package pdftex.def Info: figures/04_category_analysis/category_scatter_rmse_mae
-_no_lstm.pdf  used on input line 76.
+Package pdftex.def Info: figures/04_category_analysis/category_scatter_rmse_mae_no_lstm.pdf  used on input line 76.
 (pdftex.def)             Requested size: 362.77264pt x 289.8306pt.
- [24 <./figures/04_category_analysis/category_rank_boxplot_no_lstm.pdf> <./figu
-res/04_category_analysis/category_scatter_rmse_mae_no_lstm.pdf>] (./tables/08_h
-orizon_degradation.tex
+ [24 <./figures/04_category_analysis/category_rank_boxplot_no_lstm.pdf> <./figures/04_category_analysis/category_scatter_rmse_mae_no_lstm.pdf>] (./tables/08_horizon_degradation.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.95pt on input line 113.
 ) [25] [26]
-<figures/04_category_analysis/asset_model_comparison_grouped_no_lstm.pdf, id=11
-26, 710.89467pt x 421.55687pt>
-File: figures/04_category_analysis/asset_model_comparison_grouped_no_lstm.pdf G
-raphic file (type pdf)
+<figures/04_category_analysis/asset_model_comparison_grouped_no_lstm.pdf, id=1126, 710.89467pt x 421.55687pt>
+File: figures/04_category_analysis/asset_model_comparison_grouped_no_lstm.pdf Graphic file (type pdf)
 <use figures/04_category_analysis/asset_model_comparison_grouped_no_lstm.pdf>
-Package pdftex.def Info: figures/04_category_analysis/asset_model_comparison_gr
-ouped_no_lstm.pdf  used on input line 108.
+Package pdftex.def Info: figures/04_category_analysis/asset_model_comparison_grouped_no_lstm.pdf  used on input line 108.
 (pdftex.def)             Requested size: 483.69687pt x 286.83498pt.
-<figures/05_horizon_analysis/horizon_degradation_lineplot_no_lstm.pdf, id=1127,
- 710.89467pt x 421.49345pt>
-File: figures/05_horizon_analysis/horizon_degradation_lineplot_no_lstm.pdf Grap
-hic file (type pdf)
+<figures/05_horizon_analysis/horizon_degradation_lineplot_no_lstm.pdf, id=1127, 710.89467pt x 421.49345pt>
+File: figures/05_horizon_analysis/horizon_degradation_lineplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/05_horizon_analysis/horizon_degradation_lineplot_no_lstm.pdf>
-Package pdftex.def Info: figures/05_horizon_analysis/horizon_degradation_linepl
-ot_no_lstm.pdf  used on input line 115.
+Package pdftex.def Info: figures/05_horizon_analysis/horizon_degradation_lineplot_no_lstm.pdf  used on input line 115.
 (pdftex.def)             Requested size: 362.77264pt x 215.09387pt.
-
-(./tables/09_variance_decomposition.tex) [27 <./figures/04_category_analysis/as
-set_model_comparison_grouped_no_lstm.pdf>] [28 <./figures/05_horizon_analysis/h
-orizon_degradation_lineplot_no_lstm.pdf>]
-<figures/06_robustness/seed_variance_violin.pdf, id=1260, 710.91035pt x 421.556
-87pt>
+ (./tables/09_variance_decomposition.tex) [27 <./figures/04_category_analysis/asset_model_comparison_grouped_no_lstm.pdf>] [28 <./figures/05_horizon_analysis/horizon_degradation_lineplot_no_lstm.pdf>]
+<figures/06_robustness/seed_variance_violin.pdf, id=1260, 710.91035pt x 421.55687pt>
 File: figures/06_robustness/seed_variance_violin.pdf Graphic file (type pdf)
 <use figures/06_robustness/seed_variance_violin.pdf>
-Package pdftex.def Info: figures/06_robustness/seed_variance_violin.pdf  used o
-n input line 147.
+Package pdftex.def Info: figures/06_robustness/seed_variance_violin.pdf  used on input line 147.
 (pdftex.def)             Requested size: 232.17242pt x 137.67332pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.19998pt on input line 148.
-<figures/06_robustness/variance_decomposition_pie.pdf, id=1261, 535.19951pt x 5
-66.42555pt>
-File: figures/06_robustness/variance_decomposition_pie.pdf Graphic file (type p
-df)
+<figures/06_robustness/variance_decomposition_pie.pdf, id=1261, 535.19951pt x 566.42555pt>
+File: figures/06_robustness/variance_decomposition_pie.pdf Graphic file (type pdf)
 <use figures/06_robustness/variance_decomposition_pie.pdf>
-Package pdftex.def Info: figures/06_robustness/variance_decomposition_pie.pdf  
-used on input line 153.
+Package pdftex.def Info: figures/06_robustness/variance_decomposition_pie.pdf  used on input line 153.
 (pdftex.def)             Requested size: 232.17242pt x 245.71896pt.
- (./tables/11_directional_accuracy.tex) [29 <./figures/06_robustness/seed_varia
-nce_violin.pdf> <./figures/06_robustness/variance_decomposition_pie.pdf>] (./ta
-bles/10_statistical_tests.tex
+ (./tables/11_directional_accuracy.tex) [29 <./figures/06_robustness/seed_variance_violin.pdf> <./figures/06_robustness/variance_decomposition_pie.pdf>] (./tables/10_statistical_tests.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 167.
-)
-[30] [31]
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
-192.
+) [30] [31]
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 192.
  (c:/texlive/2025/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
@@ -2246,8 +1866,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [32]
-(./figures/critical_difference.tex
+ [32] (./figures/critical_difference.tex
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
 (Font)              scaled to size 6.0pt on input line 121.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
@@ -2278,566 +1897,317 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
 (Font)              scaled to size 10.95pt on input line 213.
  [33]
-<figures/07_efficiency/complexity_vs_performance_h4_no_lstm.pdf, id=1402, 782.7
-1921pt x 494.82678pt>
-File: figures/07_efficiency/complexity_vs_performance_h4_no_lstm.pdf Graphic fi
-le (type pdf)
+<figures/07_efficiency/complexity_vs_performance_h4_no_lstm.pdf, id=1402, 782.71921pt x 494.82678pt>
+File: figures/07_efficiency/complexity_vs_performance_h4_no_lstm.pdf Graphic file (type pdf)
 <use figures/07_efficiency/complexity_vs_performance_h4_no_lstm.pdf>
-Package pdftex.def Info: figures/07_efficiency/complexity_vs_performance_h4_no_
-lstm.pdf  used on input line 246.
+Package pdftex.def Info: figures/07_efficiency/complexity_vs_performance_h4_no_lstm.pdf  used on input line 246.
 (pdftex.def)             Requested size: 232.17242pt x 146.77298pt.
-<figures/07_efficiency/complexity_vs_performance_h24_no_lstm.pdf, id=1403, 782.
-71921pt x 494.82678pt>
-File: figures/07_efficiency/complexity_vs_performance_h24_no_lstm.pdf Graphic f
-ile (type pdf)
+<figures/07_efficiency/complexity_vs_performance_h24_no_lstm.pdf, id=1403, 782.71921pt x 494.82678pt>
+File: figures/07_efficiency/complexity_vs_performance_h24_no_lstm.pdf Graphic file (type pdf)
 <use figures/07_efficiency/complexity_vs_performance_h24_no_lstm.pdf>
-Package pdftex.def Info: figures/07_efficiency/complexity_vs_performance_h24_no
-_lstm.pdf  used on input line 252.
+Package pdftex.def Info: figures/07_efficiency/complexity_vs_performance_h24_no_lstm.pdf  used on input line 252.
 (pdftex.def)             Requested size: 232.17242pt x 146.77298pt.
  [34]
-<figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_1.pdf, id=1415, 
-714.909pt x 267.49411pt>
-File: figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_1.pdf Graph
-ic file (type pdf)
+<figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_1.pdf, id=1415, 714.909pt x 267.49411pt>
+File: figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_1.pdf Graphic file (type pdf)
 <use figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_1.pdf>
-Package pdftex.def Info: figures/08_predictions/crypto/ModernTCN/4/actual_vs_pr
-ed_step_1.pdf  used on input line 285.
+Package pdftex.def Info: figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_1.pdf  used on input line 285.
 (pdftex.def)             Requested size: 232.17242pt x 86.86923pt.
-<figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_4.pdf, id=1416, 
-714.909pt x 267.49411pt>
-File: figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_4.pdf Graph
-ic file (type pdf)
+<figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_4.pdf, id=1416, 714.909pt x 267.49411pt>
+File: figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_4.pdf Graphic file (type pdf)
 <use figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_4.pdf>
-Package pdftex.def Info: figures/08_predictions/crypto/ModernTCN/4/actual_vs_pr
-ed_step_4.pdf  used on input line 291.
+Package pdftex.def Info: figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_4.pdf  used on input line 291.
 (pdftex.def)             Requested size: 232.17242pt x 86.86923pt.
- [35 <./figures/07_efficiency/complexity_vs_performance_h4_no_lstm.pdf> <./figu
-res/07_efficiency/complexity_vs_performance_h24_no_lstm.pdf>]
-<figures/08_predictions/forex/PatchTST/4/actual_vs_pred_step_1.pdf, id=1539, 71
-5.0301pt x 267.49411pt>
-File: figures/08_predictions/forex/PatchTST/4/actual_vs_pred_step_1.pdf Graphic
- file (type pdf)
+ [35 <./figures/07_efficiency/complexity_vs_performance_h4_no_lstm.pdf> <./figures/07_efficiency/complexity_vs_performance_h24_no_lstm.pdf>]
+<figures/08_predictions/forex/PatchTST/4/actual_vs_pred_step_1.pdf, id=1539, 715.0301pt x 267.49411pt>
+File: figures/08_predictions/forex/PatchTST/4/actual_vs_pred_step_1.pdf Graphic file (type pdf)
 <use figures/08_predictions/forex/PatchTST/4/actual_vs_pred_step_1.pdf>
-Package pdftex.def Info: figures/08_predictions/forex/PatchTST/4/actual_vs_pred
-_step_1.pdf  used on input line 304.
+Package pdftex.def Info: figures/08_predictions/forex/PatchTST/4/actual_vs_pred_step_1.pdf  used on input line 304.
 (pdftex.def)             Requested size: 232.17242pt x 86.857pt.
-<figures/08_predictions/indices/TimeXer/4/actual_vs_pred_step_1.pdf, id=1540, 7
-14.93472pt x 267.49411pt>
-File: figures/08_predictions/indices/TimeXer/4/actual_vs_pred_step_1.pdf Graphi
-c file (type pdf)
+<figures/08_predictions/indices/TimeXer/4/actual_vs_pred_step_1.pdf, id=1540, 714.93472pt x 267.49411pt>
+File: figures/08_predictions/indices/TimeXer/4/actual_vs_pred_step_1.pdf Graphic file (type pdf)
 <use figures/08_predictions/indices/TimeXer/4/actual_vs_pred_step_1.pdf>
-Package pdftex.def Info: figures/08_predictions/indices/TimeXer/4/actual_vs_pre
-d_step_1.pdf  used on input line 310.
+Package pdftex.def Info: figures/08_predictions/indices/TimeXer/4/actual_vs_pred_step_1.pdf  used on input line 310.
 (pdftex.def)             Requested size: 232.17242pt x 86.86516pt.
-<figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_1.pdf, id=154
-3, 714.909pt x 267.49411pt>
-File: figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_1.pdf Gr
-aphic file (type pdf)
+<figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_1.pdf, id=1543, 714.909pt x 267.49411pt>
+File: figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_1.pdf Graphic file (type pdf)
 <use figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_1.pdf>
-Package pdftex.def Info: figures/08_predictions/crypto/iTransformer/4/actual_vs
-_pred_step_1.pdf  used on input line 323.
+Package pdftex.def Info: figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_1.pdf  used on input line 323.
 (pdftex.def)             Requested size: 232.17242pt x 86.86923pt.
-<figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_4.pdf, id=154
-4, 714.909pt x 267.49411pt>
-File: figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_4.pdf Gr
-aphic file (type pdf)
+<figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_4.pdf, id=1544, 714.909pt x 267.49411pt>
+File: figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_4.pdf Graphic file (type pdf)
 <use figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_4.pdf>
-Package pdftex.def Info: figures/08_predictions/crypto/iTransformer/4/actual_vs
-_pred_step_4.pdf  used on input line 329.
+Package pdftex.def Info: figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_4.pdf  used on input line 329.
 (pdftex.def)             Requested size: 232.17242pt x 86.86923pt.
-<figures/08_predictions/forex/ModernTCN/24/actual_vs_pred_step_12.pdf, id=1551,
- 715.0301pt x 267.49411pt>
-File: figures/08_predictions/forex/ModernTCN/24/actual_vs_pred_step_12.pdf Grap
-hic file (type pdf)
+<figures/08_predictions/forex/ModernTCN/24/actual_vs_pred_step_12.pdf, id=1551, 715.0301pt x 267.49411pt>
+File: figures/08_predictions/forex/ModernTCN/24/actual_vs_pred_step_12.pdf Graphic file (type pdf)
 <use figures/08_predictions/forex/ModernTCN/24/actual_vs_pred_step_12.pdf>
-Package pdftex.def Info: figures/08_predictions/forex/ModernTCN/24/actual_vs_pr
-ed_step_12.pdf  used on input line 345.
+Package pdftex.def Info: figures/08_predictions/forex/ModernTCN/24/actual_vs_pred_step_12.pdf  used on input line 345.
 (pdftex.def)             Requested size: 232.17242pt x 86.857pt.
-<figures/08_predictions/indices/PatchTST/24/actual_vs_pred_step_12.pdf, id=1552
-, 714.93472pt x 267.49411pt>
-File: figures/08_predictions/indices/PatchTST/24/actual_vs_pred_step_12.pdf Gra
-phic file (type pdf)
+<figures/08_predictions/indices/PatchTST/24/actual_vs_pred_step_12.pdf, id=1552, 714.93472pt x 267.49411pt>
+File: figures/08_predictions/indices/PatchTST/24/actual_vs_pred_step_12.pdf Graphic file (type pdf)
 <use figures/08_predictions/indices/PatchTST/24/actual_vs_pred_step_12.pdf>
-Package pdftex.def Info: figures/08_predictions/indices/PatchTST/24/actual_vs_p
-red_step_12.pdf  used on input line 351.
+Package pdftex.def Info: figures/08_predictions/indices/PatchTST/24/actual_vs_pred_step_12.pdf  used on input line 351.
 (pdftex.def)             Requested size: 232.17242pt x 86.86516pt.
- [36 <./figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_1.pdf> <.
-/figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_4.pdf> <./figure
-s/08_predictions/forex/PatchTST/4/actual_vs_pred_step_1.pdf> <./figures/08_pred
-ictions/indices/TimeXer/4/actual_vs_pred_step_1.pdf>]
-<figures/08_predictions/crypto/ModernTCN/24/actual_vs_pred_step_24.pdf, id=1748
-, 714.909pt x 267.49411pt>
-File: figures/08_predictions/crypto/ModernTCN/24/actual_vs_pred_step_24.pdf Gra
-phic file (type pdf)
+ [36 <./figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_1.pdf> <./figures/08_predictions/crypto/ModernTCN/4/actual_vs_pred_step_4.pdf> <./figures/08_predictions/forex/PatchTST/4/actual_vs_pred_step_1.pdf> <./figures/08_predictions/indices/TimeXer/4/actual_vs_pred_step_1.pdf>]
+<figures/08_predictions/crypto/ModernTCN/24/actual_vs_pred_step_24.pdf, id=1748, 714.909pt x 267.49411pt>
+File: figures/08_predictions/crypto/ModernTCN/24/actual_vs_pred_step_24.pdf Graphic file (type pdf)
 <use figures/08_predictions/crypto/ModernTCN/24/actual_vs_pred_step_24.pdf>
-Package pdftex.def Info: figures/08_predictions/crypto/ModernTCN/24/actual_vs_p
-red_step_24.pdf  used on input line 366.
+Package pdftex.def Info: figures/08_predictions/crypto/ModernTCN/24/actual_vs_pred_step_24.pdf  used on input line 366.
 (pdftex.def)             Requested size: 386.95897pt x 144.78343pt.
-) (./sections/05_discussion.tex [37 <./figures/08_predictions/crypto/iTransform
-er/4/actual_vs_pred_step_1.pdf> <./figures/08_predictions/crypto/iTransformer/4
-/actual_vs_pred_step_4.pdf> <./figures/08_predictions/forex/ModernTCN/24/actual
-_vs_pred_step_12.pdf> <./figures/08_predictions/indices/PatchTST/24/actual_vs_p
-red_step_12.pdf>] [38 <./figures/08_predictions/crypto/ModernTCN/24/actual_vs_p
-red_step_24.pdf>] [39] [40] [41] [42]) (./sections/06_conclusion.tex [43]
-[44]) (./sections/07_reproducibility.tex [45]) [46] [47
+) (./sections/05_discussion.tex [37 <./figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_1.pdf> <./figures/08_predictions/crypto/iTransformer/4/actual_vs_pred_step_4.pdf> <./figures/08_predictions/forex/ModernTCN/24/actual_vs_pred_step_12.pdf> <./figures/08_predictions/indices/PatchTST/24/actual_vs_pred_step_12.pdf>] [38 <./figures/08_predictions/crypto/ModernTCN/24/actual_vs_pred_step_24.pdf>] [39] [40] [41] [42]) (./sections/06_conclusion.tex [43] [44]) (./sections/07_reproducibility.tex [45]) [46] [47
 
-] [48]
-(./sections/appendix.tex
-<figures/appendix/crypto/BTCUSDT/4/rmse_comparison_barplot_no_lstm.pdf, id=2113
-, 710.89467pt x 421.55687pt>
-File: figures/appendix/crypto/BTCUSDT/4/rmse_comparison_barplot_no_lstm.pdf Gra
-phic file (type pdf)
+] [48] (./sections/appendix.tex
+<figures/appendix/crypto/BTCUSDT/4/rmse_comparison_barplot_no_lstm.pdf, id=2113, 710.89467pt x 421.55687pt>
+File: figures/appendix/crypto/BTCUSDT/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/crypto/BTCUSDT/4/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/crypto/BTCUSDT/4/rmse_comparison_barp
-lot_no_lstm.pdf  used on input line 28.
+Package pdftex.def Info: figures/appendix/crypto/BTCUSDT/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 28.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/crypto/BTCUSDT/24/rmse_comparison_barplot_no_lstm.pdf, id=211
-4, 710.89467pt x 421.55687pt>
-File: figures/appendix/crypto/BTCUSDT/24/rmse_comparison_barplot_no_lstm.pdf Gr
-aphic file (type pdf)
+<figures/appendix/crypto/BTCUSDT/24/rmse_comparison_barplot_no_lstm.pdf, id=2114, 710.89467pt x 421.55687pt>
+File: figures/appendix/crypto/BTCUSDT/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/crypto/BTCUSDT/24/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/crypto/BTCUSDT/24/rmse_comparison_bar
-plot_no_lstm.pdf  used on input line 30.
+Package pdftex.def Info: figures/appendix/crypto/BTCUSDT/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 30.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/forex/EURUSD/4/rmse_comparison_barplot_no_lstm.pdf, id=2115, 
-710.92474pt x 421.55687pt>
-File: figures/appendix/forex/EURUSD/4/rmse_comparison_barplot_no_lstm.pdf Graph
-ic file (type pdf)
+<figures/appendix/forex/EURUSD/4/rmse_comparison_barplot_no_lstm.pdf, id=2115, 710.92474pt x 421.55687pt>
+File: figures/appendix/forex/EURUSD/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/forex/EURUSD/4/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/forex/EURUSD/4/rmse_comparison_barplo
-t_no_lstm.pdf  used on input line 42.
+Package pdftex.def Info: figures/appendix/forex/EURUSD/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 42.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/forex/EURUSD/24/rmse_comparison_barplot_no_lstm.pdf, id=2116,
- 710.92474pt x 421.55687pt>
-File: figures/appendix/forex/EURUSD/24/rmse_comparison_barplot_no_lstm.pdf Grap
-hic file (type pdf)
+<figures/appendix/forex/EURUSD/24/rmse_comparison_barplot_no_lstm.pdf, id=2116, 710.92474pt x 421.55687pt>
+File: figures/appendix/forex/EURUSD/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/forex/EURUSD/24/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/forex/EURUSD/24/rmse_comparison_barpl
-ot_no_lstm.pdf  used on input line 44.
+Package pdftex.def Info: figures/appendix/forex/EURUSD/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 44.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/indices/USA30IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf, id
-=2117, 710.89467pt x 421.55687pt>
-File: figures/appendix/indices/USA30IDXUSD/4/rmse_comparison_barplot_no_lstm.pd
-f Graphic file (type pdf)
-<use figures/appendix/indices/USA30IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf
->
-Package pdftex.def Info: figures/appendix/indices/USA30IDXUSD/4/rmse_comparison
-_barplot_no_lstm.pdf  used on input line 56.
+<figures/appendix/indices/USA30IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf, id=2117, 710.89467pt x 421.55687pt>
+File: figures/appendix/indices/USA30IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
+<use figures/appendix/indices/USA30IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf>
+Package pdftex.def Info: figures/appendix/indices/USA30IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 56.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/indices/USA30IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf, i
-d=2118, 710.89467pt x 421.55687pt>
-File: figures/appendix/indices/USA30IDXUSD/24/rmse_comparison_barplot_no_lstm.p
-df Graphic file (type pdf)
-<use figures/appendix/indices/USA30IDXUSD/24/rmse_comparison_barplot_no_lstm.pd
-f>
-Package pdftex.def Info: figures/appendix/indices/USA30IDXUSD/24/rmse_compariso
-n_barplot_no_lstm.pdf  used on input line 58.
+<figures/appendix/indices/USA30IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf, id=2118, 710.89467pt x 421.55687pt>
+File: figures/appendix/indices/USA30IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
+<use figures/appendix/indices/USA30IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf>
+Package pdftex.def Info: figures/appendix/indices/USA30IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 58.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
  [49
 
- <./figures/appendix/crypto/BTCUSDT/4/rmse_comparison_barplot_no_lstm.pdf> <./f
-igures/appendix/crypto/BTCUSDT/24/rmse_comparison_barplot_no_lstm.pdf> <./figur
-es/appendix/forex/EURUSD/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appe
-ndix/forex/EURUSD/24/rmse_comparison_barplot_no_lstm.pdf>]
-<figures/appendix/crypto/ETHUSDT/4/rmse_comparison_barplot_no_lstm.pdf, id=2342
-, 710.89467pt x 421.55687pt>
-File: figures/appendix/crypto/ETHUSDT/4/rmse_comparison_barplot_no_lstm.pdf Gra
-phic file (type pdf)
+ <./figures/appendix/crypto/BTCUSDT/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/crypto/BTCUSDT/24/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/forex/EURUSD/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/forex/EURUSD/24/rmse_comparison_barplot_no_lstm.pdf>]
+<figures/appendix/crypto/ETHUSDT/4/rmse_comparison_barplot_no_lstm.pdf, id=2342, 710.89467pt x 421.55687pt>
+File: figures/appendix/crypto/ETHUSDT/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/crypto/ETHUSDT/4/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/crypto/ETHUSDT/4/rmse_comparison_barp
-lot_no_lstm.pdf  used on input line 81.
+Package pdftex.def Info: figures/appendix/crypto/ETHUSDT/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 81.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/crypto/ETHUSDT/24/rmse_comparison_barplot_no_lstm.pdf, id=234
-3, 710.89467pt x 421.55687pt>
-File: figures/appendix/crypto/ETHUSDT/24/rmse_comparison_barplot_no_lstm.pdf Gr
-aphic file (type pdf)
+<figures/appendix/crypto/ETHUSDT/24/rmse_comparison_barplot_no_lstm.pdf, id=2343, 710.89467pt x 421.55687pt>
+File: figures/appendix/crypto/ETHUSDT/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/crypto/ETHUSDT/24/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/crypto/ETHUSDT/24/rmse_comparison_bar
-plot_no_lstm.pdf  used on input line 83.
+Package pdftex.def Info: figures/appendix/crypto/ETHUSDT/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 83.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/crypto/BNBUSDT/4/rmse_comparison_barplot_no_lstm.pdf, id=2344
-, 710.92474pt x 421.55687pt>
-File: figures/appendix/crypto/BNBUSDT/4/rmse_comparison_barplot_no_lstm.pdf Gra
-phic file (type pdf)
+<figures/appendix/crypto/BNBUSDT/4/rmse_comparison_barplot_no_lstm.pdf, id=2344, 710.92474pt x 421.55687pt>
+File: figures/appendix/crypto/BNBUSDT/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/crypto/BNBUSDT/4/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/crypto/BNBUSDT/4/rmse_comparison_barp
-lot_no_lstm.pdf  used on input line 93.
+Package pdftex.def Info: figures/appendix/crypto/BNBUSDT/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 93.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/crypto/BNBUSDT/24/rmse_comparison_barplot_no_lstm.pdf, id=234
-5, 710.89467pt x 421.55687pt>
-File: figures/appendix/crypto/BNBUSDT/24/rmse_comparison_barplot_no_lstm.pdf Gr
-aphic file (type pdf)
+<figures/appendix/crypto/BNBUSDT/24/rmse_comparison_barplot_no_lstm.pdf, id=2345, 710.89467pt x 421.55687pt>
+File: figures/appendix/crypto/BNBUSDT/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/crypto/BNBUSDT/24/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/crypto/BNBUSDT/24/rmse_comparison_bar
-plot_no_lstm.pdf  used on input line 95.
+Package pdftex.def Info: figures/appendix/crypto/BNBUSDT/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 95.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/crypto/ADAUSDT/4/rmse_comparison_barplot_no_lstm.pdf, id=2346
-, 710.92474pt x 421.55687pt>
-File: figures/appendix/crypto/ADAUSDT/4/rmse_comparison_barplot_no_lstm.pdf Gra
-phic file (type pdf)
+<figures/appendix/crypto/ADAUSDT/4/rmse_comparison_barplot_no_lstm.pdf, id=2346, 710.92474pt x 421.55687pt>
+File: figures/appendix/crypto/ADAUSDT/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/crypto/ADAUSDT/4/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/crypto/ADAUSDT/4/rmse_comparison_barp
-lot_no_lstm.pdf  used on input line 104.
+Package pdftex.def Info: figures/appendix/crypto/ADAUSDT/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 104.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/crypto/ADAUSDT/24/rmse_comparison_barplot_no_lstm.pdf, id=234
-7, 710.92474pt x 421.55687pt>
-File: figures/appendix/crypto/ADAUSDT/24/rmse_comparison_barplot_no_lstm.pdf Gr
-aphic file (type pdf)
+<figures/appendix/crypto/ADAUSDT/24/rmse_comparison_barplot_no_lstm.pdf, id=2347, 710.92474pt x 421.55687pt>
+File: figures/appendix/crypto/ADAUSDT/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/crypto/ADAUSDT/24/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/crypto/ADAUSDT/24/rmse_comparison_bar
-plot_no_lstm.pdf  used on input line 106.
+Package pdftex.def Info: figures/appendix/crypto/ADAUSDT/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 106.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/forex/USDJPY/4/rmse_comparison_barplot_no_lstm.pdf, id=2349, 
-710.92474pt x 421.55687pt>
-File: figures/appendix/forex/USDJPY/4/rmse_comparison_barplot_no_lstm.pdf Graph
-ic file (type pdf)
+<figures/appendix/forex/USDJPY/4/rmse_comparison_barplot_no_lstm.pdf, id=2349, 710.92474pt x 421.55687pt>
+File: figures/appendix/forex/USDJPY/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/forex/USDJPY/4/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/forex/USDJPY/4/rmse_comparison_barplo
-t_no_lstm.pdf  used on input line 120.
+Package pdftex.def Info: figures/appendix/forex/USDJPY/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 120.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/forex/USDJPY/24/rmse_comparison_barplot_no_lstm.pdf, id=2350,
- 710.92474pt x 421.55687pt>
-File: figures/appendix/forex/USDJPY/24/rmse_comparison_barplot_no_lstm.pdf Grap
-hic file (type pdf)
+<figures/appendix/forex/USDJPY/24/rmse_comparison_barplot_no_lstm.pdf, id=2350, 710.92474pt x 421.55687pt>
+File: figures/appendix/forex/USDJPY/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/forex/USDJPY/24/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/forex/USDJPY/24/rmse_comparison_barpl
-ot_no_lstm.pdf  used on input line 122.
+Package pdftex.def Info: figures/appendix/forex/USDJPY/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 122.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
- [50 <./figures/appendix/indices/USA30IDXUSD/4/rmse_comparison_barplot_no_lstm.
-pdf> <./figures/appendix/indices/USA30IDXUSD/24/rmse_comparison_barplot_no_lstm
-.pdf> <./figures/appendix/crypto/ETHUSDT/4/rmse_comparison_barplot_no_lstm.pdf>
- <./figures/appendix/crypto/ETHUSDT/24/rmse_comparison_barplot_no_lstm.pdf> <./
-figures/appendix/crypto/BNBUSDT/4/rmse_comparison_barplot_no_lstm.pdf> <./figur
-es/appendix/crypto/BNBUSDT/24/rmse_comparison_barplot_no_lstm.pdf>]
-<figures/appendix/forex/GBPUSD/4/rmse_comparison_barplot_no_lstm.pdf, id=2680, 
-710.92474pt x 421.55687pt>
-File: figures/appendix/forex/GBPUSD/4/rmse_comparison_barplot_no_lstm.pdf Graph
-ic file (type pdf)
+ [50 <./figures/appendix/indices/USA30IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/USA30IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/crypto/ETHUSDT/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/crypto/ETHUSDT/24/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/crypto/BNBUSDT/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/crypto/BNBUSDT/24/rmse_comparison_barplot_no_lstm.pdf>]
+<figures/appendix/forex/GBPUSD/4/rmse_comparison_barplot_no_lstm.pdf, id=2680, 710.92474pt x 421.55687pt>
+File: figures/appendix/forex/GBPUSD/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/forex/GBPUSD/4/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/forex/GBPUSD/4/rmse_comparison_barplo
-t_no_lstm.pdf  used on input line 132.
+Package pdftex.def Info: figures/appendix/forex/GBPUSD/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 132.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/forex/GBPUSD/24/rmse_comparison_barplot_no_lstm.pdf, id=2681,
- 710.92474pt x 421.55687pt>
-File: figures/appendix/forex/GBPUSD/24/rmse_comparison_barplot_no_lstm.pdf Grap
-hic file (type pdf)
+<figures/appendix/forex/GBPUSD/24/rmse_comparison_barplot_no_lstm.pdf, id=2681, 710.92474pt x 421.55687pt>
+File: figures/appendix/forex/GBPUSD/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/forex/GBPUSD/24/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/forex/GBPUSD/24/rmse_comparison_barpl
-ot_no_lstm.pdf  used on input line 134.
+Package pdftex.def Info: figures/appendix/forex/GBPUSD/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 134.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/forex/AUDUSD/4/rmse_comparison_barplot_no_lstm.pdf, id=2682, 
-710.92474pt x 421.55687pt>
-File: figures/appendix/forex/AUDUSD/4/rmse_comparison_barplot_no_lstm.pdf Graph
-ic file (type pdf)
+<figures/appendix/forex/AUDUSD/4/rmse_comparison_barplot_no_lstm.pdf, id=2682, 710.92474pt x 421.55687pt>
+File: figures/appendix/forex/AUDUSD/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/forex/AUDUSD/4/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/forex/AUDUSD/4/rmse_comparison_barplo
-t_no_lstm.pdf  used on input line 143.
+Package pdftex.def Info: figures/appendix/forex/AUDUSD/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 143.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/forex/AUDUSD/24/rmse_comparison_barplot_no_lstm.pdf, id=2683,
- 710.92474pt x 421.55687pt>
-File: figures/appendix/forex/AUDUSD/24/rmse_comparison_barplot_no_lstm.pdf Grap
-hic file (type pdf)
+<figures/appendix/forex/AUDUSD/24/rmse_comparison_barplot_no_lstm.pdf, id=2683, 710.92474pt x 421.55687pt>
+File: figures/appendix/forex/AUDUSD/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/forex/AUDUSD/24/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/forex/AUDUSD/24/rmse_comparison_barpl
-ot_no_lstm.pdf  used on input line 145.
+Package pdftex.def Info: figures/appendix/forex/AUDUSD/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 145.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/indices/DEUIDXEUR/4/rmse_comparison_barplot_no_lstm.pdf, id=2
-684, 710.89467pt x 421.55687pt>
-File: figures/appendix/indices/DEUIDXEUR/4/rmse_comparison_barplot_no_lstm.pdf 
-Graphic file (type pdf)
+<figures/appendix/indices/DEUIDXEUR/4/rmse_comparison_barplot_no_lstm.pdf, id=2684, 710.89467pt x 421.55687pt>
+File: figures/appendix/indices/DEUIDXEUR/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/indices/DEUIDXEUR/4/rmse_comparison_barplot_no_lstm.pdf>
-Package pdftex.def Info: figures/appendix/indices/DEUIDXEUR/4/rmse_comparison_b
-arplot_no_lstm.pdf  used on input line 156.
+Package pdftex.def Info: figures/appendix/indices/DEUIDXEUR/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 156.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/indices/DEUIDXEUR/24/rmse_comparison_barplot_no_lstm.pdf, id=
-2685, 710.89467pt x 421.55687pt>
-File: figures/appendix/indices/DEUIDXEUR/24/rmse_comparison_barplot_no_lstm.pdf
- Graphic file (type pdf)
+<figures/appendix/indices/DEUIDXEUR/24/rmse_comparison_barplot_no_lstm.pdf, id=2685, 710.89467pt x 421.55687pt>
+File: figures/appendix/indices/DEUIDXEUR/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/appendix/indices/DEUIDXEUR/24/rmse_comparison_barplot_no_lstm.pdf>
-
-Package pdftex.def Info: figures/appendix/indices/DEUIDXEUR/24/rmse_comparison_
-barplot_no_lstm.pdf  used on input line 158.
+Package pdftex.def Info: figures/appendix/indices/DEUIDXEUR/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 158.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/indices/USA500IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf, i
-d=2686, 710.89467pt x 421.55687pt>
-File: figures/appendix/indices/USA500IDXUSD/4/rmse_comparison_barplot_no_lstm.p
-df Graphic file (type pdf)
-<use figures/appendix/indices/USA500IDXUSD/4/rmse_comparison_barplot_no_lstm.pd
-f>
-Package pdftex.def Info: figures/appendix/indices/USA500IDXUSD/4/rmse_compariso
-n_barplot_no_lstm.pdf  used on input line 168.
+<figures/appendix/indices/USA500IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf, id=2686, 710.89467pt x 421.55687pt>
+File: figures/appendix/indices/USA500IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
+<use figures/appendix/indices/USA500IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf>
+Package pdftex.def Info: figures/appendix/indices/USA500IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 168.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/indices/USA500IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf, 
-id=2687, 710.89467pt x 421.55687pt>
-File: figures/appendix/indices/USA500IDXUSD/24/rmse_comparison_barplot_no_lstm.
-pdf Graphic file (type pdf)
-<use figures/appendix/indices/USA500IDXUSD/24/rmse_comparison_barplot_no_lstm.p
-df>
-Package pdftex.def Info: figures/appendix/indices/USA500IDXUSD/24/rmse_comparis
-on_barplot_no_lstm.pdf  used on input line 170.
+<figures/appendix/indices/USA500IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf, id=2687, 710.89467pt x 421.55687pt>
+File: figures/appendix/indices/USA500IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
+<use figures/appendix/indices/USA500IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf>
+Package pdftex.def Info: figures/appendix/indices/USA500IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 170.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/indices/USATECHIDXUSD/4/rmse_comparison_barplot_no_lstm.pdf, 
-id=2689, 710.89467pt x 421.55687pt>
-File: figures/appendix/indices/USATECHIDXUSD/4/rmse_comparison_barplot_no_lstm.
-pdf Graphic file (type pdf)
-<use figures/appendix/indices/USATECHIDXUSD/4/rmse_comparison_barplot_no_lstm.p
-df>
-Package pdftex.def Info: figures/appendix/indices/USATECHIDXUSD/4/rmse_comparis
-on_barplot_no_lstm.pdf  used on input line 180.
+<figures/appendix/indices/USATECHIDXUSD/4/rmse_comparison_barplot_no_lstm.pdf, id=2689, 710.89467pt x 421.55687pt>
+File: figures/appendix/indices/USATECHIDXUSD/4/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
+<use figures/appendix/indices/USATECHIDXUSD/4/rmse_comparison_barplot_no_lstm.pdf>
+Package pdftex.def Info: figures/appendix/indices/USATECHIDXUSD/4/rmse_comparison_barplot_no_lstm.pdf  used on input line 180.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/appendix/indices/USATECHIDXUSD/24/rmse_comparison_barplot_no_lstm.pdf,
- id=2690, 710.89467pt x 421.55687pt>
-File: figures/appendix/indices/USATECHIDXUSD/24/rmse_comparison_barplot_no_lstm
-.pdf Graphic file (type pdf)
-<use figures/appendix/indices/USATECHIDXUSD/24/rmse_comparison_barplot_no_lstm.
-pdf>
-Package pdftex.def Info: figures/appendix/indices/USATECHIDXUSD/24/rmse_compari
-son_barplot_no_lstm.pdf  used on input line 182.
+<figures/appendix/indices/USATECHIDXUSD/24/rmse_comparison_barplot_no_lstm.pdf, id=2690, 710.89467pt x 421.55687pt>
+File: figures/appendix/indices/USATECHIDXUSD/24/rmse_comparison_barplot_no_lstm.pdf Graphic file (type pdf)
+<use figures/appendix/indices/USATECHIDXUSD/24/rmse_comparison_barplot_no_lstm.pdf>
+Package pdftex.def Info: figures/appendix/indices/USATECHIDXUSD/24/rmse_comparison_barplot_no_lstm.pdf  used on input line 182.
 (pdftex.def)             Requested size: 217.66211pt x 129.06673pt.
-<figures/05_horizon_analysis/horizon_degradation_lineplot.pdf, id=2694, 710.894
-67pt x 421.49345pt>
-File: figures/05_horizon_analysis/horizon_degradation_lineplot.pdf Graphic file
- (type pdf)
+<figures/05_horizon_analysis/horizon_degradation_lineplot.pdf, id=2694, 710.89467pt x 421.49345pt>
+File: figures/05_horizon_analysis/horizon_degradation_lineplot.pdf Graphic file (type pdf)
 <use figures/05_horizon_analysis/horizon_degradation_lineplot.pdf>
-Package pdftex.def Info: figures/05_horizon_analysis/horizon_degradation_linepl
-ot.pdf  used on input line 201.
+Package pdftex.def Info: figures/05_horizon_analysis/horizon_degradation_lineplot.pdf  used on input line 201.
 (pdftex.def)             Requested size: 362.77264pt x 215.09387pt.
-
-[51 <./figures/appendix/crypto/ADAUSDT/4/rmse_comparison_barplot_no_lstm.pdf> <
-./figures/appendix/crypto/ADAUSDT/24/rmse_comparison_barplot_no_lstm.pdf> <./fi
-gures/appendix/forex/USDJPY/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/a
-ppendix/forex/USDJPY/24/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendi
-x/forex/GBPUSD/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/forex
-/GBPUSD/24/rmse_comparison_barplot_no_lstm.pdf>] [52 <./figures/appendix/forex/
-AUDUSD/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/forex/AUDUSD/
-24/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/DEUIDXEUR/4
-/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/DEUIDXEUR/24/
-rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/USA500IDXUSD/4
-/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/USA500IDXUSD/
-24/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/USATECHIDXU
-SD/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/USATECHID
-XUSD/24/rmse_comparison_barplot_no_lstm.pdf>]
-<figures/appendix/horizon_sensitivity_heatmap.pdf, id=3463, 802.49164pt x 566.0
-3346pt>
+ [51 <./figures/appendix/crypto/ADAUSDT/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/crypto/ADAUSDT/24/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/forex/USDJPY/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/forex/USDJPY/24/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/forex/GBPUSD/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/forex/GBPUSD/24/rmse_comparison_barplot_no_lstm.pdf>] [52 <./figures/appendix/forex/AUDUSD/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/forex/AUDUSD/24/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/DEUIDXEUR/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/DEUIDXEUR/24/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/USA500IDXUSD/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/USA500IDXUSD/24/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/USATECHIDXUSD/4/rmse_comparison_barplot_no_lstm.pdf> <./figures/appendix/indices/USATECHIDXUSD/24/rmse_comparison_barplot_no_lstm.pdf>]
+<figures/appendix/horizon_sensitivity_heatmap.pdf, id=3463, 802.49164pt x 566.03346pt>
 File: figures/appendix/horizon_sensitivity_heatmap.pdf Graphic file (type pdf)
 <use figures/appendix/horizon_sensitivity_heatmap.pdf>
-Package pdftex.def Info: figures/appendix/horizon_sensitivity_heatmap.pdf  used
- on input line 220.
+Package pdftex.def Info: figures/appendix/horizon_sensitivity_heatmap.pdf  used on input line 220.
 (pdftex.def)             Requested size: 411.14528pt x 290.00333pt.
-<figures/03_global_performance/global_metric_heatmap.pdf, id=3467, 807.30962pt 
-x 421.50914pt>
-File: figures/03_global_performance/global_metric_heatmap.pdf Graphic file (typ
-e pdf)
+<figures/03_global_performance/global_metric_heatmap.pdf, id=3467, 807.30962pt x 421.50914pt>
+File: figures/03_global_performance/global_metric_heatmap.pdf Graphic file (type pdf)
 <use figures/03_global_performance/global_metric_heatmap.pdf>
-Package pdftex.def Info: figures/03_global_performance/global_metric_heatmap.pd
-f  used on input line 240.
+Package pdftex.def Info: figures/03_global_performance/global_metric_heatmap.pdf  used on input line 240.
 (pdftex.def)             Requested size: 411.14528pt x 214.67094pt.
-<figures/04_category_analysis/asset_model_comparison_grouped.pdf, id=3469, 710.
-89467pt x 421.55687pt>
-File: figures/04_category_analysis/asset_model_comparison_grouped.pdf Graphic f
-ile (type pdf)
+<figures/04_category_analysis/asset_model_comparison_grouped.pdf, id=3469, 710.89467pt x 421.55687pt>
+File: figures/04_category_analysis/asset_model_comparison_grouped.pdf Graphic file (type pdf)
 <use figures/04_category_analysis/asset_model_comparison_grouped.pdf>
-Package pdftex.def Info: figures/04_category_analysis/asset_model_comparison_gr
-ouped.pdf  used on input line 247.
+Package pdftex.def Info: figures/04_category_analysis/asset_model_comparison_grouped.pdf  used on input line 247.
 (pdftex.def)             Requested size: 483.69687pt x 286.83498pt.
-<figures/07_efficiency/complexity_vs_performance_h4.pdf, id=3472, 782.7393pt x 
-494.82678pt>
-File: figures/07_efficiency/complexity_vs_performance_h4.pdf Graphic file (type
- pdf)
+<figures/07_efficiency/complexity_vs_performance_h4.pdf, id=3472, 782.7393pt x 494.82678pt>
+File: figures/07_efficiency/complexity_vs_performance_h4.pdf Graphic file (type pdf)
 <use figures/07_efficiency/complexity_vs_performance_h4.pdf>
-Package pdftex.def Info: figures/07_efficiency/complexity_vs_performance_h4.pdf
-  used on input line 261.
+Package pdftex.def Info: figures/07_efficiency/complexity_vs_performance_h4.pdf  used on input line 261.
 (pdftex.def)             Requested size: 232.17242pt x 146.77298pt.
-<figures/07_efficiency/complexity_vs_performance_h24.pdf, id=3473, 782.7393pt x
- 494.82678pt>
-File: figures/07_efficiency/complexity_vs_performance_h24.pdf Graphic file (typ
-e pdf)
+<figures/07_efficiency/complexity_vs_performance_h24.pdf, id=3473, 782.7393pt x 494.82678pt>
+File: figures/07_efficiency/complexity_vs_performance_h24.pdf Graphic file (type pdf)
 <use figures/07_efficiency/complexity_vs_performance_h24.pdf>
-Package pdftex.def Info: figures/07_efficiency/complexity_vs_performance_h24.pd
-f  used on input line 267.
+Package pdftex.def Info: figures/07_efficiency/complexity_vs_performance_h24.pdf  used on input line 267.
 (pdftex.def)             Requested size: 232.17242pt x 146.77298pt.
-<figures/04_category_analysis/crypto_category_hierarchical_ranking_no_lstm.pdf,
- id=3476, 710.91035pt x 421.55687pt>
-File: figures/04_category_analysis/crypto_category_hierarchical_ranking_no_lstm
-.pdf Graphic file (type pdf)
-<use figures/04_category_analysis/crypto_category_hierarchical_ranking_no_lstm.
-pdf>
-Package pdftex.def Info: figures/04_category_analysis/crypto_category_hierarchi
-cal_ranking_no_lstm.pdf  used on input line 288.
+<figures/04_category_analysis/crypto_category_hierarchical_ranking_no_lstm.pdf, id=3476, 710.91035pt x 421.55687pt>
+File: figures/04_category_analysis/crypto_category_hierarchical_ranking_no_lstm.pdf Graphic file (type pdf)
+<use figures/04_category_analysis/crypto_category_hierarchical_ranking_no_lstm.pdf>
+Package pdftex.def Info: figures/04_category_analysis/crypto_category_hierarchical_ranking_no_lstm.pdf  used on input line 288.
 (pdftex.def)             Requested size: 232.17242pt x 137.67332pt.
-<figures/04_category_analysis/forex_category_hierarchical_ranking_no_lstm.pdf, 
-id=3477, 710.91035pt x 421.55687pt>
-File: figures/04_category_analysis/forex_category_hierarchical_ranking_no_lstm.
-pdf Graphic file (type pdf)
-<use figures/04_category_analysis/forex_category_hierarchical_ranking_no_lstm.p
-df>
-Package pdftex.def Info: figures/04_category_analysis/forex_category_hierarchic
-al_ranking_no_lstm.pdf  used on input line 294.
+<figures/04_category_analysis/forex_category_hierarchical_ranking_no_lstm.pdf, id=3477, 710.91035pt x 421.55687pt>
+File: figures/04_category_analysis/forex_category_hierarchical_ranking_no_lstm.pdf Graphic file (type pdf)
+<use figures/04_category_analysis/forex_category_hierarchical_ranking_no_lstm.pdf>
+Package pdftex.def Info: figures/04_category_analysis/forex_category_hierarchical_ranking_no_lstm.pdf  used on input line 294.
 (pdftex.def)             Requested size: 232.17242pt x 137.67332pt.
-<figures/04_category_analysis/indices_category_hierarchical_ranking_no_lstm.pdf
-, id=3478, 710.91035pt x 421.55687pt>
-File: figures/04_category_analysis/indices_category_hierarchical_ranking_no_lst
-m.pdf Graphic file (type pdf)
-<use figures/04_category_analysis/indices_category_hierarchical_ranking_no_lstm
-.pdf>
-Package pdftex.def Info: figures/04_category_analysis/indices_category_hierarch
-ical_ranking_no_lstm.pdf  used on input line 301.
+<figures/04_category_analysis/indices_category_hierarchical_ranking_no_lstm.pdf, id=3478, 710.91035pt x 421.55687pt>
+File: figures/04_category_analysis/indices_category_hierarchical_ranking_no_lstm.pdf Graphic file (type pdf)
+<use figures/04_category_analysis/indices_category_hierarchical_ranking_no_lstm.pdf>
+Package pdftex.def Info: figures/04_category_analysis/indices_category_hierarchical_ranking_no_lstm.pdf  used on input line 301.
 (pdftex.def)             Requested size: 232.17242pt x 137.67332pt.
- [53 <./figures/05_horizon_analysis/horizon_degradation_lineplot.pdf>] [54 <./f
-igures/appendix/horizon_sensitivity_heatmap.pdf> <./figures/03_global_performan
-ce/global_metric_heatmap.pdf>]
-<figures/04_category_analysis/crypto_category_performance_matrix_no_lstm.pdf, i
-d=3676, 811.4651pt x 566.17773pt>
-File: figures/04_category_analysis/crypto_category_performance_matrix_no_lstm.p
-df Graphic file (type pdf)
-<use figures/04_category_analysis/crypto_category_performance_matrix_no_lstm.pd
-f>
-Package pdftex.def Info: figures/04_category_analysis/crypto_category_performan
-ce_matrix_no_lstm.pdf  used on input line 327.
+ [53 <./figures/05_horizon_analysis/horizon_degradation_lineplot.pdf>] [54 <./figures/appendix/horizon_sensitivity_heatmap.pdf> <./figures/03_global_performance/global_metric_heatmap.pdf>]
+<figures/04_category_analysis/crypto_category_performance_matrix_no_lstm.pdf, id=3676, 811.4651pt x 566.17773pt>
+File: figures/04_category_analysis/crypto_category_performance_matrix_no_lstm.pdf Graphic file (type pdf)
+<use figures/04_category_analysis/crypto_category_performance_matrix_no_lstm.pdf>
+Package pdftex.def Info: figures/04_category_analysis/crypto_category_performance_matrix_no_lstm.pdf  used on input line 327.
 (pdftex.def)             Requested size: 232.17242pt x 161.99298pt.
-<figures/04_category_analysis/forex_category_performance_matrix_no_lstm.pdf, id
-=3677, 805.50288pt x 566.03346pt>
-File: figures/04_category_analysis/forex_category_performance_matrix_no_lstm.pd
-f Graphic file (type pdf)
-<use figures/04_category_analysis/forex_category_performance_matrix_no_lstm.pdf
->
-Package pdftex.def Info: figures/04_category_analysis/forex_category_performanc
-e_matrix_no_lstm.pdf  used on input line 333.
+<figures/04_category_analysis/forex_category_performance_matrix_no_lstm.pdf, id=3677, 805.50288pt x 566.03346pt>
+File: figures/04_category_analysis/forex_category_performance_matrix_no_lstm.pdf Graphic file (type pdf)
+<use figures/04_category_analysis/forex_category_performance_matrix_no_lstm.pdf>
+Package pdftex.def Info: figures/04_category_analysis/forex_category_performance_matrix_no_lstm.pdf  used on input line 333.
 (pdftex.def)             Requested size: 232.17242pt x 163.1436pt.
-<figures/04_category_analysis/indices_category_performance_matrix_no_lstm.pdf, 
-id=3678, 803.27753pt x 566.1313pt>
-File: figures/04_category_analysis/indices_category_performance_matrix_no_lstm.
-pdf Graphic file (type pdf)
-<use figures/04_category_analysis/indices_category_performance_matrix_no_lstm.p
-df>
-Package pdftex.def Info: figures/04_category_analysis/indices_category_performa
-nce_matrix_no_lstm.pdf  used on input line 341.
+<figures/04_category_analysis/indices_category_performance_matrix_no_lstm.pdf, id=3678, 803.27753pt x 566.1313pt>
+File: figures/04_category_analysis/indices_category_performance_matrix_no_lstm.pdf Graphic file (type pdf)
+<use figures/04_category_analysis/indices_category_performance_matrix_no_lstm.pdf>
+Package pdftex.def Info: figures/04_category_analysis/indices_category_performance_matrix_no_lstm.pdf  used on input line 341.
 (pdftex.def)             Requested size: 314.40001pt x 221.58505pt.
-
-[55 <./figures/04_category_analysis/asset_model_comparison_grouped.pdf> <./figu
-res/07_efficiency/complexity_vs_performance_h4.pdf> <./figures/07_efficiency/co
-mplexity_vs_performance_h24.pdf>] [56 <./figures/04_category_analysis/crypto_ca
-tegory_hierarchical_ranking_no_lstm.pdf> <./figures/04_category_analysis/forex_
-category_hierarchical_ranking_no_lstm.pdf> <./figures/04_category_analysis/indi
-ces_category_hierarchical_ranking_no_lstm.pdf>] [57 <./figures/04_category_anal
-ysis/crypto_category_performance_matrix_no_lstm.pdf> <./figures/04_category_ana
-lysis/forex_category_performance_matrix_no_lstm.pdf> <./figures/04_category_ana
-lysis/indices_category_performance_matrix_no_lstm.pdf>]
-<figures/06_robustness/btcusdt_h4_seed_variance_boxplot_no_lstm.pdf, id=4220, 7
-10.89467pt x 421.55687pt>
-File: figures/06_robustness/btcusdt_h4_seed_variance_boxplot_no_lstm.pdf Graphi
-c file (type pdf)
+ [55 <./figures/04_category_analysis/asset_model_comparison_grouped.pdf> <./figures/07_efficiency/complexity_vs_performance_h4.pdf> <./figures/07_efficiency/complexity_vs_performance_h24.pdf>] [56 <./figures/04_category_analysis/crypto_category_hierarchical_ranking_no_lstm.pdf> <./figures/04_category_analysis/forex_category_hierarchical_ranking_no_lstm.pdf> <./figures/04_category_analysis/indices_category_hierarchical_ranking_no_lstm.pdf>] [57 <./figures/04_category_analysis/crypto_category_performance_matrix_no_lstm.pdf> <./figures/04_category_analysis/forex_category_performance_matrix_no_lstm.pdf> <./figures/04_category_analysis/indices_category_performance_matrix_no_lstm.pdf>]
+<figures/06_robustness/btcusdt_h4_seed_variance_boxplot_no_lstm.pdf, id=4220, 710.89467pt x 421.55687pt>
+File: figures/06_robustness/btcusdt_h4_seed_variance_boxplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/06_robustness/btcusdt_h4_seed_variance_boxplot_no_lstm.pdf>
-Package pdftex.def Info: figures/06_robustness/btcusdt_h4_seed_variance_boxplot
-_no_lstm.pdf  used on input line 410.
+Package pdftex.def Info: figures/06_robustness/btcusdt_h4_seed_variance_boxplot_no_lstm.pdf  used on input line 410.
 (pdftex.def)             Requested size: 232.17242pt x 137.67332pt.
-<figures/06_robustness/eurusd_h4_seed_variance_boxplot_no_lstm.pdf, id=4221, 71
-0.92474pt x 421.55687pt>
-File: figures/06_robustness/eurusd_h4_seed_variance_boxplot_no_lstm.pdf Graphic
- file (type pdf)
+<figures/06_robustness/eurusd_h4_seed_variance_boxplot_no_lstm.pdf, id=4221, 710.92474pt x 421.55687pt>
+File: figures/06_robustness/eurusd_h4_seed_variance_boxplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/06_robustness/eurusd_h4_seed_variance_boxplot_no_lstm.pdf>
-Package pdftex.def Info: figures/06_robustness/eurusd_h4_seed_variance_boxplot_
-no_lstm.pdf  used on input line 416.
+Package pdftex.def Info: figures/06_robustness/eurusd_h4_seed_variance_boxplot_no_lstm.pdf  used on input line 416.
 (pdftex.def)             Requested size: 232.17242pt x 137.66689pt.
-<figures/06_robustness/usa30_h4_seed_variance_boxplot_no_lstm.pdf, id=4222, 710
-.89467pt x 421.55687pt>
-File: figures/06_robustness/usa30_h4_seed_variance_boxplot_no_lstm.pdf Graphic 
-file (type pdf)
+<figures/06_robustness/usa30_h4_seed_variance_boxplot_no_lstm.pdf, id=4222, 710.89467pt x 421.55687pt>
+File: figures/06_robustness/usa30_h4_seed_variance_boxplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/06_robustness/usa30_h4_seed_variance_boxplot_no_lstm.pdf>
-Package pdftex.def Info: figures/06_robustness/usa30_h4_seed_variance_boxplot_n
-o_lstm.pdf  used on input line 423.
+Package pdftex.def Info: figures/06_robustness/usa30_h4_seed_variance_boxplot_no_lstm.pdf  used on input line 423.
 (pdftex.def)             Requested size: 314.40001pt x 186.43759pt.
-<figures/06_robustness/btcusdt_h24_seed_variance_boxplot_no_lstm.pdf, id=4223, 
-710.89467pt x 421.55687pt>
-File: figures/06_robustness/btcusdt_h24_seed_variance_boxplot_no_lstm.pdf Graph
-ic file (type pdf)
+<figures/06_robustness/btcusdt_h24_seed_variance_boxplot_no_lstm.pdf, id=4223, 710.89467pt x 421.55687pt>
+File: figures/06_robustness/btcusdt_h24_seed_variance_boxplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/06_robustness/btcusdt_h24_seed_variance_boxplot_no_lstm.pdf>
-Package pdftex.def Info: figures/06_robustness/btcusdt_h24_seed_variance_boxplo
-t_no_lstm.pdf  used on input line 437.
+Package pdftex.def Info: figures/06_robustness/btcusdt_h24_seed_variance_boxplot_no_lstm.pdf  used on input line 437.
 (pdftex.def)             Requested size: 232.17242pt x 137.67332pt.
-<figures/06_robustness/eurusd_h24_seed_variance_boxplot_no_lstm.pdf, id=4224, 7
-10.92474pt x 421.55687pt>
-File: figures/06_robustness/eurusd_h24_seed_variance_boxplot_no_lstm.pdf Graphi
-c file (type pdf)
+<figures/06_robustness/eurusd_h24_seed_variance_boxplot_no_lstm.pdf, id=4224, 710.92474pt x 421.55687pt>
+File: figures/06_robustness/eurusd_h24_seed_variance_boxplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/06_robustness/eurusd_h24_seed_variance_boxplot_no_lstm.pdf>
-Package pdftex.def Info: figures/06_robustness/eurusd_h24_seed_variance_boxplot
-_no_lstm.pdf  used on input line 443.
+Package pdftex.def Info: figures/06_robustness/eurusd_h24_seed_variance_boxplot_no_lstm.pdf  used on input line 443.
 (pdftex.def)             Requested size: 232.17242pt x 137.66689pt.
-<figures/06_robustness/usa30_h24_seed_variance_boxplot_no_lstm.pdf, id=4225, 71
-0.89467pt x 421.55687pt>
-File: figures/06_robustness/usa30_h24_seed_variance_boxplot_no_lstm.pdf Graphic
- file (type pdf)
+<figures/06_robustness/usa30_h24_seed_variance_boxplot_no_lstm.pdf, id=4225, 710.89467pt x 421.55687pt>
+File: figures/06_robustness/usa30_h24_seed_variance_boxplot_no_lstm.pdf Graphic file (type pdf)
 <use figures/06_robustness/usa30_h24_seed_variance_boxplot_no_lstm.pdf>
-Package pdftex.def Info: figures/06_robustness/usa30_h24_seed_variance_boxplot_
-no_lstm.pdf  used on input line 450.
+Package pdftex.def Info: figures/06_robustness/usa30_h24_seed_variance_boxplot_no_lstm.pdf  used on input line 450.
 (pdftex.def)             Requested size: 314.40001pt x 186.43759pt.
-<figures/06_robustness/btcusdt_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf, id
-=4226, 708.61914pt x 566.03346pt>
-File: figures/06_robustness/btcusdt_h4_scatter_rmse_vs_seed_variance_no_lstm.pd
-f Graphic file (type pdf)
-<use figures/06_robustness/btcusdt_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf
->
-Package pdftex.def Info: figures/06_robustness/btcusdt_h4_scatter_rmse_vs_seed_
-variance_no_lstm.pdf  used on input line 463.
+<figures/06_robustness/btcusdt_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf, id=4226, 708.61914pt x 566.03346pt>
+File: figures/06_robustness/btcusdt_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf Graphic file (type pdf)
+<use figures/06_robustness/btcusdt_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf>
+Package pdftex.def Info: figures/06_robustness/btcusdt_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf  used on input line 463.
 (pdftex.def)             Requested size: 232.17242pt x 185.45288pt.
-<figures/06_robustness/eurusd_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf, id=
-4227, 707.59682pt x 566.03346pt>
-File: figures/06_robustness/eurusd_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf
- Graphic file (type pdf)
+<figures/06_robustness/eurusd_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf, id=4227, 707.59682pt x 566.03346pt>
+File: figures/06_robustness/eurusd_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf Graphic file (type pdf)
 <use figures/06_robustness/eurusd_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf>
-
-Package pdftex.def Info: figures/06_robustness/eurusd_h4_scatter_rmse_vs_seed_v
-ariance_no_lstm.pdf  used on input line 469.
+Package pdftex.def Info: figures/06_robustness/eurusd_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf  used on input line 469.
 (pdftex.def)             Requested size: 232.17242pt x 185.72063pt.
-<figures/06_robustness/usa30_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf, id=4
-228, 708.92024pt x 566.03346pt>
-File: figures/06_robustness/usa30_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf 
-Graphic file (type pdf)
+<figures/06_robustness/usa30_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf, id=4228, 708.92024pt x 566.03346pt>
+File: figures/06_robustness/usa30_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf Graphic file (type pdf)
 <use figures/06_robustness/usa30_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf>
-Package pdftex.def Info: figures/06_robustness/usa30_h4_scatter_rmse_vs_seed_va
-riance_no_lstm.pdf  used on input line 476.
+Package pdftex.def Info: figures/06_robustness/usa30_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf  used on input line 476.
 (pdftex.def)             Requested size: 314.40001pt x 251.03336pt.
-<figures/06_robustness/btcusdt_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf, i
-d=4229, 708.61914pt x 566.03346pt>
-File: figures/06_robustness/btcusdt_h24_scatter_rmse_vs_seed_variance_no_lstm.p
-df Graphic file (type pdf)
-<use figures/06_robustness/btcusdt_h24_scatter_rmse_vs_seed_variance_no_lstm.pd
-f>
-Package pdftex.def Info: figures/06_robustness/btcusdt_h24_scatter_rmse_vs_seed
-_variance_no_lstm.pdf  used on input line 491.
+<figures/06_robustness/btcusdt_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf, id=4229, 708.61914pt x 566.03346pt>
+File: figures/06_robustness/btcusdt_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf Graphic file (type pdf)
+<use figures/06_robustness/btcusdt_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf>
+Package pdftex.def Info: figures/06_robustness/btcusdt_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf  used on input line 491.
 (pdftex.def)             Requested size: 232.17242pt x 185.45288pt.
-<figures/06_robustness/eurusd_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf, id
-=4230, 707.59682pt x 566.03346pt>
-File: figures/06_robustness/eurusd_h24_scatter_rmse_vs_seed_variance_no_lstm.pd
-f Graphic file (type pdf)
-<use figures/06_robustness/eurusd_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf
->
-Package pdftex.def Info: figures/06_robustness/eurusd_h24_scatter_rmse_vs_seed_
-variance_no_lstm.pdf  used on input line 497.
+<figures/06_robustness/eurusd_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf, id=4230, 707.59682pt x 566.03346pt>
+File: figures/06_robustness/eurusd_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf Graphic file (type pdf)
+<use figures/06_robustness/eurusd_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf>
+Package pdftex.def Info: figures/06_robustness/eurusd_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf  used on input line 497.
 (pdftex.def)             Requested size: 232.17242pt x 185.72063pt.
-<figures/06_robustness/usa30_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf, id=
-4231, 708.92024pt x 566.03346pt>
-File: figures/06_robustness/usa30_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf
- Graphic file (type pdf)
+<figures/06_robustness/usa30_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf, id=4231, 708.92024pt x 566.03346pt>
+File: figures/06_robustness/usa30_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf Graphic file (type pdf)
 <use figures/06_robustness/usa30_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf>
-
-Package pdftex.def Info: figures/06_robustness/usa30_h24_scatter_rmse_vs_seed_v
-ariance_no_lstm.pdf  used on input line 504.
+Package pdftex.def Info: figures/06_robustness/usa30_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf  used on input line 504.
 (pdftex.def)             Requested size: 314.40001pt x 251.03336pt.
  [58
 
-] [59 <./figures/06_robustness/btcusdt_h4_seed_variance_boxplot_no_lstm.pdf> <.
-/figures/06_robustness/eurusd_h4_seed_variance_boxplot_no_lstm.pdf> <./figures/
-06_robustness/usa30_h4_seed_variance_boxplot_no_lstm.pdf>] [60 <./figures/06_ro
-bustness/btcusdt_h24_seed_variance_boxplot_no_lstm.pdf> <./figures/06_robustnes
-s/eurusd_h24_seed_variance_boxplot_no_lstm.pdf> <./figures/06_robustness/usa30_
-h24_seed_variance_boxplot_no_lstm.pdf>] [61 <./figures/06_robustness/btcusdt_h4
-_scatter_rmse_vs_seed_variance_no_lstm.pdf> <./figures/06_robustness/eurusd_h4_
-scatter_rmse_vs_seed_variance_no_lstm.pdf> <./figures/06_robustness/usa30_h4_sc
-atter_rmse_vs_seed_variance_no_lstm.pdf>] [62 <./figures/06_robustness/btcusdt_
-h24_scatter_rmse_vs_seed_variance_no_lstm.pdf> <./figures/06_robustness/eurusd_
-h24_scatter_rmse_vs_seed_variance_no_lstm.pdf> <./figures/06_robustness/usa30_h
-24_scatter_rmse_vs_seed_variance_no_lstm.pdf>]) [63
+] [59 <./figures/06_robustness/btcusdt_h4_seed_variance_boxplot_no_lstm.pdf> <./figures/06_robustness/eurusd_h4_seed_variance_boxplot_no_lstm.pdf> <./figures/06_robustness/usa30_h4_seed_variance_boxplot_no_lstm.pdf>] [60 <./figures/06_robustness/btcusdt_h24_seed_variance_boxplot_no_lstm.pdf> <./figures/06_robustness/eurusd_h24_seed_variance_boxplot_no_lstm.pdf> <./figures/06_robustness/usa30_h24_seed_variance_boxplot_no_lstm.pdf>] [61 <./figures/06_robustness/btcusdt_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf> <./figures/06_robustness/eurusd_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf> <./figures/06_robustness/usa30_h4_scatter_rmse_vs_seed_variance_no_lstm.pdf>] [62 <./figures/06_robustness/btcusdt_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf> <./figures/06_robustness/eurusd_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf> <./figures/06_robustness/usa30_h24_scatter_rmse_vs_seed_variance_no_lstm.pdf>]) [63
 
 ] (./main.aux)
  ***********
@@ -2851,36 +2221,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55435 strings out of 467537
- 1275168 string characters out of 5423704
- 2186657 words of memory out of 5000000
+ 55436 strings out of 467537
+ 1275337 string characters out of 5423704
+ 2186683 words of memory out of 5000000
  82570 multiletter control sequences out of 15000+600000
  876194 words of font info for 624 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,15n,131p,2321b,2267s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb><c:/texlive
-/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><c:/texlive/2025/texmf-di
-st/fonts/type1/public/newtx/NewTXMI7.pfb><c:/texlive/2025/texmf-dist/fonts/type
-1/public/lm/lmbx6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.p
-fb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025
-/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/t
-ype1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7
-.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/202
-5/texmf-dist/fonts/type1/public/lm/lmss8.pfb><c:/texlive/2025/texmf-dist/fonts/
-type1/public/lm/lmssbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/
-lmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texli
-ve/2025/texmf-dist/fonts/type1/public/lm/lmtt8.pfb><c:/texlive/2025/texmf-dist/
-fonts/type1/public/tex-gyre/qtmr.pfb><c:/texlive/2025/texmf-dist/fonts/type1/pu
-blic/txfonts/t1xtt.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/txb
-sys.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/txexs.pfb><c:/texl
-ive/2025/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><c:/texlive/2025/texmf-
-dist/fonts/type1/public/newtx/txsym.pfb><c:/texlive/2025/texmf-dist/fonts/type1
-/public/newtx/txsys.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uh
-vb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/te
-xlive/2025/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><c:/texlive/2025/texmf-
-dist/fonts/type1/public/newtx/ztmr.pfb><c:/texlive/2025/texmf-dist/fonts/type1/
-public/newtx/ztmri.pfb>
-Output written on main.pdf (63 pages, 2423075 bytes).
+ 87i,15n,131p,2378b,2267s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/txbsys.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/txexs.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/txsym.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/txsys.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on main.pdf (63 pages, 2423282 bytes).
 PDF statistics:
  5056 PDF objects out of 5155 (max. 8388607)
  1565 compressed objects within 16 object streams
