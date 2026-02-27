@@ -159,17 +159,17 @@ The benchmark follows a five-stage protocol that isolates architectural merit fr
 
 ## Key Results
 
-| Rank | Model | Family | Mean Rank | Win Rate |
-|---|---|---|---|---|
-| 1 | ModernTCN | CNN | 1.333 | 75.0% |
-| 2 | PatchTST | Transformer | 2.000 | 12.5% |
-| 3 | iTransformer | Transformer | 3.667 | — |
-| 4 | TimeXer | Transformer | 4.292 | — |
-| 5 | DLinear | MLP/Linear | 4.958 | — |
-| 6 | N-HiTS | MLP | 5.250 | 12.5% |
-| 7 | TimesNet | CNN | 7.708 | — |
-| 8 | Autoformer | Transformer | 7.833 | — |
-| 9 | LSTM | RNN | 7.958 | — |
+| Rank | Model | Family | Mean Rank | 
+|---|---|---|---|
+| 1 | ModernTCN | CNN | 1.333 |
+| 2 | PatchTST | Transformer | 2.000 | 
+| 3 | iTransformer | Transformer | 3.667 |
+| 4 | TimeXer | Transformer | 4.292 |
+| 5 | DLinear | MLP/Linear | 4.958 |
+| 6 | N-HiTS | MLP | 5.250 | 
+| 7 | TimesNet | CNN | 7.708 |
+| 8 | Autoformer | Transformer | 7.833 |
+| 9 | LSTM | RNN | 7.958 |
 
 - Architecture choice explains **99.90%** of total forecast variance; seed variation accounts for **0.01%**.
 - Rankings are **stable across horizons** despite 2–2.5× error amplification from h=4 to h=24.
